@@ -42,7 +42,6 @@ La page HTML comprend des exemples sur l'utilisation des classes (regardez le co
 
 
 
-
 jQuery
 ------
 http://jquery.com/
@@ -54,5 +53,11 @@ http://leaverou.github.com/prefixfree/
 modernizr
 ---------
 http://modernizr.com/
-http://www.hongkiat.com/blog/modernizr/
 
+selectivizr
+-----------
+http://selectivizr.com/
+
+jQuery Easing
+-------------
+https://github.com/gdsmith/jquery.easing
