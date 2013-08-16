@@ -24,12 +24,10 @@ blockquote, q {quotes: none;}
 blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
 table {border-collapse: collapse; border-spacing: 0;}
 
-/* scripts */
 body > script {display: none !important;}
 
 
-/* !!! ATTENTION !!! Changement du model de boîtes (border et padding n'augmente plus le taille des blocs) 
-Compatible avec IE6 et IE7 !*/
+/* !!! ATTENTION !!! Changement du model de boîtes (border et padding n'augmente plus le taille des blocs), mais compatible avec IE6 et IE7 !*/
 *, 
 *:before, 
 *:after { 
@@ -158,7 +156,6 @@ h6:first-child {
 }
 
 /* retire la marge du bas sur le dernier élément d'un bloc */
-
 p:last-child,
 ul:last-child,
 ol:last-child,

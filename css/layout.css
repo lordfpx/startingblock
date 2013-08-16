@@ -4,19 +4,19 @@
 
 .nogut { 
     padding-left: 0 !important; 
-    padding-right: 0 !important; /* To remove gutter from a column */
+    padding-right: 0 !important; /* retirer la gouttière sur une colonne */
 }
 
 .colset, 
 .subcolset {
-    display: inline-block; /* to create a block formating context (BFC) for the floating children */
+    display: inline-block; /* pour créer un contexte de formatage de block (BFC) pour les enfants flottants */
     width: 100%;
     vertical-align: top;
     padding-left: 10px; 
     padding-right: 10px;
 }
 
-/* gutter can be personnalized has you wich */
+/* C'est ici que vous pouvez librement personnaliser les gouttières */
 .colset > [class*=col-], 
 .colset .subcolset > [class*=col-] {
     float: left;
@@ -24,14 +24,13 @@
     padding-right: 10px; 
 }
 
-/* To remove gutter from nested set of columns */
+/* Retirer les goutières des colonnes imbriquées */
 .colset .subcolset {
     padding-left: 0 !important; 
     padding-right: 0 !important;
 }
 
-
-
+/* Les colonnes sont en %, si vous ne souhaitez pas d'un site flexible, créer un conteneur de taille fixe */
 .col-1 { width: 8.3333333333%; }
 .col-2 { width: 16.6666666667%; }
 .col-3 { width: 25%; }
