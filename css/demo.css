@@ -1,0 +1,93 @@
+/* ---------------------------------------------------- *\
+				STYLES DEMO (effacez le fichier quad vous intégrez votre site !!!)
+\* ---------------------------------------------------- */
+body{
+	font-family: arial, helvetica, sans-serif;
+}
+
+#menu{
+	background: black;
+	color: white;
+	height: 70px;
+	line-height: 70px;
+}
+
+#menu a{
+	text-decoration: none;
+}
+
+.intro{
+	width: 70%;
+	max-width: 700px;
+}
+
+.demo-chapters{
+	background: rgb(100,100,100);
+	margin-top: 50px;
+	padding-left: 20px;
+	color: black;
+}
+
+.demo-titles{
+	background: rgb(200,200,200);
+	padding-left: 60px;
+	margin-top: 40px;
+}
+
+#samplesLayout h3{
+	margin-top: 20px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid grey;
+}
+
+.demo-margins{
+	background: grey;
+	width: 200px;
+	min-height: 21px;
+}
+
+.demo-margins div{
+	background: rgb(200,200,200);
+}
+
+#samplesLayout th, #samplesLayout td{
+	border: 1px solid grey;
+	padding: 5px;
+}
+
+#samplesLayout th{
+	background: grey;
+}
+
+#samplesLayout .col1{
+	width: 150px;
+}
+
+#samplesLayout .col2{
+	width: 400px;
+}
+
+
+/* Tablettes */
+@media (max-width: 768px) {
+	.nodesktop { display: block; }
+	.notablet { display: none; }
+	
+	/* linéarisation des contenus flottants */
+	.break-tablet {
+		background: orange;
+	}
+}
+
+/* Mobiles */
+@media (max-width: 640px) {
+	.notablet { display: block; }
+	.nomobile { display: none; }
+
+	/* linéarisation des contenus flottants */
+	.break-mobile {
+		background: red;
+	}
+}
+
+

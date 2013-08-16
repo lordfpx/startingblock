@@ -1,0 +1,182 @@
+/* ------------------------------------ *\
+				RESET 
+\* ------------------------------------ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0; padding: 0; border: 0;
+	font-size: 100%; font: inherit;
+	vertical-align: baseline;
+	font-weight: normal;
+	font-style: normal;
+}
+
+article, aside, audio, canvas, datagrid, datalist, details, dialog, figure, footer, header, main, menu, nav, section, video {display: block;}
+abbr, eventsource, mark, meter, time, progress, output, bb { display: inline; }
+
+ul, ol { padding-left: 30px; }
+
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+
+/* scripts */
+body > script {display: none !important;}
+
+
+/* !!! ATTENTION !!! Changement du model de boîtes (border et padding n'augmente plus le taille des blocs) 
+Compatible avec IE6 et IE7 !*/
+*, 
+*:before, 
+*:after { 
+	box-sizing: border-box; 
+	*behavior: url(css/boxsizing.htc); 
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+	border: 0;
+}
+a:focus { outline: thin dotted; }
+
+em { font-style: italic; }
+b, strong { font-weight: bold; }
+
+img, table, td, blockquote, code, pre, textarea, input, video, iframe {
+	max-width: 100%;
+	width: auto\9; /* ie8 */
+}
+
+img {
+	vertical-align: middle;
+	height: auto;
+	-ms-interpolation-mode: bicubic; /* lissage pour IE */
+	border: 0;
+}
+	/* fix d'un bug sur le max-width si vous utilisez Gmap3 (voir google) */
+	#map_canvas img, .gmnoprint img {max-width: none;}
+
+table, td, blockquote, code, pre, textarea, input {
+	height: auto;
+}
+
+iframe{
+	vertical-align: middle;
+	border: 0;
+}
+
+textarea, table, td, th, code, pre, samp, div, p {
+	word-wrap: break-word;
+	hyphens: auto;
+}
+
+code, pre, samp {
+	white-space: pre-wrap;
+	font-family: consolas, 'DejaVu Sans Mono', courier, monospace;
+	line-height: 1em;
+}
+
+sup, sub {
+	vertical-align: 0;
+	position: relative;
+}
+sup { bottom: 1ex; }
+sub { top: .5ex; }
+
+abbr[title] { cursor: help; } 
+
+label, button, input[type="submit"], input[type="button"], input[type="reset"] { 
+	-webkit-appearance: button;
+	cursor: pointer;
+	*overflow: visible;
+}
+
+label, button, input, select, .btn { vertical-align: middle; }
+
+textarea {
+	resize: none;
+	overflow: auto;
+	vertical-align: top;
+}
+
+input[type="radio"], input[type="checkbox"] {
+	background-color: none;
+	border: 0;
+	width: auto;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+button[disabled], html input[disabled] { cursor: default; }
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+html { -webkit-font-smoothing: antialiased; }
+
+body { background: #fff; }
+
+/* retire la marge du haut sur le 1er élément d'un bloc */
+p:first-child,
+ul:first-child,
+ol:first-child,
+dl:first-child,
+blockquote:first-child,
+pre:first-child,
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+	margin-top: 0;
+}
+
+/* retire la marge du bas sur le dernier élément d'un bloc */
+
+p:last-child,
+ul:last-child,
+ol:last-child,
+dl:last-child,
+blockquote:last-child,
+pre:last-child,
+table:last-child,
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child {
+	margin-bottom: 0;
+}
+
+/* retire les marges des éléments imbriqués dans une liste */
+li p, li ul, li ol {
+	margin-top: 0;
+	margin-bottom: 0;
+}

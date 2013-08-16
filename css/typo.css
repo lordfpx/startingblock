@@ -1,0 +1,123 @@
+/* ------------------------------------ *\
+				TYPO 
+\* ------------------------------------ */
+
+/* exemple de font-face
+-----------------------
+@font-face {
+	font-family: 'FuturaStdBook';
+	src: url('fonts/futurastd-book-webfont.eot');
+	src: url('fonts/futurastd-book-webfont.eot?#iefix') format('eot'),
+		url('fonts/futurastd-book-webfont.woff') format('woff'),
+		url('fonts/futurastd-book-webfont.ttf') format('truetype'),
+		url('fonts/futurastd-book-webfont.svg#FuturaStdBook') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+*/
+
+html {
+	font-size: 62.5%;
+}
+
+body{
+	font-size: 14px; 
+	font-size: 1.4rem;
+	line-height: 1.5; /* àdapter à votre design */
+}
+
+/* TEXTE STANDARD */
+p, ul, ol, dl, blockquote,
+pre, td, th, label, textarea, caption,
+details, figure, hgroup {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+
+/* modifier taille des textes */
+.smaller { 
+	font-size: 10px; 
+	font-size: 1rem;
+}
+.small { 
+	font-size: 12px; 
+	font-size: 1.2rem;
+}
+.big { 
+	font-size: 16px; 
+	font-size: 1.6rem; 
+}
+.bigger { 
+	font-size: 18px;
+	font-size: 1.8rem; 
+}
+.biggest { 
+	font-size: 20px; 
+	font-size: 2rem; 
+}
+
+
+/* TITRES */
+h1, .h1 {
+	font-size: 26px;
+	font-size: 2.6rem;
+	font-weight: bold;
+}
+
+h2, .h2 {
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-weight: bold;
+}
+
+h3, .h3 {
+	font-size: 22px;
+	font-size: 2.2rem;
+	font-weight: bold;
+}
+
+h4, .h4 {
+	font-size: 20px;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+h5, .h5 {
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+
+h6, .h6 {
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+
+
+/* LIENS */
+a { 
+	text-decoration: underline; 
+}
+	a:link {  } 
+	a:visited {  } 
+	a:focus {  } 
+	a:hover { 
+		background: black; 
+		color: white;
+	} 
+	a:active {  } 
+
+
+/* AUTREs */
+q{
+	font-style: italic;
+}
+	q:before{
+		content: '«';
+	}
+
+	q:after{
+		content: '»';
+	}
+

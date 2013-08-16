@@ -1,0 +1,26 @@
+/* ------------------------------------ *\
+				FORMS
+\* ------------------------------------ */
+
+/* messages d'erreur ou de confirmation */
+.alert, 
+.alert input, 
+.alert textarea, 
+.alert select {
+	color: red;
+	font-weight: bold;
+}
+
+.alert input, 
+.alert textarea, 
+.alert select {
+	border: 1px solid red;
+}
+
+.alert img { 
+	border: 0; 
+}
+
+.ok {
+
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]><html class="ie6 no-js" lang="fr-FR"><![endif]-->
+<!--[if IE 7]><html class="ie7 no-js" lang="fr-FR"><![endif]-->
+<!--[if IE 8]><html class="ie8 no-js" lang="fr-FR"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="fr-FR" class="no-js"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>Page de démonstration</title>
+	<meta name="description" content="Une petite page de présentation de la CSS">
+	<meta name="author" content="Thierry Philippe - www.thierryphilippe.fr">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/reset.css">		<!-- reset très puissant -->
+	<link rel="stylesheet" href="css/global.css">		<!-- classes réutilisables pour aller plus vite -->
+	<link rel="stylesheet" href="css/typo.css">			<!-- juste les typos et couleurs -->
+	<link rel="stylesheet" href="css/layout.css">		<!-- grille, positionnements, background : mise en page -->
+	<link rel="stylesheet" href="css/forms.css">		<!-- formulaires -->
+	<link rel="stylesheet" href="css/custom.css">		<!-- tous les trucs particuliers -->
+	<link rel="stylesheet" href="css/mediaqueries.css">	<!-- les media queries -->
+	<link rel="stylesheet" href="css/demo.css">	<!-- les media queries -->
+
+	<!-- Les favicons http://www.jonathantneal.com/blog/understand-the-favicon -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+	<meta name="msapplication-TileColor" content="#D83434">
+	<meta name="msapplication-TileImage" content="tileicon.png">
+
+	<!-- Pour tester plein de choses et prévoir des fallbacks et rends les blocs HTML5 compatibles IE -->
+	<script src="js/modernizr.2.6.2.js"></script>
+
+	<!-- Ajoute automatiquement les prefixes des navigateurs (CSS3) -->
+	<script src="js/prefixfree.min.js"></script>
+
+	<!-- Sélecteur CSS3 pour IE 6 à 8 -->
+	<!--[if (gte IE 6)&(lte IE 8)]>
+		<script src="js/selectivizr-min.js"></script>
+	<![endif]-->
+
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-migrate-1.2.1.min.js"><\/script>')</script>
+</head>
+<body>
+<nav id="menu">
+	<ul class="unstyled mod biggest">
+		<li class="left pl-l pr-l"><a href="#balises">Balises</a></li>
+		<li class="left pl-l pr-l"><a href="#layout">Mise en page</a></li>
+		<li class="left pl-l pr-l"><a href="#formulaire">Formulaire</a></li>
+	</ul>
+</nav>
+
+<div class="intro margesauto mt-m">
+	<p class="mb-m">Cette page est là pour vous détailler les styles présents dans le framework. Ils sont volontairement très basiques afin que vous puissiez les personnaliser sans peine.</p>
+
+	<p class="mb-m">D'ailleur cette page vous permet, lorsque vous débuter une intégration, de tester les rendus des styles de base en situation réelle.</p>
+
+	<p class="mb-m">Notez que le menu noir et les titres grisés ne font pas parti du framework, mais seulement de la démo ! Vous devrez supprimer la CSS "demo.css" quand vous commencerez à intégrer</p>
+
+	<p class="mb-m">Cette démo est responsive. Pour voir comment les classes "break-tablet" et "break-mobile" sont utilisées, réduisez la taille de la fenêtre, les blocs changés deviendront orange au format tablette et rouge au format mobile.</p>
+</div>
+
+<h1 id="balises" class="demo-chapters">Balises</h1>
+
+<div class="margesauto colset">
+	<div class="col-6 break-mobile">
+		<h2 class="demo-titles m-0">Titres</h2>
+		<h1>Titre 1</h1>
+		<h2>Titre 2</h2>
+		<h3>Titre 3</h3>
+		<h4>Titre 4</h4>
+		<h5>Titre 5</h5>
+		<h6>Titre 6</h6>
+
+		<h2 class="demo-titles">Listes</h2>
+		<ul class="mb-l">
+			<li>
+				Fruits
+				<ul>
+					<li>Abricot</li>
+					<li>Fraise</li>
+					<li>Poire</li>
+				</ul>
+			</li>
+			<li>Légumes</li>
+			<li>Viandes</li>
+		</ul>
+
+		<ol>
+			<li>
+				Fruits
+				<ol>
+					<li>Abricot</li>
+					<li>Fraise</li>
+					<li>Poire</li>
+				</ol>
+			</li>
+			<li>Légumes</li>
+			<li>Viandes</li>
+		</ol>
+	</div>
+
+	<div class="col-6 break-mobile">
+		<h2 class="demo-titles">Paragraphes</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, dignissimos, repellendus, ex, expedita fugiat voluptatum eveniet ratione quaerat ipsam cum amet delectus magni consequatur temporibus eligendi optio porro doloremque id? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, aliquam temporibus inventore est explicabo repellat repudiandae maiores molestiae at minima fuga in dignissimos velit iste non ex vitae voluptate fugiat.</p>
+
+		<p>Asperiores, nostrum eum consequuntur atque autem nulla mollitia nisi. Ullam, hic, fugiat, necessitatibus temporibus non nihil maxime ratione enim fugit excepturi ipsa repudiandae consequuntur saepe tempore obcaecati eos modi quaerat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, fugiat, eius, quibusdam minus ratione possimus consectetur iste earum ut eveniet itaque nihil enim aliquam libero accusamus sint quo eum saepe.</p>
+
+		<h2 class="demo-titles">Grande citation</h2>
+		<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis ratione ipsum modi cum architecto maxime unde dolorum vero accusantium! Obcaecati vel sit eius saepe accusamus excepturi quas sapiente iste deleniti!</blockquote>
+
+		<h2 class="demo-titles">Eléments "inline"</h2>
+		<ul>
+			<li><a href="#">un lien</a></li>
+			<li><strong>Balise de remforcement &lsaquo;strong&rsaquo;</strong></li>
+			<li><em>balise d'emphase &lsaquo;em&rsaquo;</em></li>
+			<li><q>citation courte &lsaquo;q&rsaquo; (quillemets ajoutés automatiquement)</q></li>
+		</ul>
+
+		<h2 class="demo-titles">Format des textes</h2>
+		<ul class="mb-m">
+			<li class="smaller">class "smaller"</li>
+			<li class="small">class "small"</li>
+			<li>Taille normale</li>
+			<li class="big">class "big"</li>
+			<li class="bigger">class "bigger"</li>
+			<li class="biggest">class "biggest"</li>
+		</ul>
+		<p class="alignleft">Texte aligné à gauche : class "alignleft"</p>
+		<p class="alignright">Texte aligné à droite : class "alignright"</p>
+		<p class="aligncenter">Texte centré : class "aligncenter"</p>
+		<p class="alignjustify">Texte justifié : class "alignjustify"</p>
+		<p class="uppercase">Texte en majuscule : class "uppercase"</p>
+	</div>
+</div>
+
+
+<h1 id="layout" class="demo-chapters">Mise en page</h1>
+
+<section id="samplesLayout">
+	<h2 class="demo-titles m-0">Classes utiles pour le layout</h2>
+	<table class="margesauto mt-s mb-l">
+		<tr>
+			<th class="col1">Class</th>
+			<th class="col2">Utilité</th>
+		</tr>
+		<tr>
+			<td>mod</td>
+			<td>permet de contenir des flottant en utilisant overflow: hidden</td>
+		</tr>
+		<tr>
+			<td>left - right</td>
+			<td>float à gauche ou à droite</td>
+		</tr>
+		<tr>
+			<td>clearfix</td>
+			<td>applique un clear sur le contenant lui-même (très pratique)</td>
+		</tr>
+		<tr>
+			<td>ilbl</td>
+			<td>inline-block</td>
+		</tr>
+	</table>
+
+	<h2 class="demo-titles m-0">Margins et paddings</h2>
+	<ul>
+		<li>m = margin</li>
+		<li>p = padding</li>
+		<li>t = top</li>
+		<li>r = right</li>
+		<li>b = bottom</li>
+		<li>l = left</li>
+		<li>Différentes tailles : -0 (zéro), -s (small), -m (medium), -l (large)</li>
+	</ul>
+
+	<div class="colset">
+		<div class="col-6 break-mobile">
+			<h3>Margins</h3>
+			<div class="mod mb-s aligncenter">
+				<div class="demo-margins left">&nbsp;</div>
+				<div class="demo-margins left ml-0">class "ml-0"</div>		
+			</div>
+
+			<div class="mod mb-s aligncenter">
+				<div class="demo-margins left">&nbsp;</div>
+				<div class="demo-margins left ml-s">class "ml-s"</div>		
+			</div>
+
+			<div class="mod mb-s aligncenter">
+				<div class="demo-margins left">&nbsp;</div>
+				<div class="demo-margins left ml-m">class "ml-m"</div>		
+			</div>
+
+			<div class="mod mb-m aligncenter">
+				<div class="demo-margins left">&nbsp;</div>
+				<div class="demo-margins left ml-l">class "ml-l"</div>		
+			</div>
+		</div>
+		
+		<div class="col-6 break-mobile">
+			<h3>Paddings</h3>
+			<div class="mod mb-s aligncenter">
+				<div class="demo-margins left p-0"><div>class "p-0"</div></div>		
+			</div>
+
+			<div class="mod mb-s aligncenter">
+				<div class="demo-margins left p-s"><div>class "p-s"</div></div>		
+			</div>
+
+			<div class="mod mb-s aligncenter">
+				<div class="demo-margins left p-m"><div>class "p-m"</div></div>		
+			</div>
+
+			<div class="mod mb-m aligncenter">
+				<div class="demo-margins left p-l"><div>class "p-l"</div></div>		
+			</div>
+		</div>
+	</div>
+		
+	<div id="grilles">
+		<h2 class="demo-titles m-0">Système de grilles (12 colonnes flexibles et goutières réglables)</h2>
+		<p class="aligncenter mt-m">la classe "nogut" permet d'annuler les gouttières sur une colonne pour des besoins de design</p>
+
+		<h3>3 colonnes (qui occuppent 4 unités : 12/3 = 4</h3>
+		<div class="colset">
+			<div class="col-4 break-mobile">
+				<h4>col-4</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
+			</div>
+
+			<div class="col-4 break-mobile">
+				<h4>col-4</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
+			</div>
+
+			<div class="col-4 break-mobile">
+				<h4>col-4</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
+			</div>
+		</div>
+
+		<h3>2 colonnes variables (9 unités + 3 unités</h3>
+		<div class="colset">
+			<div class="col-9 break-mobile">
+				<h4>col-9</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
+			</div>
+
+			<div class="col-3 break-mobile">
+				<h4>col-3</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
+			</div>
+		</div>
+
+		<h3>Exemples d'imbrication complexe 2 colonnes avec un second jeu de 3 colonnes</h3>
+		<div class="colset">
+			<div class="col-6 break-tablet">
+				<h4>col-6</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
+			</div>
+
+			<div class="col-6 break-tablet subcolset">
+				<div class="col-12">
+					<h4>col-5 (col-12 pour ce bloc)</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
+				</div>
+				
+				<div class="col-4 break-mobile">
+					<h4>col-4</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
+				</div>
+
+				<div class="col-4 break-mobile">
+					<h4>col-4</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
+				</div>
+
+				<div class="col-4 break-mobile">
+					<h4>col-4</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

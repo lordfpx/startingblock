@@ -1,0 +1,142 @@
+/* ------------------------------------ *\
+				GLOBAL
+\* ------------------------------------ */
+.left 	{ float: left; }
+.right 	{ float: right; }
+
+.mod 	{ overflow: hidden; } /* block contenant des flottants */
+
+	.ie6 .mod, .ie7 .mod
+	.ie6 .clearfix, .ie7 .clearfix { zoom: 1; }
+
+.clearfix:after,
+.mod:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+/* inline-block */
+.ilbl {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: -.25em;
+}
+	.ie6 .ilbl, .ie7 .ilbl {
+		display: inline;
+		zoom: 1;
+	}
+
+
+/* Définitions de marges et de paddings
+	s = small
+	m = medium
+	l = large */
+/* margin */
+.m-0 { margin: 0 !important; }
+.m-s { margin: 10px; }
+.m-m { margin: 20px; }
+.m-l { margin: 30px; }
+
+/* margin-top */
+.mt-0 { margin-top: 0 !important; }
+.mt-s { margin-top: 10px; }
+.mt-m { margin-top: 20px; }
+.mt-l { margin-top: 30px; }
+
+/* margin-right */
+.mr-0 { margin-right: 0 !important; }
+.mr-s { margin-right: 10px; }
+.mr-m { margin-right: 20px; }
+.mr-l { margin-right: 30px; }
+
+/* margin-bottom */
+.mb-0 { margin-bottom: 0 !important; }
+.mb-s { margin-bottom: 10px; }
+.mb-m { margin-bottom: 20px; }
+.mb-l { margin-bottom: 30px; }
+
+/* margin-left */
+.ml-0 { margin-left: 0 !important; }
+.ml-s { margin-left: 10px; }
+.ml-m { margin-left: 20px; }
+.ml-l { margin-left: 30px; }
+
+/* padding */
+.p-0 { padding: 0 !important; }
+.p-s { padding: 10px; }
+.p-m { padding: 20px; }
+.p-l { padding: 30px; }
+
+/* padding-top */
+.pt-0 { padding-top: 0 !important; }
+.pt-s { padding-top: 10px; }
+.pt-m { padding-top: 20px; }
+.pt-l { padding-top: 30px; }
+
+/* padding-right */
+.pr-0 { padding-right: 0 !important; }
+.pr-s { padding-right: 10px; }
+.pr-m { padding-right: 20px; }
+.pr-l { padding-right: 30px; }
+
+/* padding-bottom */
+.pb-0 { padding-bottom: 0 !important; }
+.pb-s { padding-bottom: 10px; }
+.pb-m { padding-bottom: 20px; }
+.pb-l { padding-bottom: 30px; }
+
+/* padding-left */
+.pl-0 { padding-left: 0 !important; }
+.pl-s { padding-left: 10px; }
+.pl-m { padding-left: 20px; }
+.pl-l { padding-left: 30px; }
+
+.margesauto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* Textes */
+.alignright  { text-align: right; }
+.aligncenter { text-align: center; }
+.alignleft   { text-align: left; }
+.alignjustify{ text-align: justify; }
+
+.uppercase { text-transform: uppercase; }
+
+
+/* pour les listes utiliser comme menu par exemple */
+ul.unstyled { 
+	list-style: none; 
+	padding: 0; 
+	margin: 0; 
+}
+
+/* remplacer le titre par une image en background par exemple */
+.visually-hidden {
+	position: absolute;
+	left: -7000px;
+	overflow: hidden;
+	font-size: .1px;
+	line-height: 0;
+}
+
+	[dir=rtl] .visually-hidden {
+		left: auto;
+		right: -7000px;
+	}
+
+
+/* Règles d'affichage */
+.hidden    { display: none; } /* caché partout (pour javascript) */
+.nodesktop { display: none; } /* caché sur desktop */
+.noprint   {} /* caché sur print */
+.notablet  {} /* caché sur tablettes */
+.nomobile  {} /* caché sur mobile */
+
+.break-tablet { } /* occupera toute la argeur sur tablette */
+.break-mobile { } /* occupera toute la argeur sur tablette */
+
