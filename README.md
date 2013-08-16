@@ -3,15 +3,15 @@ Starting-Block
 
 j'ai testé les frameworks CSS Twitter Bootstrap et Foundation, mais s'ils sont parfait pour styler des administrations, je n'ai jamais pu m'en servir pour intégrer un site web au design un peu trop libre. De plus, ils se révèlent surchargés de styles.
 
-Je vous propose donc un framework très basique pour que vous puissiez ne penser qu'à le personnaliser et non pas à bidouiller.
+Je vous propose donc un framework très basique pour que vous puissiez ne penser qu'à le personnaliser et non pas à bidouiller. Il est inspiré par d'autres projets comme :
+- http://www.knacss.com/ de Raphaël Goetter
+- http://rocssti.nicolas-hoffmann.net/ de Nicolas Hoffmann
+- et de pleins d'autres dont j'ai perdu les références :-/
 
 Le "htaccess" fourni est celui de Twitter Bootstrap qui est vraiment très travaillé.
-
 Ce fichier est facultatif, il est juste là pour optimiser le serveur et si vous rencontrez des difficultés ne l'utilisez tout simplement pas. Si vous avez déjà un tel fichier sur votre serveur, ne le remplacez surtout pas si vous ne savez pas ce que vous faites !
 
-Prefixfree permet de ne pas avoir à ajouter les préfixes en CSS3 (-webkit-, -moz-…).
-
-Modernizr permet de détecter si le navigateur ne supporte pas certaines choses en CSS ou HTML5 (se référer à la documentation sur le site).
+Vous pouvez utiliser librement tout les éléments de ce framework, les modifier, redistribuer... merci de me référencer tout de même.
 
 
 CONSIGNES
@@ -38,7 +38,6 @@ mediaqueries.css : les media queries
 demo.css : styles uniquement pour la démo (à effacer bien sur)
 
 La page HTML comprend des exemples sur l'utilisation des classes (regardez le code source).
-
 
 
 
