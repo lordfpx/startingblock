@@ -88,7 +88,7 @@ sub { top: .5ex; }
 
 abbr[title] { cursor: help; } 
 
-label, button, input[type="submit"], input[type="button"], input[type="reset"] { 
+button, input[type="submit"], input[type="button"], input[type="reset"] { 
 	-webkit-appearance: button;
 	cursor: pointer;
 	*overflow: visible;
