@@ -1,5 +1,5 @@
 /* ------------------------------------ *\
-		          LAYOUT
+                  LAYOUT
 \* ------------------------------------ */
 
 .nogut { 
@@ -12,17 +12,15 @@
     display: inline-block; /* pour créer un contexte de formatage de block (BFC) pour les enfants flottants */
     width: 100%;
     vertical-align: top;
-    padding-left: 10px; 
-    padding-right: 10px;
 }
 
 /* C'est ici que vous pouvez librement personnaliser les gouttières */
 .colset > [class*=col-], 
 .colset .subcolset > [class*=col-] {
     float: left;
-    padding-left: 10px; 
-    padding-right: 10px; 
-    min-height: 1px; /* pour qu'une colonne puisse être vide (pour une image en background par exemple) */
+    padding-left: 10px !important; 
+    padding-right: 10px !important; 
+    min-height: 1px;
 }
 
 /* Retirer les goutières des colonnes imbriquées */
@@ -33,30 +31,30 @@
 
 /* Les colonnes sont en %, si vous ne souhaitez pas d'un site flexible, créer un conteneur de taille fixe */
 .col-1,
-.colblank-1:first-child:before { width: 8.3333333333%; }
+.space-1:before { width: 8.3333333333%; }
 .col-2,
-.colblank-2:first-child:before { width: 16.6666666667%; }
+.space-2:before { width: 16.6666666667%; }
 .col-3,
-.colblank-3:first-child:before { width: 25%; }
+.space-3:before { width: 25%; }
 .col-4,
-.colblank-4:first-child:before { width: 33.3333333333%; }
+.space-4:before { width: 33.3333333333%; }
 .col-5,
-.colblank-5:first-child:before { width: 41.6666666667%; }
+.space-5:before { width: 41.6666666667%; }
 .col-6,
-.colblank-6:first-child:before { width: 50%; }
+.space-6:before { width: 50%; }
 .col-7,
-.colblank-7:first-child:before { width: 58.3333333333%; }
+.space-7:before { width: 58.3333333333%; }
 .col-8,
-.colblank-8:first-child:before { width: 66.6666666667%; }
+.space-8:before { width: 66.6666666667%; }
 .col-9,
-.colblank-9:first-child:before { width: 75%; }
+.space-9:before { width: 75%; }
 .col-10,
-.colblank-10:first-child:before { width: 83.3333333333%; }
+.space-10:before { width: 83.3333333333%; }
 .col-11
-,.colblank-11:first-child:before { width: 91.6666666667%; }
+,.space-11:before { width: 91.6666666667%; }
 .col-12 { width: 100%; }
 
-[class*=colblank-]:first-child:before{
+[class*=space-]:before{
     content: "";
     height: 1px;
     float: left;
