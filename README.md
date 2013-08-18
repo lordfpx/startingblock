@@ -33,6 +33,11 @@ La page index sert de point de départ. Effacez son contenu (<body>) et adaptez-
 
 
 
+FAVICONS
+--------
+Les favicons de ce frameworks sont adaptées pour la majorité des supports (navigateurs, iOS, Androïd...). Pour les designer, vous pouvez vous baser sur les exemple fournis ou utiliser un site comme : http://iconifier.net/
+
+
 CSS
 ---
 Le nom des classes est normalement parlant. Les CSS sont regroupés selon leur rôle :
