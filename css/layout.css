@@ -31,15 +31,32 @@
 }
 
 /* Les colonnes sont en %, si vous ne souhaitez pas d'un site flexible, créer un conteneur de taille fixe */
-.col-1 { width: 8.3333333333%; }
-.col-2 { width: 16.6666666667%; }
-.col-3 { width: 25%; }
-.col-4 { width: 33.3333333333%; }
-.col-5 { width: 41.6666666667%; }
-.col-6 { width: 50%; }
-.col-7 { width: 58.3333333333%; }
-.col-8 { width: 66.6666666667%; }
-.col-9 { width: 75%; }
-.col-10 { width: 83.3333333333%; }
-.col-11 { width: 91.6666666667%; }
+.col-1,
+.colblank-1:first-child:before { width: 8.3333333333%; }
+.col-2,
+.colblank-2:first-child:before { width: 16.6666666667%; }
+.col-3,
+.colblank-3:first-child:before { width: 25%; }
+.col-4,
+.colblank-4:first-child:before { width: 33.3333333333%; }
+.col-5,
+.colblank-5:first-child:before { width: 41.6666666667%; }
+.col-6,
+.colblank-6:first-child:before { width: 50%; }
+.col-7,
+.colblank-7:first-child:before { width: 58.3333333333%; }
+.col-8,
+.colblank-8:first-child:before { width: 66.6666666667%; }
+.col-9,
+.colblank-9:first-child:before { width: 75%; }
+.col-10,
+.colblank-10:first-child:before { width: 83.3333333333%; }
+.col-11
+,.colblank-11:first-child:before { width: 91.6666666667%; }
 .col-12 { width: 100%; }
+
+[class*=colblank-]:first-child:before{
+    content: "";
+    height: 1px;
+    float: left;
+} 
