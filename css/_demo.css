@@ -1,0 +1,105 @@
+/* --------------------------------------------------------- *\
+					STYLES DEMO 
+	(effacez le fichier quad vous intégrez votre site !!!)
+\* --------------------------------------------------------- */
+body{
+	font-family: arial, helvetica, sans-serif;
+}
+
+#intro {
+	padding-top: 70px;
+}
+
+.exemple{
+	background: rgba(230,230,230,.8);
+	border-radius: 20px;
+	padding: 40px 10px 10px 10px;
+	margin: 10px;
+	position: relative;
+}
+
+	.exemple:before{
+		content: "exemple";
+		color: rgb(200,200,200);
+		position: absolute;
+		top: 5px;
+		left: 10px;
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+.off {
+	color: grey;
+}
+
+.classe{
+	background: rgb(100,200,200);
+	padding: 2px 5px;
+	border-radius: 7px;
+}
+
+#menu{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	background: black;
+	color: white;
+	height: 4.1em;
+	line-height: 4.1em;
+	z-index: 2;
+}
+
+#menu a{
+	text-decoration: none;
+}
+
+#menu a:hover{
+	background: white;
+	color: black;
+}
+
+.intro{
+	width: 70%;
+	max-width: 700px;
+}
+
+.demo-margins{
+	background: grey;
+	width: 200px;
+	min-height: 21px;
+}
+
+.demo-margins div{
+	background: white;
+}
+
+#samplesLayout th, #samplesLayout td{
+	border: 1px solid grey;
+	padding: 5px;
+}
+
+#samplesLayout th{
+	background: grey;
+}
+
+#samplesLayout .col1{
+	width: 150px;
+}
+
+#samplesLayout .col2{
+	width: 400px;
+}
+
+
+@media (max-width: 768px) {
+	.break-tablet {
+		background: orange;
+	}
+}
+
+@media (max-width: 640px) {
+	.break-mobile {
+		background: red;
+	}
+}

@@ -1,13 +1,73 @@
 /* ------------------------------------ *\
 				GLOBAL
 \* ------------------------------------ */
+
+
+/* ------------------ GRILLE -------------------- */
+.nogut { 
+    padding-left: 0 !important; 
+    padding-right: 0 !important; /* retirer la gouttière sur une colonne */
+}
+
+.colset {
+    display: inline-block; /* pour créer un contexte de formatage de block (BFC) pour les enfants flottants */
+    width: 100%;
+    vertical-align: top;
+}
+
+/* C'est ici que vous pouvez librement personnaliser les gouttières */
+.colset > [class*=col-] {
+	position: relative;
+    float: left;
+    padding-left: 15px; 
+    padding-right: 15px; 
+    min-height: 1px;
+}
+
+.colset > [class*=col-]:first-of-type {
+    padding-left: 0;
+}
+
+.colset > [class*=col-]:last-of-type {
+    padding-right: 0;
+}
+
+/* Les colonnes sont en %, si vous ne souhaitez pas d'un site flexible, créer un conteneur de taille fixe (col-12 est inutile) */
+.col-1 { width: 8.3333333333%; }
+.col-2 { width: 16.6666666667%; }
+.col-3 { width: 25%; }
+.col-4 { width: 33.3333333333%; }
+.col-5 { width: 41.6666666667%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.3333333333%; }
+.col-8 { width: 66.6666666667%; }
+.col-9 { width: 75%; }
+.col-10 { width: 83.3333333333%; }
+.col-11 { width: 91.6666666667%; }
+
+.space-1 { margin-left: 8.3333333333%; }
+.space-2 { margin-left: 16.6666666667%; }
+.space-3 { margin-left: 25%; }
+.space-4 { margin-left: 33.3333333333%; }
+.space-5 { margin-left: 41.6666666667%; }
+.space-6 { margin-left: 50%; }
+.space-7 { margin-left: 58.3333333333%; }
+.space-8 { margin-left: 66.6666666667%; }
+.space-9 { margin-left: 75%; }
+.space-10 { margin-left: 83.3333333333%; }
+.space-11 { margin-left: 91.6666666667%; }
+
+/* -------------------------------------------------------------- */
+
+
+.wrapper {
+    max-width: 1000px;
+}
+
 .left 	{ float: left; }
 .right 	{ float: right; }
 
 .mod 	{ overflow: hidden; } /* block contenant des flottants */
-
-	.ie6 .mod, .ie7 .mod
-	.ie6 .clearfix, .ie7 .clearfix { zoom: 1; }
 
 .clearfix:after,
 .mod:after{
@@ -15,6 +75,9 @@
 	display: table;
 	clear: both;
 }
+
+	.ie6 .mod, .ie7 .mod
+	.ie6 .clearfix, .ie7 .clearfix { zoom: 1; }
 
 
 /* inline-block */
@@ -39,25 +102,25 @@
 .m-m { margin: 20px; }
 .m-l { margin: 30px; }
 
-/* margin-top */
+/* mt = margin-top */
 .mt-0 { margin-top: 0 !important; }
 .mt-s { margin-top: 10px; }
 .mt-m { margin-top: 20px; }
 .mt-l { margin-top: 30px; }
 
-/* margin-right */
+/* mr = margin-right */
 .mr-0 { margin-right: 0 !important; }
 .mr-s { margin-right: 10px; }
 .mr-m { margin-right: 20px; }
 .mr-l { margin-right: 30px; }
 
-/* margin-bottom */
+/* mb = margin-bottom */
 .mb-0 { margin-bottom: 0 !important; }
 .mb-s { margin-bottom: 10px; }
 .mb-m { margin-bottom: 20px; }
 .mb-l { margin-bottom: 30px; }
 
-/* margin-left */
+/* ml = margin-left */
 .ml-0 { margin-left: 0 !important; }
 .ml-s { margin-left: 10px; }
 .ml-m { margin-left: 20px; }
@@ -69,31 +132,31 @@
 .p-m { padding: 20px; }
 .p-l { padding: 30px; }
 
-/* padding-top */
+/* pt = padding-top */
 .pt-0 { padding-top: 0 !important; }
 .pt-s { padding-top: 10px; }
 .pt-m { padding-top: 20px; }
 .pt-l { padding-top: 30px; }
 
-/* padding-right */
+/* pr = padding-right */
 .pr-0 { padding-right: 0 !important; }
 .pr-s { padding-right: 10px; }
 .pr-m { padding-right: 20px; }
 .pr-l { padding-right: 30px; }
 
-/* padding-bottom */
+/* pb = padding-bottom */
 .pb-0 { padding-bottom: 0 !important; }
 .pb-s { padding-bottom: 10px; }
 .pb-m { padding-bottom: 20px; }
 .pb-l { padding-bottom: 30px; }
 
-/* padding-left */
+/* pl = padding-left */
 .pl-0 { padding-left: 0 !important; }
 .pl-s { padding-left: 10px; }
 .pl-m { padding-left: 20px; }
 .pl-l { padding-left: 30px; }
 
-.margesauto {
+.m-auto {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -115,28 +178,13 @@ ul.unstyled {
 	margin: 0; 
 }
 
-/* remplacer le titre par une image en background par exemple */
-.visually-hidden {
-	position: absolute;
-	left: -7000px;
-	overflow: hidden;
-	font-size: .1px;
-	line-height: 0;
+/* remplacer du texte par une image en background par exemple */
+.text-hide {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
 }
-
-	[dir=rtl] .visually-hidden {
-		left: auto;
-		right: -7000px;
-	}
 
 
 /* Règles d'affichage */
 .hidden    { display: none; } /* caché partout (pour javascript) */
-.nodesktop { display: none; } /* caché sur desktop */
-.noprint   {} /* caché sur print */
-.notablet  {} /* caché sur tablettes */
-.nomobile  {} /* caché sur mobile */
-
-.break-tablet { } /* occupera toute la argeur sur tablette */
-.break-mobile { } /* occupera toute la argeur sur tablette */
-

@@ -21,6 +21,20 @@
 	border: 0; 
 }
 
-.ok {
+.good, 
+.good input, 
+.good textarea, 
+.good select {
+	color: green;
+	font-weight: bold;
+}
 
+.good input, 
+.good textarea, 
+.good select {
+	border: 1px solid green;
+}
+
+.good img { 
+	border: 0; 
 }

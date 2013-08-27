@@ -18,8 +18,6 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 article, aside, audio, canvas, datagrid, datalist, details, dialog, figure, footer, header, main, menu, nav, section, video {display: block;}
 abbr, eventsource, mark, meter, time, progress, output, bb { display: inline; }
 
-ul, ol { padding-left: 30px; }
-
 blockquote, q {quotes: none;}
 blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
 table {border-collapse: collapse; border-spacing: 0;}
@@ -37,10 +35,8 @@ body > script {display: none !important;}
 
 a{
 	color: inherit;
-	text-decoration: none;
 	border: 0;
 }
-a:focus { outline: thin dotted; }
 
 em { font-style: italic; }
 b, strong { font-weight: bold; }
@@ -139,20 +135,10 @@ html { -webkit-font-smoothing: antialiased; }
 
 body { background: #fff; }
 
-/* retire la marge du haut sur le 1er élément d'un bloc */
-p:first-child,
-ul:first-child,
-ol:first-child,
-dl:first-child,
-blockquote:first-child,
-pre:first-child,
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child {
+/* retire les marges des éléments imbriqués dans une liste */
+li > p, li > ul, li > ol {
 	margin-top: 0;
+	margin-bottom: 0;
 }
 
 /* retire la marge du bas sur le dernier élément d'un bloc */
@@ -169,11 +155,5 @@ h3:last-child,
 h4:last-child,
 h5:last-child,
 h6:last-child {
-	margin-bottom: 0;
-}
-
-/* retire les marges des éléments imbriqués dans une liste */
-li p, li ul, li ol {
-	margin-top: 0;
 	margin-bottom: 0;
 }

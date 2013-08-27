@@ -1,6 +1,14 @@
 /* ------------------------------------ *\
 			MEDIA QUERIES
 \* ------------------------------------ */
+.nodesktop { display: none; } /* caché sur desktop */
+.noprint   {} /* caché sur print */
+.notablet  {} /* caché sur tablettes */
+.nomobile  {} /* caché sur mobile */
+
+.break-tablet { } /* occupera toute la largeur sur tablettes */
+.break-mobile { } /* occupera toute la largeur sur mobiles */
+
 
 /* Ecrans Retina */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -21,6 +29,19 @@
 	.break-tablet {
 		float: none;
 		width: 100%;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5,
+	h6, .h6 {
+		text-rendering: optimizeLegibility;
 	}
 }
 
@@ -33,6 +54,19 @@
 	.break-mobile {
 		float: none;
 		width: 100%;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5,
+	h6, .h6 {
+		text-rendering: optimizeLegibility;
 	}
 }
 
@@ -84,4 +118,13 @@
 	* à limiter cette possibilité aux liens dans le contenu */
 	a:after { content: " (" attr(href) ") "; }
 	a:after img { content: ""; }
+
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5,
+	h6, .h6 {
+		text-rendering: optimizeLegibility;
+	}
 }
