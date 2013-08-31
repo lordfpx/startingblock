@@ -1,8 +1,5 @@
 @import 'config.less';
 
-/* ------------------------------------ *\
-				TYPO 
-\* ------------------------------------ */
 
 /* pense-bête font-face
 -----------------------
@@ -26,6 +23,7 @@ body{
 	.font-size(@fontBase);
 	line-height: @lineHeight;
 	text-rendering: optimizeLegibility;
+	color: @color1;
 }
 
 /* TEXTE STANDARD */
@@ -45,7 +43,7 @@ ul, ol {
 
 hr {
 	border: none;
-	border-top: 1px solid rgb(200,200,200);
+	border-top: 4px solid @color3;
 }
 
 /* modifier taille des textes */
@@ -132,7 +130,7 @@ a {
 
 
 /* AUTRES */
-q{
+q {
 	font-style: italic;
 }
 

@@ -1,0 +1,107 @@
+@import 'config.less';
+
+
+/* --------------------------------------------------------- *\
+					STYLES DEMO 
+	(effacez le fichier quad vous intégrez votre site !!!)
+\* --------------------------------------------------------- */
+body{
+	font-family: arial, helvetica, sans-serif;
+}
+
+#intro {
+	padding-top: 70px;
+}
+
+.exemple{
+	background: @color3;
+	border-radius: 20px;
+	padding: 40px 10px 10px 10px;
+	margin: 10px;
+	position: relative;
+}
+
+	.exemple:before{
+		content: "exemple";
+		color: @color4;
+		position: absolute;
+		top: 5px;
+		left: 10px;
+		.font-size(20);
+		font-weight: bold;
+	}
+
+.off {
+	color: @color2 ;
+}
+
+.classe{
+	background: @colorLink;
+	padding: 2px 5px;
+	border-radius: 7px;
+}
+
+#menu{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	background: @color1;
+	color: white;
+	line-height: 4.1em;
+	z-index: 2;
+}
+
+#menu a{
+	text-decoration: none;
+}
+
+#menu a:hover{
+	background: white;
+	color: @color1;
+}
+
+.intro{
+	width: 70%;
+	max-width: 700px;
+}
+
+.demo-margins{
+	border: 1px solid @color2;
+	width: 200px;
+	min-height: 21px;
+}
+
+.demo-margins div{
+	background: white;
+}
+
+#samplesLayout th, #samplesLayout td{
+	border: 1px solid @color2;
+	padding: 5px;
+}
+
+#samplesLayout th{
+	background: @color2;
+}
+
+#samplesLayout .col1{
+	width: 150px;
+}
+
+#samplesLayout .col2{
+	width: 400px;
+}
+
+
+@media (max-width: @screenSmall) {
+	.break-tablet {
+		background: orange;
+	}
+}
+
+@media (max-width: @screenTiny) {
+	.break-mobile {
+		background: red;
+	}
+}

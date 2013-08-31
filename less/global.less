@@ -1,8 +1,5 @@
 @import 'config.less';
 
-/* ------------------------------------ *\
-				GLOBAL
-\* ------------------------------------ */
 
 /* ------------------ GRILLE -------------------- */
 .nogut { 
@@ -20,7 +17,7 @@
 	    float: left;
 	    padding-left: @gutter; 
 	    padding-right: @gutter; 
-	    min-height: 1px;
+	    min-height: 1px; /* Pour que ça marche même si le bloc est vide */
 	}
 
 	> [class*=col-]:first-of-type {
@@ -174,7 +171,7 @@ ul.unstyled {
 }
 
 /* remplacer du texte par une image en background par exemple */
-.text-hide {
+.text-hidden {
 	font: 0/0 a;
 	color: transparent;
 	text-shadow: none;

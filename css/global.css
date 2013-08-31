@@ -1,6 +1,3 @@
-/* ------------------------------------ *\
-				GLOBAL
-\* ------------------------------------ */
 /* ------------------ GRILLE -------------------- */
 .nogut {
   padding-left: 0 !important;
@@ -21,6 +18,8 @@
   padding-left: 15px;
   padding-right: 15px;
   min-height: 1px;
+  /* Pour que ça marche même si le bloc est vide */
+
 }
 .colset > [class*=col-]:first-of-type {
   padding-left: 0;
@@ -291,7 +290,7 @@ ul.unstyled {
   margin: 0;
 }
 /* remplacer du texte par une image en background par exemple */
-.text-hide {
+.text-hidden {
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
