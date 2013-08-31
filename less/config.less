@@ -1,0 +1,21 @@
+@fontBase     : 14; 	// taille de base
+@lineHeight   : 1.5;    // line-height de base
+
+@size1        : 10px; 	// taille minimale (pour margin et padding)
+@size2        : 20px; 	// taille moyenne (pour margin et padding)
+@size3        : 30px; 	// taille importante (pour margin et padding)
+
+@wrapper      : 1000px; // définition d'un conteneur si nécessaire
+
+@gutter       : 15px; 	// goutière en pixel pour la grille
+
+@screenTiny   : 640px; 	// très petite taille d'écran pour media query (mobiles)
+@screenSmall  : 768px; 	// taille d'écran réduite media query (tablettes)
+@screenLarge  : 1280px; // grands écrans media query (moniteurs de grand format)
+
+
+// utlisé automatiquement par les CSS = ne pas modifier
+.font-size(@fontSize) {
+	font-size: (@fontSize + 0px);
+	font-size: ((@fontSize / 10) + 0rem);
+}

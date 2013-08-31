@@ -65,7 +65,7 @@ body{
 }
 
 .demo-margins{
-	background: grey;
+	border: 1px solid grey;
 	width: 200px;
 	min-height: 21px;
 }

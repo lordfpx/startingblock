@@ -1,0 +1,185 @@
+@import 'config.less';
+
+/* ------------------------------------ *\
+				GLOBAL
+\* ------------------------------------ */
+
+/* ------------------ GRILLE -------------------- */
+.nogut { 
+    padding-left: 0 !important; 
+    padding-right: 0 !important; /* retirer la gouttière sur une colonne */
+}
+
+.colset {
+    display: inline-block; /* pour créer un contexte de formatage de block (BFC) pour les enfants flottants */
+    width: 100%;
+    vertical-align: top;
+
+    > [class*=col-] {
+		position: relative;
+	    float: left;
+	    padding-left: @gutter; 
+	    padding-right: @gutter; 
+	    min-height: 1px;
+	}
+
+	> [class*=col-]:first-of-type {
+	    padding-left: 0;
+	}
+
+	> [class*=col-]:last-of-type {
+	    padding-right: 0;
+	}
+}
+
+.col-1  { width: ((100 / 12) + 0%); }
+.col-2  { width: ((100 / 12) * 2 + 0%); }
+.col-3  { width: ((100 / 12) * 3 + 0%); }
+.col-4  { width: ((100 / 12) * 4 + 0%); }
+.col-5  { width: ((100 / 12) * 5 + 0%); }
+.col-6  { width: ((100 / 12) * 6 + 0%); }
+.col-7  { width: ((100 / 12) * 7 + 0%); }
+.col-8  { width: ((100 / 12) * 8 + 0%); }
+.col-9  { width: ((100 / 12) * 9 + 0%); }
+.col-10 { width: ((100 / 12) * 10 + 0%); }
+.col-11 { width: ((100 / 12) * 11 + 0%); }
+
+.space-1  { margin-left: ((100 / 12) + 0%); }
+.space-2  { margin-left: ((100 / 12) * 2 + 0%); }
+.space-3  { margin-left: ((100 / 12) * 3 + 0%); }
+.space-4  { margin-left: ((100 / 12) * 4 + 0%); }
+.space-5  { margin-left: ((100 / 12) * 5 + 0%); }
+.space-6  { margin-left: ((100 / 12) * 6 + 0%); }
+.space-7  { margin-left: ((100 / 12) * 7 + 0%); }
+.space-8  { margin-left: ((100 / 12) * 8 + 0%); }
+.space-9  { margin-left: ((100 / 12) * 9 + 0%); }
+.space-10 { margin-left: ((100 / 12) * 10 + 0%); }
+.space-11 { margin-left: ((100 / 12) * 11 + 0%); }
+/* -------------------------------------------------------------- */
+
+
+.wrapper {
+    max-width: @wrapper;
+}
+
+.left 	{ float: left; }
+.right 	{ float: right; }
+
+.mod 	{ overflow: hidden; } /* block contenant des flottants */
+
+.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+	.ie6 .mod, .ie7 .mod,
+	.ie6 .clearfix, .ie7 .clearfix { zoom: 1; }
+
+
+/* inline-block */
+.ilbl {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: -.25em;
+}
+	.ie6 .ilbl, .ie7 .ilbl {
+		display: inline;
+		zoom: 1;
+	}
+
+
+/* Définitions de marges et de paddings */
+/* margin */
+.m0 { margin: 0 !important; }
+.m1 { margin: @size1; }
+.m2 { margin: @size2; }
+.m3 { margin: @size3; }
+
+/* mt = margin-top */
+.mt0 { margin-top: 0 !important; }
+.mt1 { margin-top: @size1; }
+.mt2 { margin-top: @size2; }
+.mt3 { margin-top: @size3; }
+
+/* mr = margin-right */
+.mr0 { margin-right: 0 !important; }
+.mr1 { margin-right: @size1; }
+.mr2 { margin-right: @size2; }
+.mr3 { margin-right: @size3; }
+
+/* mb = margin-bottom */
+.mb0 { margin-bottom: 0 !important; }
+.mb1 { margin-bottom: @size1; }
+.mb2 { margin-bottom: @size2; }
+.mb3 { margin-bottom: @size3; }
+
+/* ml = margin-left */
+.ml0 { margin-left: 0 !important; }
+.ml1 { margin-left: @size1; }
+.ml2 { margin-left: @size2; }
+.ml3 { margin-left: @size3; }
+
+/* padding */
+.p0 { padding: 0 !important; }
+.p1 { padding: @size1; }
+.p2 { padding: @size2; }
+.p3 { padding: @size3; }
+
+/* pt = padding-top */
+.pt0 { padding-top: 0 !important; }
+.pt1 { padding-top: @size1; }
+.pt2 { padding-top: @size2; }
+.pt3 { padding-top: @size3; }
+
+/* pr = padding-right */
+.pr0 { padding-right: 0 !important; }
+.pr1 { padding-right: @size1; }
+.pr2 { padding-right: @size2; }
+.pr3 { padding-right: @size3; }
+
+/* pb = padding-bottom */
+.pb0 { padding-bottom: 0 !important; }
+.pb1 { padding-bottom: @size1; }
+.pb2 { padding-bottom: @size2; }
+.pb3 { padding-bottom: @size3; }
+
+/* pl = padding-left */
+.pl0 { padding-left: 0 !important; }
+.pl1 { padding-left: @size1; }
+.pl2 { padding-left: @size2; }
+.pl3 { padding-left: @size3; }
+
+.m-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* Textes */
+.alignright  { text-align: right; }
+.aligncenter { text-align: center; }
+.alignleft   { text-align: left; }
+.alignjustify{ text-align: justify; }
+
+.uppercase { text-transform: uppercase; }
+.underline { text-decoration: underline; }
+
+
+/* pour les listes utiliser comme menu par exemple */
+ul.unstyled { 
+	list-style: none; 
+	padding: 0; 
+	margin: 0; 
+}
+
+/* remplacer du texte par une image en background par exemple */
+.text-hide {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+}
+
+
+/* Règles d'affichage */
+.hidden    { display: none; } /* caché partout (pour javascript) */

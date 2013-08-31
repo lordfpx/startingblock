@@ -1,7 +1,6 @@
 /* ------------------------------------ *\
 				TYPO 
 \* ------------------------------------ */
-
 /* pense-bête font-face
 -----------------------
 @font-face {
@@ -15,126 +14,125 @@
 	font-style: normal;
 }
 */
-
 html {
-	font-size: 62.5%;
+  font-size: 62.5%;
 }
-
-body{
-	font-size: 14px; 
-	font-size: 1.4rem;
-	line-height: 1.5; /* àdapter à votre design */
-	text-rendering: optimizeLegibility;
+body {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
 }
-
 /* TEXTE STANDARD */
-p, ul, ol, dl, blockquote,
-pre, td, th, label, textarea, caption,
-details, figure, hgroup {
-	font-size: 14px;
-	font-size: 1.4rem;
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+td,
+th,
+label,
+textarea,
+caption,
+details,
+figure,
+hgroup {
+  font-size: 14px;
+  font-size: 1.4rem;
 }
-
-p, ul, ol, dl, blockquote, pre {
-	margin-bottom: 20px;
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre {
+  margin-bottom: 20px;
 }
-
-ul, ol { 
-	padding-left: 30px; 
+ul,
+ol {
+  padding-left: 30px;
 }
-
 hr {
-	margin-top: 20px;
-	margin-bottom: 40px;
-	border: none;
-	border-top: 1px solid rgb(200,200,200);
+  border: none;
+  border-top: 1px solid #c8c8c8;
 }
-
 /* modifier taille des textes */
-.smaller { 
-	font-size: 10px; 
-	font-size: 1rem;
+.smaller {
+  font-size: 10px;
+  font-size: 1rem;
 }
-.small { 
-	font-size: 12px; 
-	font-size: 1.2rem;
+.small {
+  font-size: 12px;
+  font-size: 1.2rem;
 }
-.big { 
-	font-size: 16px; 
-	font-size: 1.6rem; 
+.big {
+  font-size: 16px;
+  font-size: 1.6rem;
 }
-.bigger { 
-	font-size: 19px;
-	font-size: 1.9rem; 
+.bigger {
+  font-size: 19px;
+  font-size: 1.9rem;
 }
-.biggest { 
-	font-size: 24px; 
-	font-size: 2.4rem; 
+.biggest {
+  font-size: 24px;
+  font-size: 2.4rem;
 }
-
-
 /* TITRES */
-h1, .h1 {
-	font-size: 60px;
-	font-size: 6rem;
-	margin-top: 20px;
-	margin-bottom: 10px;
+h1,
+.h1 {
+  font-size: 60px;
+  font-size: 6rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
-
-h2, .h2 {
-	font-size: 35px;
-	font-size: 3.5rem;
-	margin-top: 20px;
-	margin-bottom: 10px;
+h2,
+.h2 {
+  font-size: 35px;
+  font-size: 3.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
-
-h3, .h3 {
-	font-size: 26px;
-	font-size: 2.6rem;
-	margin-top: 20px;
-	margin-bottom: 10px;
+h3,
+.h3 {
+  font-size: 26px;
+  font-size: 2.6rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
-
-h4, .h4 {
-	font-size: 20px;
-	font-size: 2rem;
-	margin-top: 20px;
-	margin-bottom: 10px;
+h4,
+.h4 {
+  font-size: 20px;
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
-
-h5, .h5 {
-	font-size: 14px;
-	font-size: 1.4rem;
-	margin-top: 10px;
-	margin-bottom: 10px;
+h5,
+.h5 {
+  font-size: 14px;
+  font-size: 1.4rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-
-h6, .h6 {
-	font-size: 12px;
-	font-size: 1.2rem;
-	margin-top: 10px;
-	margin-bottom: 10px;
+h6,
+.h6 {
+  font-size: 12px;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-
-
 /* LIENS */
-a { 
-	text-decoration: underline; 
+a {
+  text-decoration: underline;
 }
-	a:link {  } 
-	a:visited {  } 
-	a:focus { 
-		outline: thin dotted; 
-	} 
-	a:hover { 
-		background: black; 
-		color: white;
-	} 
-	a:active {  } 
-
-
+a:focus {
+  outline: thin dotted;
+}
+a:hover {
+  background: black;
+  color: white;
+}
 /* AUTRES */
-q{
-	font-style: italic;
+q {
+  font-style: italic;
 }
-

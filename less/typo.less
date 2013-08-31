@@ -1,0 +1,138 @@
+@import 'config.less';
+
+/* ------------------------------------ *\
+				TYPO 
+\* ------------------------------------ */
+
+/* pense-bête font-face
+-----------------------
+@font-face {
+	font-family: 'FuturaStdBook';
+	src: url('fonts/futurastd-book-webfont.eot');
+	src: url('fonts/futurastd-book-webfont.eot?#iefix') format('eot'),
+		url('fonts/futurastd-book-webfont.woff') format('woff'),
+		url('fonts/futurastd-book-webfont.ttf') format('truetype'),
+		url('fonts/futurastd-book-webfont.svg#FuturaStdBook') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+*/
+
+html {
+	font-size: 62.5%;
+}
+
+body{
+	.font-size(@fontBase);
+	line-height: @lineHeight;
+	text-rendering: optimizeLegibility;
+}
+
+/* TEXTE STANDARD */
+p, ul, ol, dl, blockquote,
+pre, td, th, label, textarea, caption,
+details, figure, hgroup {
+	.font-size(@fontBase);
+}
+
+p, ul, ol, dl, blockquote, pre {
+	margin-bottom: @size2;
+}
+
+ul, ol { 
+	padding-left: @size3; 
+}
+
+hr {
+	border: none;
+	border-top: 1px solid rgb(200,200,200);
+}
+
+/* modifier taille des textes */
+.smaller { 
+	.font-size(10);
+}
+.small { 
+	.font-size(12);
+}
+.big { 
+	.font-size(16);
+}
+.bigger { 
+	.font-size(19);
+}
+.biggest { 
+	.font-size(24); 
+}
+
+
+/* TITRES */
+h1, .h1 {
+	.font-size(60);
+	margin-top: @size2;
+	margin-bottom: @size1;
+}
+
+h2, .h2 {
+	.font-size(35);
+	margin-top: @size2;
+	margin-bottom: @size1;
+}
+
+h3, .h3 {
+	.font-size(26);
+	margin-top: @size2;
+	margin-bottom: @size1;
+}
+
+h4, .h4 {
+	.font-size(20);
+	margin-top: @size2;
+	margin-bottom: @size1;
+}
+
+h5, .h5 {
+	.font-size(14);
+	margin-top: @size1;
+	margin-bottom: @size1;
+}
+
+h6, .h6 {
+	.font-size(12);
+	margin-top: @size1;
+	margin-bottom: @size1;
+}
+
+
+/* LIENS */
+a { 
+	text-decoration: underline; 
+
+	&link{
+
+	}
+
+	&:visited{
+
+	}
+
+	&:focus{
+		outline: thin dotted; 
+	}
+
+	&:hover{
+		background: black; 
+		color: white;
+	}
+
+	&:active{
+
+	}
+}
+
+
+/* AUTRES */
+q{
+	font-style: italic;
+}
+

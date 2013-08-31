@@ -1,40 +1,32 @@
 /* ------------------------------------ *\
 				FORMS
 \* ------------------------------------ */
-
 /* messages d'erreur ou de confirmation */
-.alert, 
-.alert input, 
-.alert textarea, 
+.alert {
+  color: red;
+  font-weight: bold;
+}
+.alert input,
+.alert textarea,
 .alert select {
-	color: red;
-	font-weight: bold;
+  color: red;
+  font-weight: bold;
+  border: 1px solid red;
 }
-
-.alert input, 
-.alert textarea, 
-.alert select {
-	border: 1px solid red;
+.alert img {
+  border: 0;
 }
-
-.alert img { 
-	border: 0; 
+.good {
+  color: green;
+  font-weight: bold;
 }
-
-.good, 
-.good input, 
-.good textarea, 
+.good input,
+.good textarea,
 .good select {
-	color: green;
-	font-weight: bold;
+  color: green;
+  font-weight: bold;
+  border: 1px solid green;
 }
-
-.good input, 
-.good textarea, 
-.good select {
-	border: 1px solid green;
-}
-
-.good img { 
-	border: 0; 
+.good img {
+  border: 0;
 }
