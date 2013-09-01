@@ -59,7 +59,7 @@ table, td, blockquote, code, pre, textarea, input {
 	height: auto;
 }
 
-iframe{
+iframe {
 	vertical-align: middle;
 	border: 0;
 }
@@ -138,22 +138,5 @@ body { background: #fff; }
 /* retire les marges des éléments imbriqués dans une liste */
 li > p, li > ul, li > ol {
 	margin-top: 0;
-	margin-bottom: 0;
-}
-
-/* retire la marge du bas sur le dernier élément d'un bloc */
-p:last-child,
-ul:last-child,
-ol:last-child,
-dl:last-child,
-blockquote:last-child,
-pre:last-child,
-table:last-child,
-h1:last-child,
-h2:last-child,
-h3:last-child,
-h4:last-child,
-h5:last-child,
-h6:last-child {
 	margin-bottom: 0;
 }
