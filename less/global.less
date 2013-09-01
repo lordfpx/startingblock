@@ -11,6 +11,7 @@
     display: inline-block; /* pour créer un contexte de formatage de block (BFC) pour les enfants flottants */
     width: 100%;
     vertical-align: top;
+    .nogut; // évite le doublement de la goutière en cas d'imbrication (.col-* .colset)
 
     > [class*=col-] {
 		position: relative;
@@ -18,14 +19,6 @@
 	    padding-left: @gutter; 
 	    padding-right: @gutter; 
 	    min-height: 1px; /* Pour que ça marche même si le bloc est vide */
-	}
-
-	> [class*=col-]:first-of-type {
-	    padding-left: 0;
-	}
-
-	> [class*=col-]:last-of-type {
-	    padding-right: 0;
 	}
 }
 
@@ -40,6 +33,7 @@
 .col-9  { width: ((100 / 12) * 9 + 0%); }
 .col-10 { width: ((100 / 12) * 10 + 0%); }
 .col-11 { width: ((100 / 12) * 11 + 0%); }
+.col-12 { width: 100%; }
 
 .space-1  { margin-left: ((100 / 12) + 0%); }
 .space-2  { margin-left: ((100 / 12) * 2 + 0%); }

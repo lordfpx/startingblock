@@ -19,9 +19,8 @@ body{
 	padding: 40px 10px 10px 10px;
 	margin: 10px;
 	position: relative;
-}
 
-	.exemple:before{
+	&:before{
 		content: "exemple";
 		color: @color4;
 		position: absolute;
@@ -30,6 +29,7 @@ body{
 		.font-size(20);
 		font-weight: bold;
 	}
+}
 
 .off {
 	color: @color2 ;
@@ -50,16 +50,16 @@ body{
 	color: white;
 	line-height: 4.1em;
 	z-index: 2;
-}
 
-#menu a{
-	text-decoration: none;
-}
+	a{
+		text-decoration: none;
 
-#menu a:hover{
-	background: white;
-	color: @color1;
-}
+		&:hover{
+			background: white;
+			color: @color1;
+		}
+	}
+} 
 
 .intro{
 	width: 70%;
@@ -68,40 +68,48 @@ body{
 
 .demo-margins{
 	border: 1px solid @color2;
-	width: 200px;
+	width: 40%;
 	min-height: 21px;
+
+	div{
+		background: white;
+	}
 }
 
-.demo-margins div{
-	background: white;
+#samplesLayout {
+	th, td{
+		border: 1px solid @color2;
+		padding: 5px;
+	}
+
+	th{
+		background: @color2;
+	}
+
+	.col1{
+		width: 150px;
+	}
+
+	.col2{
+		width: 400px;
+	}
 }
 
-#samplesLayout th, #samplesLayout td{
-	border: 1px solid @color2;
-	padding: 5px;
-}
+#grilles [class*=col-]{
+	border:1px solid rgba(0,0,0,.1);
+	background: rgba(0,0,0,.2);
 
-#samplesLayout th{
-	background: @color2;
-}
-
-#samplesLayout .col1{
-	width: 150px;
-}
-
-#samplesLayout .col2{
-	width: 400px;
 }
 
 
 @media (max-width: @screenSmall) {
 	.break-tablet {
-		background: orange;
+		background: rgba(255,150,0,.2) !important;
 	}
 }
 
 @media (max-width: @screenTiny) {
 	.break-mobile {
-		background: red;
+		background: rgba(255,0,0,.2) !important;
 	}
 }

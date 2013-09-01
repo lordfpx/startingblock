@@ -56,7 +56,7 @@ body {
 }
 .demo-margins {
   border: 1px solid #7d7d7d;
-  width: 200px;
+  width: 40%;
   min-height: 21px;
 }
 .demo-margins div {
@@ -76,13 +76,17 @@ body {
 #samplesLayout .col2 {
   width: 400px;
 }
+#grilles [class*=col-] {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+}
 @media (max-width: 768px) {
   .break-tablet {
-    background: orange;
+    background: rgba(255, 150, 0, 0.2) !important;
   }
 }
 @media (max-width: 640px) {
   .break-mobile {
-    background: red;
+    background: rgba(255, 0, 0, 0.2) !important;
   }
 }
