@@ -132,150 +132,150 @@
 }
 /* Définitions de marges et de paddings */
 /* margin */
-.m0 {
+.margin0 {
   margin: 0 !important;
 }
-.m1 {
+.margin1 {
   margin: 10px;
 }
-.m2 {
+.margin2 {
   margin: 20px;
 }
-.m3 {
+.margin3 {
   margin: 30px;
 }
 /* mt = margin-top */
-.mt0 {
+.marginT0 {
   margin-top: 0 !important;
 }
-.mt1 {
+.marginT1 {
   margin-top: 10px;
 }
-.mt2 {
+.marginT2 {
   margin-top: 20px;
 }
-.mt3 {
+.marginT3 {
   margin-top: 30px;
 }
 /* mr = margin-right */
-.mr0 {
+.marginR0 {
   margin-right: 0 !important;
 }
-.mr1 {
+.marginR1 {
   margin-right: 10px;
 }
-.mr2 {
+.marginR2 {
   margin-right: 20px;
 }
-.mr3 {
+.marginR3 {
   margin-right: 30px;
 }
 /* mb = margin-bottom */
-.mb0 {
+.marginB0 {
   margin-bottom: 0 !important;
 }
-.mb1 {
+.marginB1 {
   margin-bottom: 10px;
 }
-.mb2 {
+.marginB2 {
   margin-bottom: 20px;
 }
-.mb3 {
+.marginB3 {
   margin-bottom: 30px;
 }
 /* ml = margin-left */
-.ml0 {
+.marginL0 {
   margin-left: 0 !important;
 }
-.ml1 {
+.marginL1 {
   margin-left: 10px;
 }
-.ml2 {
+.marginL2 {
   margin-left: 20px;
 }
-.ml3 {
+.marginL3 {
   margin-left: 30px;
 }
 /* padding */
-.p0 {
+.padding0 {
   padding: 0 !important;
 }
-.p1 {
+.padding1 {
   padding: 10px;
 }
-.p2 {
+.padding2 {
   padding: 20px;
 }
-.p3 {
+.padding3 {
   padding: 30px;
 }
 /* pt = padding-top */
-.pt0 {
+.paddingT0 {
   padding-top: 0 !important;
 }
-.pt1 {
+.paddingT1 {
   padding-top: 10px;
 }
-.pt2 {
+.paddingT2 {
   padding-top: 20px;
 }
-.pt3 {
+.paddingT3 {
   padding-top: 30px;
 }
 /* pr = padding-right */
-.pr0 {
+.paddingR0 {
   padding-right: 0 !important;
 }
-.pr1 {
+.paddingR1 {
   padding-right: 10px;
 }
-.pr2 {
+.paddingR2 {
   padding-right: 20px;
 }
-.pr3 {
+.paddingR3 {
   padding-right: 30px;
 }
 /* pb = padding-bottom */
-.pb0 {
+.paddingB0 {
   padding-bottom: 0 !important;
 }
-.pb1 {
+.paddingB1 {
   padding-bottom: 10px;
 }
-.pb2 {
+.paddingB2 {
   padding-bottom: 20px;
 }
-.pb3 {
+.paddingB3 {
   padding-bottom: 30px;
 }
 /* pl = padding-left */
-.pl0 {
+.paddingL0 {
   padding-left: 0 !important;
 }
-.pl1 {
+.paddingL1 {
   padding-left: 10px;
 }
-.pl2 {
+.paddingL2 {
   padding-left: 20px;
 }
-.pl3 {
+.paddingL3 {
   padding-left: 30px;
 }
-.m-auto {
+.marginAuto {
   margin-left: auto;
   margin-right: auto;
 }
 /* Textes */
-.alignright {
+.alignR {
   text-align: right;
 }
-.aligncenter {
+.alignC {
   text-align: center;
 }
-.alignleft {
+.alignL {
   text-align: left;
 }
-.alignjustify {
+.alignJ {
   text-align: justify;
 }
 .uppercase {
@@ -291,7 +291,7 @@ ul.unstyled {
   margin: 0;
 }
 /* remplacer du texte par une image en background par exemple */
-.text-hidden {
+.textHidden {
   font: 0/0 a;
   color: transparent;
   text-shadow: none;

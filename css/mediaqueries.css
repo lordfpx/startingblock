@@ -27,7 +27,7 @@
     display: none;
   }
   /* linéarisation des contenus flottants */
-  .break-tablet {
+  .breakTablet {
     float: none;
     width: 100%;
     margin-left: 0 !important;
@@ -57,7 +57,7 @@
     display: none;
   }
   /* linéarisation des contenus flottants */
-  .break-mobile {
+  .breakMobile {
     float: none;
     width: 100%;
     margin-left: 0 !important;

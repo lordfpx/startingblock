@@ -45,41 +45,41 @@
 	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
 <body>
-<nav id="menu" class="mb2">
+<nav id="menu" class="marginB2">
 	<ul class="unstyled mod biggest">
-		<li class="left pl3 pr3"><a href="#intro">Présentation</a></li>
-		<li class="left pl3 pr3"><a href="#balises">Balises</a></li>
-		<li class="left pl3 pr3"><a href="#layout">Mise en page</a></li>
-		<li class="left pl3 pr3 off"><a href="#">Formulaire</a></li>
-		<li class="left pl3 pr3 off"><a href="#">Tableaux</a></li>
-		<li class="left pl3 pr3 off"><a href="#">Media-queries</a></li>
+		<li class="left paddingL3 paddingR3"><a href="#intro">Présentation</a></li>
+		<li class="left paddingL3 paddingR3"><a href="#balises">Balises</a></li>
+		<li class="left paddingL3 paddingR3"><a href="#layout">Mise en page</a></li>
+		<li class="left paddingL3 paddingR3 off"><a href="#">Formulaire</a></li>
+		<li class="left paddingL3 paddingR3 off"><a href="#">Tableaux</a></li>
+		<li class="left paddingL3 paddingR3 off"><a href="#">Media-queries</a></li>
 	</ul>
 </nav>
 
-<div class="wrapper m-auto">
-	<div  id="intro" class="m-auto intro">
+<div class="wrapper marginAuto">
+	<div  id="intro" class="marginAuto intro">
 		<h1>Starting-block</h1>
 		<h2>- Le framework CSS et HTML de base -</h2>
 
 		<p><strong>Starting-Block</strong> est un Framework CSS et HTML pour débuter un projet sur de bonnes bases. Il se veut flexible pour des designs avancés. Cette page démo vous permet de tester le rendu des styles de base afin de les paramétrer selon vos besoins.</p>
 
-		<p>Cette page est <strong>responsive</strong>. Pour constater comment les classes <span class="classe">break-tablet</span> et <span class="classe">break-mobile</span> sont utilisées, réduisez la taille de la fenêtre, les blocs modifiés se teinteront d'orange au format tablette et de rouge au format mobile.</p>
+		<p>Cette page est <strong>responsive</strong>. Pour constater comment les classes <span class="classe">breakTablet</span> et <span class="classe">breakMobile</span> sont utilisées, réduisez la taille de la fenêtre, les blocs modifiés se teinteront d'orange au format tablette et de rouge au format mobile.</p>
 
 		<p>Je me suis inspiré de frameworks existants tels que <a href="http://www.knacss.com/"><strong>Knacss</strong></a>, <a href="http://rocssti.nicolas-hoffmann.net/"><strong>ROCSSTI</strong></a>, <a href="http://getbootstrap.com/"><strong>Bootstrap</strong></a> ou <a href="http://foundation.zurb.com/"><strong>Foundation</strong></a>.</p>
 
 		<p>Je m'appelle <strong>Thierry Philippe</strong>, je suis web designer et intégrateur freelance en région parisienne avec l'accent du Sud-Ouest: <a href="http://www.thierryphilippe.fr"><strong>Mon portfolio</strong></a>.</p>
 	</div>
 
-	<hr id="balises" class="mt3 mb2">
+	<hr id="balises" class="marginT3 marginB2">
 
 	<h1>Balises</h1>
 
-	<div class="m-auto intro">
-		<p>Notez que la classe <span class="classe">text-hidden</span> permet de cacher le texte, pour le remplacer par un background par exemple, sans perdre la sémantique. Le nom des classes est suffisamment évocateur de leur fonction.</p>
+	<div class="marginAuto intro">
+		<p>Notez que la classe <span class="classe">textHidden</span> permet de cacher le texte, pour le remplacer par un background par exemple, sans perdre la sémantique. Le nom des classes est suffisamment évocateur de leur fonction.</p>
 	</div> 
 
 	<div class="colset">
-		<div class="col-6 break-mobile">
+		<div class="col-6 breakMobile">
 			<h2>Titres</h2>
 			<div class="exemple">
 				<h1><span class="classe">&lsaquo;h1&rsaquo;</span> <span class="classe">.h1</span> Titre 1</h1>
@@ -92,7 +92,7 @@
 
 			<h2>Listes <span class="classe">&lsaquo;ul&rsaquo;</span> <span class="classe">&lsaquo;ol&rsaquo;</span></h2>
 			<div class="exemple">
-				<ul class="mb3">
+				<ul class="marginB3">
 					<li>
 						Fruits
 						<ul>
@@ -119,7 +119,7 @@
 				</ol>
 
 				<h3>Liste <span class="classe">unstyled</span></h3>
-				<ul class="mb3 unstyled">
+				<ul class="marginB3 unstyled">
 					<li>Fruits</li>
 					<li>Légumes</li>
 					<li>Viandes</li>
@@ -137,7 +137,7 @@
 			</div>
 		</div>
 
-		<div class="col-6 break-mobile">
+		<div class="col-6 breakMobile">
 			<h2>Paragraphes <span class="classe">&lsaquo;p&rsaquo;</span></h2>
 			<div class="exemple">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, dignissimos, repellendus, ex, expedita fugiat voluptatum eveniet ratione quaerat ipsam cum amet delectus magni consequatur temporibus eligendi optio porro doloremque id? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, aliquam temporibus inventore est explicabo repellat repudiandae maiores molestiae at minima fuga in dignissimos velit iste non ex vitae voluptate fugiat.</p>
@@ -152,7 +152,7 @@
 
 			<h2>Format des textes</h2>
 			<div class="exemple">
-				<ul class="mb2">
+				<ul class="marginB2">
 					<li class="smaller">class <span class="classe">smaller</span></li>
 					<li class="small">class <span class="classe">small</span></li>
 					<li>Taille normale</li>
@@ -162,23 +162,23 @@
 				</ul>
 			</div>
 			<div class="exemple">
-				<p class="alignleft">Texte aligné à gauche : class <span class="classe">alignleft</span></p>
-				<p class="alignright">Texte aligné à droite : class <span class="classe">alignright</span></p>
-				<p class="aligncenter">Texte centré : class <span class="classe">aligncenter</span></p>
-				<p class="alignjustify">Texte justifié : class <span class="classe">alignjustify</span></p>
+				<p class="alignL">Texte aligné à gauche : class <span class="classe">alignL</span></p>
+				<p class="alignR">Texte aligné à droite : class <span class="classe">alignR</span></p>
+				<p class="alignC">Texte centré : class <span class="classe">alignC</span></p>
+				<p class="alignJ">Texte justifié : class <span class="classe">alignJ</span></p>
 				<p class="uppercase">Texte en majuscule : class <span class="classe">uppercase</span></p>
 				<p class="underline">Texte souligné : class <span class="classe">underline</span></p>
 			</div>
 		</div>
 	</div>
 
-	<hr id="layout" class="mt3 mb2">
+	<hr id="layout" class="marginT3 marginB2">
 
 	<h1>Mise en page</h1>
 
 	<section id="samplesLayout">
 		<h2>Classes utiles pour le layout</h2>
-		<table class="m-auto mt1 mb3">
+		<table class="marginAuto marginT1 marginB3">
 			<tr>
 				<th class="col1">Class</th>
 				<th class="col2">Utilité</th>
@@ -215,48 +215,46 @@
 
 		<h2>Margins et paddings</h2>
 		<ul>
-			<li>m = margin</li>
-			<li>p = padding</li>
-			<li>t = top</li>
-			<li>r = right</li>
-			<li>b = bottom</li>
-			<li>l = left</li>
+			<li>T = top</li>
+			<li>R = right</li>
+			<li>B = bottom</li>
+			<li>L = left</li>
 			<li>Différentes tailles : 0 (zéro), 1 (petite), 2 (moyenne), 3 (grande)</li>
 		</ul>
 
 		<div class="colset">
-			<div class="col-6 break-mobile">
+			<div class="col-6 breakMobile">
 				<h3>Margins</h3>
 				<div class="exemple aligncenter">
-					<div class="mod mb1">
+					<div class="mod marginB1">
 						<div class="demo-margins left">&nbsp;</div>
-						<div class="demo-margins left ml0">class <span class="classe">ml0</span></div>		
+						<div class="demo-margins left marginL0">class <span class="classe">marginL0</span></div>		
 					</div>
 					
-					<div class="mod mb1">
+					<div class="mod marginB1">
 						<div class="demo-margins left">&nbsp;</div>
-						<div class="demo-margins left ml1">class <span class="classe">ml1</span></div>		
+						<div class="demo-margins left marginL1">class <span class="classe">marginL1</span></div>		
 					</div>
 					
-					<div class="mod mb1">
+					<div class="mod marginB1">
 						<div class="demo-margins left">&nbsp;</div>
-						<div class="demo-margins left ml2">class <span class="classe">ml2</span></div>		
+						<div class="demo-margins left marginL2">class <span class="classe">marginL2</span></div>		
 					</div>
 					
 					<div class="mod">
 						<div class="demo-margins left">&nbsp;</div>
-						<div class="demo-margins left ml3">class <span class="classe">ml3</span></div>		
+						<div class="demo-margins left marginL3">class <span class="classe">marginL3</span></div>		
 					</div>
 				</div>
 			</div>
 			
-			<div class="col-6 break-mobile">
+			<div class="col-6 breakMobile">
 				<h3>Paddings</h3>
 				<div class="exemple aligncenter">
-					<div class="demo-margins m-auto mb1 p0"><div>class <span class="classe">p0</span></div></div>						
-					<div class="demo-margins m-auto mb1 p1"><div>class <span class="classe">p1</span></div></div>						
-					<div class="demo-margins m-auto mb1 p2"><div>class <span class="classe">p2</span></div></div>						
-					<div class="demo-margins m-auto p3"><div>class <span class="classe">p3</span></div></div>		
+					<div class="demo-margins marginAuto marginB1 padding0"><div>class <span class="classe">padding0</span></div></div>						
+					<div class="demo-margins marginAuto marginB1 padding1"><div>class <span class="classe">padding1</span></div></div>						
+					<div class="demo-margins marginAuto marginB1 padding2"><div>class <span class="classe">padding2</span></div></div>						
+					<div class="demo-margins marginAuto padding3"><div>class <span class="classe">padding3</span></div></div>		
 				</div>
 			</div>
 		</div>
@@ -264,7 +262,7 @@
 		<div id="grilles">
 			<h2>Système de grilles</h2>
 
-			<div class="m-auto intro">
+			<div class="marginAuto intro">
 				<p>La grille se base sur 12 colonnes flexibles avec une goutière paramétrable en pixel. Il est possible d'imbriquer autant de sets de colonnes que l'on souhaite. Le somme des colonnes <span class="classe">col-*</span> et des espaces <span class="classe">space-*</span> ne doit pas dépasser 12 sur une ligne!</p>
 				<p>La classe <span class="classe">nogut</span> permet d'annuler les gouttières sur une colonne.</p>
 			</div>
@@ -272,17 +270,17 @@
 			<h3>3 colonnes (12/3 = 4)</h3>
 			<div class="exemple">
 				<div class="colset">
-					<div class="col-4 break-mobile">
+					<div class="col-4 breakMobile">
 						<h4><span class="classe">col-4</span></h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
 					</div>
 				
-					<div class="col-4 nogut break-mobile">
+					<div class="col-4 nogut breakMobile">
 						<h4><span class="classe">col-4</span> <span class="classe">nogut</span></h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
 					</div>
 				
-					<div class="col-4 break-mobile">
+					<div class="col-4 breakMobile">
 						<h4><span class="classe">col-4</span></h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
 					</div>
@@ -292,13 +290,13 @@
 			<h3>2 colonnes variables tailles variables</h3>
 			<div class="exemple">
 				<div class="colset">
-					<div class="col-9 break-mobile">
+					<div class="col-9 breakMobile">
 						<h4><span class="classe">col-9</span></h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
 					</div>
 				
-					<div class="col-3 break-mobile">
+					<div class="col-3 breakMobile">
 						<h4><span class="classe">col-3</span></h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
 					</div>
@@ -308,37 +306,37 @@
 			<h3>Exemples d'imbrication</h3>
 			<div class="exemple">
 				<div class="colset">
-					<div class="col-6 break-tablet">
+					<div class="col-6 breakTablet">
 						<h4><span class="classe">col-6</span></h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
 					</div>
 				
-					<div class="col-6 colset break-tablet">
+					<div class="col-6 colset breakTablet">
 						<div class="col-12">
 							<h4><span class="classe">col-6</span> <span class="classe">colset</span></h4>
 							<p class="mb3"><span class="classe">col-12</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
 						</div>
 						
-						<div class="col-6 break-mobile">
+						<div class="col-6 breakMobile">
 							<h4><span class="classe">col-6</span></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus.</p>
 						</div>
 								
-						<div class="col-6 colset break-mobile">
+						<div class="col-6 colset breakMobile">
 							<div class="col-12">
 								<h4><span class="classe">col-6</span> <span class="classe">colset</span></h4>
 								<p><span class="classe">col-12</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus.</p>
 							</div>
 
-							<div class="col-6 break-mobile">
+							<div class="col-6 breakMobile">
 								<h4><span class="classe">col-6</span></h4>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil.</p>
 							</div>
 									
-							<div class="col-6 break-mobile">
+							<div class="col-6 breakMobile">
 								<h4><span class="classe">col-6</span></h4>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil.</p>
 							</div>
@@ -350,12 +348,12 @@
 			<h3>Espacement de colonnes (la somme des colonnes+espaces doit être de 12 max)</h3>
 			<div class="exemple">
 				<div class="colset">
-					<div class="col-3 space-2 break-tablet">
+					<div class="col-3 space-2 breakTablet">
 						<h4><span class="classe">col-3</span> <span class="classe">space-2</span></h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
 					</div>
 				
-					<div class="col-4 space-3 break-tablet">
+					<div class="col-4 space-3 breakTablet">
 						<h4><span class="classe">col-4</span> <span class="classe">space-3</span></h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nisi, nesciunt, at earum voluptatem voluptatibus id illo culpa nihil enim quis officia fugiat a unde doloremque est neque odio distinctio.</p>
 					</div>
