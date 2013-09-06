@@ -8,6 +8,11 @@ body {
 #intro {
   padding-top: 70px;
 }
+#intro .liens > div {
+  background: #1e1e1e;
+  border-radius: 5px;
+  color: white;
+}
 .exemple {
   background: #ebebeb;
   border-radius: 20px;
