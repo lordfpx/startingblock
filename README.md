@@ -38,9 +38,10 @@ forms.css : formulaires
 custom.css : vos propres styles
 mediaqueries.css : les media queries
 
-_demo.css : styles uniquement pour la démo (à effacer bien sur)
 
-La page HTML comprend des exemples sur l'utilisation des classes (regardez le code source).
+DEMO
+----
+http://test.lordfpx.com/startingblock/
 
 
 
