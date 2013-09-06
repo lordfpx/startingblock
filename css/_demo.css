@@ -8,10 +8,11 @@ body {
 #intro {
   padding-top: 70px;
 }
-#intro .liens > div {
+#intro .liens > * {
   background: #1e1e1e;
   border-radius: 5px;
   color: white;
+  display: block;
 }
 .exemple {
   background: #ebebeb;
