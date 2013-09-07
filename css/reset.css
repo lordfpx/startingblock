@@ -38,10 +38,15 @@ a{
 	border: 0;
 }
 
+a:link img,
+a:visited img {
+	border-style: none;
+}
+
 em { font-style: italic; }
 b, strong { font-weight: bold; }
 
-img, table, td, blockquote, code, pre, textarea, input, video, iframe {
+img, table, td, blockquote, code, pre, textarea, input, iframe {
 	max-width: 100%;
 	width: auto\9; /* ie8 */
 }
@@ -51,6 +56,7 @@ img {
 	height: auto;
 	-ms-interpolation-mode: bicubic; /* lissage pour IE */
 	border: 0;
+	border-style: none;
 }
 	/* fix d'un bug sur le max-width si vous utilisez Gmap3 (voir google) */
 	#map_canvas img, .gmnoprint img {max-width: none;}
@@ -93,7 +99,7 @@ button, input[type="submit"], input[type="button"], input[type="reset"] {
 label, button, input, select, .btn { vertical-align: middle; }
 
 textarea {
-	resize: none;
+	resize: vertical;
 	overflow: auto;
 	vertical-align: top;
 }
