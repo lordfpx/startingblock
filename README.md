@@ -14,6 +14,8 @@ Ce fichier est facultatif, il est juste là pour optimiser le serveur et si vous
 
 Vous pouvez utiliser librement tous les éléments de ce framework, les modifier, redistribuer... merci de me référencer tout de même.
 
+Support des navigateurs à partir de : Internet Explorer 7, Firefox 3.6, Safari 3, Google Chrome 16 (et certainement de plus anciennes versions).
+
 
 POURQUOI ?
 ----------
@@ -38,9 +40,10 @@ forms.css : formulaires
 custom.css : vos propres styles
 mediaqueries.css : les media queries
 
-_demo.css : styles uniquement pour la démo (à effacer bien sur)
 
-La page HTML comprend des exemples sur l'utilisation des classes (regardez le code source).
+DEMO
+----
+http://test.lordfpx.com/startingblock/
 
 
 
