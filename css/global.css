@@ -110,12 +110,14 @@
 [class*=listGrid-] {
   list-style: none;
   position: relative;
-  float: left;
   padding-left: 15px;
   padding-right: 15px;
   min-height: 1px;
   /* Pour que ça marche même si le bloc est vide */
 
+}
+[class*=listGrid-] > * {
+  float: left;
 }
 /* -------------------------------------------------------------- */
 .wrapper {
@@ -131,7 +133,8 @@
   overflow: hidden;
 }
 /* block contenant des flottants */
-.clearfix:after {
+.clearfix:after,
+[class*=listGrid-] {
   content: "";
   display: table;
   clear: both;
