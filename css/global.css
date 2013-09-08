@@ -108,13 +108,11 @@
 [class*=listGrid-] > * {
   float: left;
   position: relative;
-  padding-left: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
   min-height: 1px;
   /* Pour que ça marche même si le bloc est vide */
 
-}
-[class*=listGrid-] > *:first-child {
-  padding-left: 0;
 }
 .listGrid-1 > * {
   width: 100%;
