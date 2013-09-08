@@ -113,7 +113,7 @@
   /* Pour que ça marche même si le bloc est vide */
 
 }
-[class*=listGrid-]:first-child {
+[class*=listGrid-] > *:first-child {
   padding-left: 0;
 }
 .listGrid-1 > * {
