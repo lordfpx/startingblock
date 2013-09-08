@@ -25,52 +25,40 @@
   /* Pour que ça marche même si le bloc est vide */
 
 }
-.col-1,
-.listGrid-1 > * {
+.col-1 {
   width: 8.333333333333334%;
 }
-.col-2,
-.listGrid-2 > * {
+.col-2 {
   width: 16.666666666666668%;
 }
-.col-3,
-.listGrid-3 > * {
+.col-3 {
   width: 25%;
 }
-.col-4,
-.listGrid-4 > * {
+.col-4 {
   width: 33.333333333333336%;
 }
-.col-5,
-.listGrid-5 > * {
+.col-5 {
   width: 41.66666666666667%;
 }
-.col-6,
-.listGrid-6 > * {
+.col-6 {
   width: 50%;
 }
-.col-7,
-.listGrid-7 > * {
+.col-7 {
   width: 58.333333333333336%;
 }
-.col-8,
-.listGrid-8 > * {
+.col-8 {
   width: 66.66666666666667%;
 }
-.col-9,
-.listGrid-9 > * {
+.col-9 {
   width: 75%;
 }
-.col-10,
-.listGrid-10 > * {
+.col-10 {
   width: 83.33333333333334%;
 }
-.col-11,
-.listGrid-11 > * {
+.col-11 {
   width: 91.66666666666667%;
 }
-.col-12,
-.listGrid-12 > * {
+.col-12 {
   width: 100%;
 }
 .space-1 {
@@ -118,6 +106,42 @@
 }
 [class*=listGrid-] > * {
   float: left;
+}
+.listGrid-1 > * {
+  width: 100%;
+}
+.listGrid-2 > * {
+  width: 50%;
+}
+.listGrid-3 > * {
+  width: 33.333333333333336%;
+}
+.listGrid-4 > * {
+  width: 25%;
+}
+.listGrid-5 > * {
+  width: 20%;
+}
+.listGrid-6 > * {
+  width: 16.666666666666668%;
+}
+.listGrid-7 > * {
+  width: 14.285714285714286%;
+}
+.listGrid-8 > * {
+  width: 12.5%;
+}
+.listGrid-9 > * {
+  width: 11.11111111111111%;
+}
+.listGrid-10 > * {
+  width: 10%;
+}
+.listGrid-11 > * {
+  width: 9.090909090909092%;
+}
+.listGrid-12 > * {
+  width: 8.333333333333334%;
 }
 /* -------------------------------------------------------------- */
 .wrapper {
