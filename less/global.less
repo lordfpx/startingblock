@@ -52,6 +52,11 @@
 	list-style: none;
 	padding-left: 0;
 
+	&.nogut > * {
+		padding-left: 0 !important; 
+    	padding-right: 0 !important; /* retirer les goutières entre chaque éléments enfants */
+	}
+
     > * {
     	float: left;
     	position: relative;
