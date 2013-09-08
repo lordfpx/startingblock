@@ -97,6 +97,7 @@
 /* Grille automatique (basée sur les listes non ordonnées) */
 [class*=listGrid-] {
   list-style: none;
+  padding-left: 0;
 }
 [class*=listGrid-] > * {
   float: left;
