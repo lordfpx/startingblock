@@ -50,6 +50,11 @@
 /* Grille automatique (basée sur les listes non ordonnées) */
 [class*=listGrid-] {
 	list-style: none;
+	position: relative;
+	    float: left;
+	    padding-left: @gutter; 
+	    padding-right: @gutter; 
+	    min-height: 1px; /* Pour que ça marche même si le bloc est vide */
 }
 
 /* -------------------------------------------------------------- */
