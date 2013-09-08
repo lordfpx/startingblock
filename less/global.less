@@ -22,18 +22,18 @@
 	}
 }
 
-.col-1  { width: ((100 / 12) + 0%); }
-.col-2  { width: ((100 / 12) * 2 + 0%); }
-.col-3  { width: ((100 / 12) * 3 + 0%); }
-.col-4  { width: ((100 / 12) * 4 + 0%); }
-.col-5  { width: ((100 / 12) * 5 + 0%); }
-.col-6  { width: ((100 / 12) * 6 + 0%); }
-.col-7  { width: ((100 / 12) * 7 + 0%); }
-.col-8  { width: ((100 / 12) * 8 + 0%); }
-.col-9  { width: ((100 / 12) * 9 + 0%); }
-.col-10 { width: ((100 / 12) * 10 + 0%); }
-.col-11 { width: ((100 / 12) * 11 + 0%); }
-.col-12 { width: 100%; }
+.col-1, .listGrid-1 > *   { width: ((100 / 12) + 0%); }
+.col-2, .listGrid-2 > *   { width: ((100 / 12) * 2 + 0%); }
+.col-3, .listGrid-3 > *   { width: ((100 / 12) * 3 + 0%); }
+.col-4, .listGrid-4 > *   { width: ((100 / 12) * 4 + 0%); }
+.col-5, .listGrid-5 > *   { width: ((100 / 12) * 5 + 0%); }
+.col-6, .listGrid-6 > *   { width: ((100 / 12) * 6 + 0%); }
+.col-7, .listGrid-7 > *   { width: ((100 / 12) * 7 + 0%); }
+.col-8, .listGrid-8 > *   { width: ((100 / 12) * 8 + 0%); }
+.col-9, .listGrid-9 > *   { width: ((100 / 12) * 9 + 0%); }
+.col-10, .listGrid-10 > * { width: ((100 / 12) * 10 + 0%); }
+.col-11, .listGrid-11 > * { width: ((100 / 12) * 11 + 0%); }
+.col-12, .listGrid-12 > * { width: 100%; }
 
 .space-1  { margin-left: ((100 / 12) + 0%); }
 .space-2  { margin-left: ((100 / 12) * 2 + 0%); }
@@ -46,6 +46,12 @@
 .space-9  { margin-left: ((100 / 12) * 9 + 0%); }
 .space-10 { margin-left: ((100 / 12) * 10 + 0%); }
 .space-11 { margin-left: ((100 / 12) * 11 + 0%); }
+
+/* Grille automatique (basée sur les listes non ordonnées) */
+[class*=listGrid-] {
+	list-style: none;
+}
+
 /* -------------------------------------------------------------- */
 
 
