@@ -60,9 +60,12 @@
     > * {
     	float: left;
     	position: relative;
-	    padding-left: @gutter; 
-	    padding-right: @gutter; 
+	    padding-left: @gutter * 2; 
 	    min-height: 1px; /* Pour que ça marche même si le bloc est vide */
+    }
+
+    &:first-child {
+    	padding-left: 0; 
     }
 }
 
