@@ -98,6 +98,7 @@
 [class*=listGrid-] {
   list-style: none;
   padding-left: 0;
+  width: 100%;
 }
 [class*=listGrid-].nogut > * {
   padding-left: 0 !important;

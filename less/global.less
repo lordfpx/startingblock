@@ -2,8 +2,8 @@
 
 
 /* ------------------ GRILLE -------------------- */
-.nogut { 
-    padding-left: 0 !important; 
+.nogut {
+    padding-left: 0 !important;
     padding-right: 0 !important; /* retirer la gouttière sur une colonne */
 }
 
@@ -16,8 +16,8 @@
     > [class*=col-] {
 		position: relative;
 	    float: left;
-	    padding-left: @gutter; 
-	    padding-right: @gutter; 
+	    padding-left: @gutter;
+	    padding-right: @gutter;
 	    min-height: 1px; /* Pour que ça marche même si le bloc est vide */
 	}
 }
@@ -51,17 +51,18 @@
 [class*=listGrid-] {
 	list-style: none;
 	padding-left: 0;
+	width: 100%;
 
 	&.nogut > * {
-		padding-left: 0 !important; 
+		padding-left: 0 !important;
     	padding-right: 0 !important; /* retirer les goutières entre chaque éléments enfants */
 	}
 
     > * {
     	float: left;
     	position: relative;
-	    padding-left: @gutter; 
-	    padding-right: @gutter; 
+	    padding-left: @gutter;
+	    padding-right: @gutter;
 	    min-height: 1px; /* Pour que ça marche même si le bloc est vide */
     }
 }
@@ -191,10 +192,10 @@
 
 
 /* pour les listes utiliser comme menu par exemple */
-ul.unstyled { 
-	list-style: none; 
-	padding: 0; 
-	margin: 0; 
+ul.unstyled {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 /* remplacer du texte par une image en background par exemple */
