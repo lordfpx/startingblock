@@ -90,9 +90,10 @@
 .left 	{ float: left; }
 .right 	{ float: right; }
 
-.mod 	{ overflow: hidden; } /* block contenant des flottants */
+.mod 	{ overflow: hidden; } /* block ayant un contexte de formatage (BFC) */
 
-.clearfix:after, [class*=listGrid-]{
+.clearfix:after,
+[class*=listGrid-]{
 	content: "";
 	display: table;
 	clear: both;
@@ -103,12 +104,14 @@
 
 
 /* inline-block */
-.ilbl {
+.ilbl,
+.all_ilbl > * {
 	display: inline-block;
 	vertical-align: top;
 	margin-right: -.25em;
 }
-	.ie6 .ilbl, .ie7 .ilbl {
+	.ie6 .ilbl, .ie7 .ilbl,
+	.ie7 .all_ilbl > * {
 		display: inline;
 		zoom: 1;
 	}
@@ -116,10 +119,16 @@
 
 /* Définitions de marges et de paddings */
 /* margin */
-.margin0 { margin: 0 !important; }
-.margin1 { margin: @size1; }
-.margin2 { margin: @size2; }
-.margin3 { margin: @size3; }
+.margin0,
+.all_margin0 > * { margin: 0 !important; }
+.margin1,
+.all_margin1 > * { margin: @size1; }
+.margin2,
+.all_margin2 > * { margin: @size2; }
+.margin3,
+.all_margin3 > * { margin: @size3; }
+.margin4,
+.all_margin4 > * { margin: @size4; }
 
 /* mt = margin-top */
 .marginT0 { margin-top: 0 !important; }
@@ -184,7 +193,7 @@
 /* Textes */
 .alignR  { text-align: right; }
 .alignC { text-align: center; }
-.alignL   { text-align: left; }
+.alignL { text-align: left; }
 .alignJ{ text-align: justify; }
 
 .uppercase { text-transform: uppercase; }

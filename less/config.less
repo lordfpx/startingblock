@@ -1,9 +1,14 @@
+@import 'mixins.less';
+
 @fontBase     : 14; 	// taille de police de base
 @lineHeight   : 1.5;    // line-height de base
+
+@fontSize1    : 10;
 
 @size1        : 10px; 	// taille minimale (pour margin et padding)
 @size2        : 20px; 	// taille moyenne (pour margin et padding)
 @size3        : 30px; 	// taille importante (pour margin et padding)
+@size4        : 50px; 	// taille imposante (pour margin et padding)
 
 @wrapper      : 1000px; // définition d'un conteneur principal (facultatif)
 
@@ -19,6 +24,7 @@
 @color3       : rgb(235, 235, 235);
 @color4       : darken(@color3, 10%);
 @colorLink    : rgb(100,200,200);
+
 
 // utlisé automatiquement par les CSS = ne pas modifier
 .fontSize(@fontSize) {

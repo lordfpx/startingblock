@@ -164,7 +164,7 @@
 .mod {
   overflow: hidden;
 }
-/* block contenant des flottants */
+/* block ayant un contexte de formatage (BFC) */
 .clearfix:after,
 [class*=listGrid-] {
   content: "";
@@ -178,29 +178,39 @@
   zoom: 1;
 }
 /* inline-block */
-.ilbl {
+.ilbl,
+.all_ilbl > * {
   display: inline-block;
   vertical-align: top;
   margin-right: -0.25em;
 }
 .ie6 .ilbl,
-.ie7 .ilbl {
+.ie7 .ilbl,
+.ie7 .all_ilbl > * {
   display: inline;
   zoom: 1;
 }
 /* Définitions de marges et de paddings */
 /* margin */
-.margin0 {
+.margin0,
+.all_margin0 > * {
   margin: 0 !important;
 }
-.margin1 {
+.margin1,
+.all_margin1 > * {
   margin: 10px;
 }
-.margin2 {
+.margin2,
+.all_margin2 > * {
   margin: 20px;
 }
-.margin3 {
+.margin3,
+.all_margin3 > * {
   margin: 30px;
+}
+.margin4,
+.all_margin4 > * {
+  margin: 50px;
 }
 /* mt = margin-top */
 .marginT0 {
