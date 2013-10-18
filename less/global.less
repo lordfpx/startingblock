@@ -2,98 +2,104 @@
 
 
 /* ------------------ GRILLE -------------------- */
-.nogut {
-    padding-left: 0 !important;
-    padding-right: 0 !important; /* retirer la gouttière sur une colonne */
+/* retirer la gouttière sur une colonne ou tous les enfants */
+.nogut, .all_nogut > * {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
 }
 
+/* Contenant d'un set de colonnes */
 .colset {
-    display: inline-block; /* pour créer un contexte de formatage de block (BFC) pour les enfants flottants */
-    width: 100%;
-    vertical-align: top;
-    .nogut; // évite le doublement de la goutière en cas d'imbrication (.col-* .colset)
+	display: inline-block;
+	width: 100%;
+	vertical-align: top;
+	.nogut; // évite le doublement de la goutière en cas d'imbrication (.col-* .colset)
 
-    > [class*=col-] {
+	> [class*=col_] {
 		position: relative;
-	    float: left;
-	    padding-left: @gutter;
-	    padding-right: @gutter;
-	    min-height: 1px; /* Pour que ça marche même si le bloc est vide */
+		float: left;
+		padding-left: @gutter;
+		padding-right: @gutter;
+		min-height: 1px; /* Pour que cela fonctionne même si le bloc est vide */
 	}
 }
 
-.col-1  { width: ((100 / 12) + 0%); }
-.col-2 	{ width: ((100 / 12) * 2 + 0%); }
-.col-3 	{ width: ((100 / 12) * 3 + 0%); }
-.col-4  { width: ((100 / 12) * 4 + 0%); }
-.col-5  { width: ((100 / 12) * 5 + 0%); }
-.col-6 	{ width: ((100 / 12) * 6 + 0%); }
-.col-7 	{ width: ((100 / 12) * 7 + 0%); }
-.col-8  { width: ((100 / 12) * 8 + 0%); }
-.col-9  { width: ((100 / 12) * 9 + 0%); }
-.col-10 { width: ((100 / 12) * 10 + 0%); }
-.col-11 { width: ((100 / 12) * 11 + 0%); }
-.col-12 { width: 100%; }
+.col_1  { width: ((100 / 12) + 0%); }
+.col_2 	{ width: ((100 / 12) * 2 + 0%); }
+.col_3 	{ width: ((100 / 12) * 3 + 0%); }
+.col_4  { width: ((100 / 12) * 4 + 0%); }
+.col_5  { width: ((100 / 12) * 5 + 0%); }
+.col_6 	{ width: ((100 / 12) * 6 + 0%); }
+.col_7 	{ width: ((100 / 12) * 7 + 0%); }
+.col_8  { width: ((100 / 12) * 8 + 0%); }
+.col_9  { width: ((100 / 12) * 9 + 0%); }
+.col_10 { width: ((100 / 12) * 10 + 0%); }
+.col_11 { width: ((100 / 12) * 11 + 0%); }
+.col_12 { width: 100%; }
 
-.space-1  { margin-left: ((100 / 12) + 0%); }
-.space-2  { margin-left: ((100 / 12) * 2 + 0%); }
-.space-3  { margin-left: ((100 / 12) * 3 + 0%); }
-.space-4  { margin-left: ((100 / 12) * 4 + 0%); }
-.space-5  { margin-left: ((100 / 12) * 5 + 0%); }
-.space-6  { margin-left: ((100 / 12) * 6 + 0%); }
-.space-7  { margin-left: ((100 / 12) * 7 + 0%); }
-.space-8  { margin-left: ((100 / 12) * 8 + 0%); }
-.space-9  { margin-left: ((100 / 12) * 9 + 0%); }
-.space-10 { margin-left: ((100 / 12) * 10 + 0%); }
-.space-11 { margin-left: ((100 / 12) * 11 + 0%); }
+/* Pour créer des espaces avant une colonne */
+.space_1  { margin-left: ((100 / 12) + 0%); }
+.space_2  { margin-left: ((100 / 12) * 2 + 0%); }
+.space_3  { margin-left: ((100 / 12) * 3 + 0%); }
+.space_4  { margin-left: ((100 / 12) * 4 + 0%); }
+.space_5  { margin-left: ((100 / 12) * 5 + 0%); }
+.space_6  { margin-left: ((100 / 12) * 6 + 0%); }
+.space_7  { margin-left: ((100 / 12) * 7 + 0%); }
+.space_8  { margin-left: ((100 / 12) * 8 + 0%); }
+.space_9  { margin-left: ((100 / 12) * 9 + 0%); }
+.space_10 { margin-left: ((100 / 12) * 10 + 0%); }
+.space_11 { margin-left: ((100 / 12) * 11 + 0%); }
 
-/* Grille automatique (basée sur les listes non ordonnées) */
-[class*=listGrid-] {
+
+/* Une grille automatique se défini directement sur conteneur (basée sur les listes non ordonnées ou structure similaire) */
+[class*=listGrid_] {
 	list-style: none;
 	padding-left: 0;
 	width: 100%;
 
+	/* .nogut s'applique également sur le conteneur */
 	&.nogut > * {
 		padding-left: 0 !important;
-    	padding-right: 0 !important; /* retirer les goutières entre chaque éléments enfants */
+		padding-right: 0 !important;
 	}
 
-    > * {
-    	float: left;
-    	position: relative;
-	    padding-left: @gutter;
-	    padding-right: @gutter;
-	    min-height: 1px; /* Pour que ça marche même si le bloc est vide */
-    }
+	> * {
+		float: left;
+		position: relative;
+		padding-left: @gutter;
+		padding-right: @gutter;
+		min-height: 1px;
+	}
 }
 
-.listGrid-1 > *  { width: ((100 / 1) + 0%); }
-.listGrid-2 > *  { width: ((100 / 2) + 0%); }
-.listGrid-3 > *  { width: ((100 / 3) + 0%); }
-.listGrid-4 > *  { width: ((100 / 4) + 0%); }
-.listGrid-5 > *  { width: ((100 / 5) + 0%); }
-.listGrid-6 > *  { width: ((100 / 6) + 0%); }
-.listGrid-7 > *  { width: ((100 / 7) + 0%); }
-.listGrid-8 > *  { width: ((100 / 8) + 0%); }
-.listGrid-9 > *  { width: ((100 / 9) + 0%); }
-.listGrid-10 > * { width: ((100 / 10) + 0%); }
-.listGrid-11 > * { width: ((100 / 11) + 0%); }
-.listGrid-12 > * { width: ((100 / 12) + 0%); }
+.listGrid_1 > *  { width: ((100 / 1) + 0%); }
+.listGrid_2 > *  { width: ((100 / 2) + 0%); }
+.listGrid_3 > *  { width: ((100 / 3) + 0%); }
+.listGrid_4 > *  { width: ((100 / 4) + 0%); }
+.listGrid_5 > *  { width: ((100 / 5) + 0%); }
+.listGrid_6 > *  { width: ((100 / 6) + 0%); }
+.listGrid_7 > *  { width: ((100 / 7) + 0%); }
+.listGrid_8 > *  { width: ((100 / 8) + 0%); }
+.listGrid_9 > *  { width: ((100 / 9) + 0%); }
+.listGrid_10 > * { width: ((100 / 10) + 0%); }
+.listGrid_11 > * { width: ((100 / 11) + 0%); }
+.listGrid_12 > * { width: ((100 / 12) + 0%); }
 
 /* -------------------------------------------------------------- */
 
 
 .wrapper {
-    max-width: @wrapper;
+	max-width: @wrapper;
 }
 
-.left 	{ float: left; }
-.right 	{ float: right; }
+.left, .all_left > *	{ float: left; }
+.right, .all_right > *	{ float: right; }
 
-.mod 	{ overflow: hidden; } /* block ayant un contexte de formatage (BFC) */
+/* block ayant un contexte de formatage (BFC) */
+.mod	{ overflow: hidden; }
 
 .clearfix:after,
-[class*=listGrid-]{
+[class*=listGrid_]{
 	content: "";
 	display: table;
 	clear: both;
@@ -103,98 +109,92 @@
 	.ie6 .clearfix, .ie7 .clearfix { zoom: 1; }
 
 
-/* inline-block */
-.ilbl,
-.all_ilbl > * {
+/* inline-block (sur l'élément ou tous ses enfants) */
+.ilbl, .all_ilbl > * {
 	display: inline-block;
 	vertical-align: top;
 	margin-right: -.25em;
 }
 	.ie6 .ilbl, .ie7 .ilbl,
-	.ie7 .all_ilbl > * {
+	.ie6 .all_ilbl > *, .ie7 .all_ilbl > * {
 		display: inline;
 		zoom: 1;
 	}
 
 
-/* Définitions de marges et de paddings */
+/* Définitions de marges et de paddings (sur l'élément ou tous ses enfants) */
 /* margin */
-.margin0,
-.all_margin0 > * { margin: 0 !important; }
-.margin1,
-.all_margin1 > * { margin: @size1; }
-.margin2,
-.all_margin2 > * { margin: @size2; }
-.margin3,
-.all_margin3 > * { margin: @size3; }
-.margin4,
-.all_margin4 > * { margin: @size4; }
+.margin0, .all_margin0 > * { margin: 0 !important; }
+.margin1, .all_margin1 > * { margin: @size1; }
+.margin2, .all_margin2 > * { margin: @size2; }
+.margin3, .all_margin3 > * { margin: @size3; }
+.margin4, .all_margin4 > * { margin: @size4; }
 
 /* mt = margin-top */
-.marginT0 { margin-top: 0 !important; }
-.marginT1 { margin-top: @size1; }
-.marginT2 { margin-top: @size2; }
-.marginT3 { margin-top: @size3; }
+.marginT0, .all_marginT0 > * { margin-top: 0 !important; }
+.marginT1, .all_marginT1 > * { margin-top: @size1; }
+.marginT2, .all_marginT2 > * { margin-top: @size2; }
+.marginT3, .all_marginT3 > * { margin-top: @size3; }
 
 /* mr = margin-right */
-.marginR0 { margin-right: 0 !important; }
-.marginR1 { margin-right: @size1; }
-.marginR2 { margin-right: @size2; }
-.marginR3 { margin-right: @size3; }
+.marginR0, .all_marginR0 > * { margin-right: 0 !important; }
+.marginR1, .all_marginR1 > * { margin-right: @size1; }
+.marginR2, .all_marginR2 > * { margin-right: @size2; }
+.marginR3, .all_marginR3 > * { margin-right: @size3; }
 
 /* mb = margin-bottom */
-.marginB0 { margin-bottom: 0 !important; }
-.marginB1 { margin-bottom: @size1; }
-.marginB2 { margin-bottom: @size2; }
-.marginB3 { margin-bottom: @size3; }
+.marginB0, .all_marginB0 > * { margin-bottom: 0 !important; }
+.marginB1, .all_marginB1 > * { margin-bottom: @size1; }
+.marginB2, .all_marginB2 > * { margin-bottom: @size2; }
+.marginB3, .all_marginB3 > * { margin-bottom: @size3; }
 
 /* ml = margin-left */
-.marginL0 { margin-left: 0 !important; }
-.marginL1 { margin-left: @size1; }
-.marginL2 { margin-left: @size2; }
-.marginL3 { margin-left: @size3; }
+.marginL0, .all_marginL0 > * { margin-left: 0 !important; }
+.marginL1, .all_marginL1 > * { margin-left: @size1; }
+.marginL2, .all_marginL2 > * { margin-left: @size2; }
+.marginL3, .all_marginL3 > * { margin-left: @size3; }
 
 /* padding */
-.padding0 { padding: 0 !important; }
-.padding1 { padding: @size1; }
-.padding2 { padding: @size2; }
-.padding3 { padding: @size3; }
+.padding0, .all_padding0 > * { padding: 0 !important; }
+.padding1, .all_padding1 > * { padding: @size1; }
+.padding2, .all_padding2 > * { padding: @size2; }
+.padding3, .all_padding3 > * { padding: @size3; }
 
 /* pt = padding-top */
-.paddingT0 { padding-top: 0 !important; }
-.paddingT1 { padding-top: @size1; }
-.paddingT2 { padding-top: @size2; }
-.paddingT3 { padding-top: @size3; }
+.paddingT0, .all_paddingT0 > * { padding-top: 0 !important; }
+.paddingT1, .all_paddingT1 > * { padding-top: @size1; }
+.paddingT2, .all_paddingT2 > * { padding-top: @size2; }
+.paddingT3, .all_paddingT3 > * { padding-top: @size3; }
 
 /* pr = padding-right */
-.paddingR0 { padding-right: 0 !important; }
-.paddingR1 { padding-right: @size1; }
-.paddingR2 { padding-right: @size2; }
-.paddingR3 { padding-right: @size3; }
+.paddingR0, .all_paddingR0 > * { padding-right: 0 !important; }
+.paddingR1, .all_paddingR1 > * { padding-right: @size1; }
+.paddingR2, .all_paddingR2 > * { padding-right: @size2; }
+.paddingR3, .all_paddingR3 > * { padding-right: @size3; }
 
 /* pb = padding-bottom */
-.paddingB0 { padding-bottom: 0 !important; }
-.paddingB1 { padding-bottom: @size1; }
-.paddingB2 { padding-bottom: @size2; }
-.paddingB3 { padding-bottom: @size3; }
+.paddingB0, .all_paddingB0 > * { padding-bottom: 0 !important; }
+.paddingB1, .all_paddingB1 > * { padding-bottom: @size1; }
+.paddingB2, .all_paddingB2 > * { padding-bottom: @size2; }
+.paddingB3, .all_paddingB3 > * { padding-bottom: @size3; }
 
 /* pl = padding-left */
-.paddingL0 { padding-left: 0 !important; }
-.paddingL1 { padding-left: @size1; }
-.paddingL2 { padding-left: @size2; }
-.paddingL3 { padding-left: @size3; }
+.paddingL0, .all_paddingL0 > * { padding-left: 0 !important; }
+.paddingL1, .all_paddingL1 > * { padding-left: @size1; }
+.paddingL2, .all_paddingL2 > * { padding-left: @size2; }
+.paddingL3, .all_paddingL3 > * { padding-left: @size3; }
 
-.marginAuto {
+.marginA {
 	margin-left: auto;
 	margin-right: auto;
 }
 
 
 /* Textes */
-.alignR  { text-align: right; }
+.alignR { text-align: right; }
 .alignC { text-align: center; }
 .alignL { text-align: left; }
-.alignJ{ text-align: justify; }
+.alignJ { text-align: justify; }
 
 .uppercase { text-transform: uppercase; }
 .underline { text-decoration: underline; }
@@ -208,7 +208,7 @@ ul.unstyled {
 }
 
 /* remplacer du texte par une image en background par exemple */
-.textHidden {
+.text_hidden {
 	font: 0/0 a;
 	color: transparent;
 	text-shadow: none;
@@ -216,4 +216,4 @@ ul.unstyled {
 
 
 /* Règles d'affichage */
-.hidden    { display: none; } /* caché partout (pour javascript) */
+.hidden { display: none; } /* cacher élément */

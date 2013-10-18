@@ -1,3 +1,311 @@
+/* ------------------------------------ *\
+				RESET
+\* ------------------------------------ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-weight: normal;
+  font-style: normal;
+}
+article,
+aside,
+audio,
+canvas,
+datagrid,
+datalist,
+details,
+dialog,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+video {
+  display: block;
+}
+abbr,
+eventsource,
+mark,
+meter,
+time,
+progress,
+output,
+bb {
+  display: inline;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body > script {
+  display: none !important;
+}
+/* !!! ATTENTION !!! Changement du model de boîtes (border et padding n'augmente plus le taille des blocs), mais compatible avec IE6 et IE7 !*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(css/boxsizing.htc);
+}
+a {
+  color: inherit;
+  border: 0;
+}
+a:link img,
+a:visited img {
+  border-style: none;
+}
+em {
+  font-style: italic;
+}
+b,
+strong {
+  font-weight: bold;
+}
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input,
+iframe {
+  max-width: 100%;
+  width: auto\9;
+  /* ie8 */
+
+}
+img {
+  vertical-align: middle;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  /* lissage pour IE */
+
+  border: 0;
+  border-style: none;
+}
+/* fix d'un bug sur le max-width si vous utilisez Gmap3 (voir google) */
+#map_canvas img,
+.gmnoprint img {
+  max-width: none;
+}
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input {
+  height: auto;
+}
+iframe {
+  vertical-align: middle;
+  border: 0;
+}
+textarea,
+table,
+td,
+th,
+code,
+pre,
+samp,
+div,
+p {
+  word-wrap: break-word;
+  hyphens: auto;
+}
+code,
+pre,
+samp {
+  white-space: pre-wrap;
+  font-family: consolas, 'DejaVu Sans Mono', courier, monospace;
+  line-height: 1em;
+}
+sup,
+sub {
+  vertical-align: 0;
+  position: relative;
+}
+sup {
+  bottom: 1ex;
+}
+sub {
+  top: .5ex;
+}
+abbr[title] {
+  cursor: help;
+}
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible;
+}
+label,
+button,
+input,
+select,
+.btn {
+  vertical-align: middle;
+}
+textarea {
+  resize: vertical;
+  overflow: auto;
+  vertical-align: top;
+}
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input[disabled] {
+  cursor: default;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  background-color: none;
+  border: 0;
+  width: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button[disabled] {
+  cursor: default;
+}
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background: #fff;
+}
+/* retire les marges des éléments imbriqués dans une liste */
+li > p,
+li > ul,
+li > ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 /* pense-bête font-face
 -----------------------
 @font-face {

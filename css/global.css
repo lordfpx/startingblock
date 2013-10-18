@@ -1,172 +1,478 @@
-/* ------------------ GRILLE -------------------- */
-.nogut {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  /* retirer la gouttière sur une colonne */
+/* ------------------------------------ *\
+				RESET
+\* ------------------------------------ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-weight: normal;
+  font-style: normal;
+}
+article,
+aside,
+audio,
+canvas,
+datagrid,
+datalist,
+details,
+dialog,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+video {
+  display: block;
+}
+abbr,
+eventsource,
+mark,
+meter,
+time,
+progress,
+output,
+bb {
+  display: inline;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body > script {
+  display: none !important;
+}
+/* !!! ATTENTION !!! Changement du model de boîtes (border et padding n'augmente plus le taille des blocs), mais compatible avec IE6 et IE7 !*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(css/boxsizing.htc);
+}
+a {
+  color: inherit;
+  border: 0;
+}
+a:link img,
+a:visited img {
+  border-style: none;
+}
+em {
+  font-style: italic;
+}
+b,
+strong {
+  font-weight: bold;
+}
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input,
+iframe {
+  max-width: 100%;
+  width: auto\9;
+  /* ie8 */
 
 }
+img {
+  vertical-align: middle;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  /* lissage pour IE */
+
+  border: 0;
+  border-style: none;
+}
+/* fix d'un bug sur le max-width si vous utilisez Gmap3 (voir google) */
+#map_canvas img,
+.gmnoprint img {
+  max-width: none;
+}
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input {
+  height: auto;
+}
+iframe {
+  vertical-align: middle;
+  border: 0;
+}
+textarea,
+table,
+td,
+th,
+code,
+pre,
+samp,
+div,
+p {
+  word-wrap: break-word;
+  hyphens: auto;
+}
+code,
+pre,
+samp {
+  white-space: pre-wrap;
+  font-family: consolas, 'DejaVu Sans Mono', courier, monospace;
+  line-height: 1em;
+}
+sup,
+sub {
+  vertical-align: 0;
+  position: relative;
+}
+sup {
+  bottom: 1ex;
+}
+sub {
+  top: .5ex;
+}
+abbr[title] {
+  cursor: help;
+}
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible;
+}
+label,
+button,
+input,
+select,
+.btn {
+  vertical-align: middle;
+}
+textarea {
+  resize: vertical;
+  overflow: auto;
+  vertical-align: top;
+}
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input[disabled] {
+  cursor: default;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  background-color: none;
+  border: 0;
+  width: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button[disabled] {
+  cursor: default;
+}
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background: #fff;
+}
+/* retire les marges des éléments imbriqués dans une liste */
+li > p,
+li > ul,
+li > ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* ------------------ GRILLE -------------------- */
+/* retirer la gouttière sur une colonne ou tous les enfants */
+.nogut,
+.all_nogut > * {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+/* Contenant d'un set de colonnes */
 .colset {
   display: inline-block;
-  /* pour créer un contexte de formatage de block (BFC) pour les enfants flottants */
-
   width: 100%;
   vertical-align: top;
   padding-left: 0 !important;
   padding-right: 0 !important;
-  /* retirer la gouttière sur une colonne */
-
 }
-.colset > [class*=col-] {
+.colset > [class*=col_] {
   position: relative;
   float: left;
   padding-left: 15px;
   padding-right: 15px;
   min-height: 1px;
-  /* Pour que ça marche même si le bloc est vide */
+  /* Pour que cela fonctionne même si le bloc est vide */
 
 }
-.col-1 {
+.col_1 {
   width: 8.333333333333334%;
 }
-.col-2 {
+.col_2 {
   width: 16.666666666666668%;
 }
-.col-3 {
+.col_3 {
   width: 25%;
 }
-.col-4 {
+.col_4 {
   width: 33.333333333333336%;
 }
-.col-5 {
+.col_5 {
   width: 41.66666666666667%;
 }
-.col-6 {
+.col_6 {
   width: 50%;
 }
-.col-7 {
+.col_7 {
   width: 58.333333333333336%;
 }
-.col-8 {
+.col_8 {
   width: 66.66666666666667%;
 }
-.col-9 {
+.col_9 {
   width: 75%;
 }
-.col-10 {
+.col_10 {
   width: 83.33333333333334%;
 }
-.col-11 {
+.col_11 {
   width: 91.66666666666667%;
 }
-.col-12 {
+.col_12 {
   width: 100%;
 }
-.space-1 {
+/* Pour créer des espaces avant une colonne */
+.space_1 {
   margin-left: 8.333333333333334%;
 }
-.space-2 {
+.space_2 {
   margin-left: 16.666666666666668%;
 }
-.space-3 {
+.space_3 {
   margin-left: 25%;
 }
-.space-4 {
+.space_4 {
   margin-left: 33.333333333333336%;
 }
-.space-5 {
+.space_5 {
   margin-left: 41.66666666666667%;
 }
-.space-6 {
+.space_6 {
   margin-left: 50%;
 }
-.space-7 {
+.space_7 {
   margin-left: 58.333333333333336%;
 }
-.space-8 {
+.space_8 {
   margin-left: 66.66666666666667%;
 }
-.space-9 {
+.space_9 {
   margin-left: 75%;
 }
-.space-10 {
+.space_10 {
   margin-left: 83.33333333333334%;
 }
-.space-11 {
+.space_11 {
   margin-left: 91.66666666666667%;
 }
-/* Grille automatique (basée sur les listes non ordonnées) */
-[class*=listGrid-] {
+/* Une grille automatique se défini directement sur conteneur (basée sur les listes non ordonnées ou structure similaire) */
+[class*=listGrid_] {
   list-style: none;
   padding-left: 0;
   width: 100%;
-}
-[class*=listGrid-].nogut > * {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  /* retirer les goutières entre chaque éléments enfants */
+  /* .nogut s'applique également sur le conteneur */
 
 }
-[class*=listGrid-] > * {
+[class*=listGrid_].nogut > * {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+[class*=listGrid_] > * {
   float: left;
   position: relative;
   padding-left: 15px;
   padding-right: 15px;
   min-height: 1px;
-  /* Pour que ça marche même si le bloc est vide */
-
 }
-.listGrid-1 > * {
+.listGrid_1 > * {
   width: 100%;
 }
-.listGrid-2 > * {
+.listGrid_2 > * {
   width: 50%;
 }
-.listGrid-3 > * {
+.listGrid_3 > * {
   width: 33.333333333333336%;
 }
-.listGrid-4 > * {
+.listGrid_4 > * {
   width: 25%;
 }
-.listGrid-5 > * {
+.listGrid_5 > * {
   width: 20%;
 }
-.listGrid-6 > * {
+.listGrid_6 > * {
   width: 16.666666666666668%;
 }
-.listGrid-7 > * {
+.listGrid_7 > * {
   width: 14.285714285714286%;
 }
-.listGrid-8 > * {
+.listGrid_8 > * {
   width: 12.5%;
 }
-.listGrid-9 > * {
+.listGrid_9 > * {
   width: 11.11111111111111%;
 }
-.listGrid-10 > * {
+.listGrid_10 > * {
   width: 10%;
 }
-.listGrid-11 > * {
+.listGrid_11 > * {
   width: 9.090909090909092%;
 }
-.listGrid-12 > * {
+.listGrid_12 > * {
   width: 8.333333333333334%;
 }
 /* -------------------------------------------------------------- */
 .wrapper {
   max-width: 1000px;
 }
-.left {
+.left,
+.all_left > * {
   float: left;
 }
-.right {
+.right,
+.all_right > * {
   float: right;
 }
+/* block ayant un contexte de formatage (BFC) */
 .mod {
   overflow: hidden;
 }
-/* block ayant un contexte de formatage (BFC) */
 .clearfix:after,
-[class*=listGrid-] {
+[class*=listGrid_] {
   content: "";
   display: table;
   clear: both;
@@ -177,7 +483,7 @@
 .ie7 .clearfix {
   zoom: 1;
 }
-/* inline-block */
+/* inline-block (sur l'élément ou tous ses enfants) */
 .ilbl,
 .all_ilbl > * {
   display: inline-block;
@@ -186,11 +492,12 @@
 }
 .ie6 .ilbl,
 .ie7 .ilbl,
+.ie6 .all_ilbl > *,
 .ie7 .all_ilbl > * {
   display: inline;
   zoom: 1;
 }
-/* Définitions de marges et de paddings */
+/* Définitions de marges et de paddings (sur l'élément ou tous ses enfants) */
 /* margin */
 .margin0,
 .all_margin0 > * {
@@ -213,123 +520,159 @@
   margin: 50px;
 }
 /* mt = margin-top */
-.marginT0 {
+.marginT0,
+.all_marginT0 > * {
   margin-top: 0 !important;
 }
-.marginT1 {
+.marginT1,
+.all_marginT1 > * {
   margin-top: 10px;
 }
-.marginT2 {
+.marginT2,
+.all_marginT2 > * {
   margin-top: 20px;
 }
-.marginT3 {
+.marginT3,
+.all_marginT3 > * {
   margin-top: 30px;
 }
 /* mr = margin-right */
-.marginR0 {
+.marginR0,
+.all_marginR0 > * {
   margin-right: 0 !important;
 }
-.marginR1 {
+.marginR1,
+.all_marginR1 > * {
   margin-right: 10px;
 }
-.marginR2 {
+.marginR2,
+.all_marginR2 > * {
   margin-right: 20px;
 }
-.marginR3 {
+.marginR3,
+.all_marginR3 > * {
   margin-right: 30px;
 }
 /* mb = margin-bottom */
-.marginB0 {
+.marginB0,
+.all_marginB0 > * {
   margin-bottom: 0 !important;
 }
-.marginB1 {
+.marginB1,
+.all_marginB1 > * {
   margin-bottom: 10px;
 }
-.marginB2 {
+.marginB2,
+.all_marginB2 > * {
   margin-bottom: 20px;
 }
-.marginB3 {
+.marginB3,
+.all_marginB3 > * {
   margin-bottom: 30px;
 }
 /* ml = margin-left */
-.marginL0 {
+.marginL0,
+.all_marginL0 > * {
   margin-left: 0 !important;
 }
-.marginL1 {
+.marginL1,
+.all_marginL1 > * {
   margin-left: 10px;
 }
-.marginL2 {
+.marginL2,
+.all_marginL2 > * {
   margin-left: 20px;
 }
-.marginL3 {
+.marginL3,
+.all_marginL3 > * {
   margin-left: 30px;
 }
 /* padding */
-.padding0 {
+.padding0,
+.all_padding0 > * {
   padding: 0 !important;
 }
-.padding1 {
+.padding1,
+.all_padding1 > * {
   padding: 10px;
 }
-.padding2 {
+.padding2,
+.all_padding2 > * {
   padding: 20px;
 }
-.padding3 {
+.padding3,
+.all_padding3 > * {
   padding: 30px;
 }
 /* pt = padding-top */
-.paddingT0 {
+.paddingT0,
+.all_paddingT0 > * {
   padding-top: 0 !important;
 }
-.paddingT1 {
+.paddingT1,
+.all_paddingT1 > * {
   padding-top: 10px;
 }
-.paddingT2 {
+.paddingT2,
+.all_paddingT2 > * {
   padding-top: 20px;
 }
-.paddingT3 {
+.paddingT3,
+.all_paddingT3 > * {
   padding-top: 30px;
 }
 /* pr = padding-right */
-.paddingR0 {
+.paddingR0,
+.all_paddingR0 > * {
   padding-right: 0 !important;
 }
-.paddingR1 {
+.paddingR1,
+.all_paddingR1 > * {
   padding-right: 10px;
 }
-.paddingR2 {
+.paddingR2,
+.all_paddingR2 > * {
   padding-right: 20px;
 }
-.paddingR3 {
+.paddingR3,
+.all_paddingR3 > * {
   padding-right: 30px;
 }
 /* pb = padding-bottom */
-.paddingB0 {
+.paddingB0,
+.all_paddingB0 > * {
   padding-bottom: 0 !important;
 }
-.paddingB1 {
+.paddingB1,
+.all_paddingB1 > * {
   padding-bottom: 10px;
 }
-.paddingB2 {
+.paddingB2,
+.all_paddingB2 > * {
   padding-bottom: 20px;
 }
-.paddingB3 {
+.paddingB3,
+.all_paddingB3 > * {
   padding-bottom: 30px;
 }
 /* pl = padding-left */
-.paddingL0 {
+.paddingL0,
+.all_paddingL0 > * {
   padding-left: 0 !important;
 }
-.paddingL1 {
+.paddingL1,
+.all_paddingL1 > * {
   padding-left: 10px;
 }
-.paddingL2 {
+.paddingL2,
+.all_paddingL2 > * {
   padding-left: 20px;
 }
-.paddingL3 {
+.paddingL3,
+.all_paddingL3 > * {
   padding-left: 30px;
 }
-.marginAuto {
+.marginA {
   margin-left: auto;
   margin-right: auto;
 }
@@ -359,7 +702,7 @@ ul.unstyled {
   margin: 0;
 }
 /* remplacer du texte par une image en background par exemple */
-.textHidden {
+.text_hidden {
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
@@ -368,4 +711,4 @@ ul.unstyled {
 .hidden {
   display: none;
 }
-/* caché partout (pour javascript) */
+/* cacher élément */

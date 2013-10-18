@@ -1,15 +1,12 @@
 @import 'config.less';
 
-/* ------------------------------------ *\
-			MEDIA QUERIES
-\* ------------------------------------ */
-.nodesktop { display: none; } /* caché sur desktop */
-.noprint   {} /* caché sur print */
-.notablet  {} /* caché sur tablettes */
-.nomobile  {} /* caché sur mobile */
+.no_desktop { display: none; } /* caché sur desktop */
+.no_print   {} /* caché sur print */
+.no_tablet  {} /* caché sur tablettes */
+.no_mobile  {} /* caché sur mobile */
 
-.breakTablet { } /* occupera toute la largeur sur tablettes */
-.breakMobile { } /* occupera toute la largeur sur mobiles */
+.break_tablet { } /* occupera toute la largeur sur tablettes */
+.break_mobile { } /* occupera toute la largeur sur mobiles */
 
 
 /* Ecrans Retina */
@@ -24,11 +21,11 @@
 
 /* Tablettes */
 @media (max-width: @screenSmall) {
-	.nodesktop { display: block; }
-	.notablet { display: none; }
-	
+	.no_desktop { display: block; }
+	.no_tablet { display: none; }
+
 	/* linéarisation des contenus flottants */
-	.breakTablet {
+	.break_tablet {
 		float: none;
 		width: 100%;
 		margin-left: 0 !important;
@@ -47,11 +44,11 @@
 
 /* Mobiles */
 @media (max-width: @screenTiny) {
-	.notablet { display: block; }
-	.nomobile { display: none; }
+	.no_tablet { display: block; }
+	.no_mobile { display: none; }
 
 	/* linéarisation des contenus flottants */
-	.breakMobile {
+	.break_mobile {
 		float: none;
 		width: 100%;
 		margin-left: 0 !important;
@@ -96,7 +93,7 @@
 		padding: .5em;
 	}
 
-	.noprint { display: none; }
+	.no_print { display: none; }
 
 	/* éviter saut de page hasardeux */
 	blockquote, ul, ol {
@@ -105,14 +102,14 @@
 	h1, h2, h3, caption {
 		page-break-after: avoid;
 	}
-	
+
 	p, blockquote {
 		orphans: 2;
 		widows: 2;
 	}
 
 	/* affichage des liens, sauf pour image contenue */
-	/* attention, penser à vérifier le résultat et penser 
+	/* attention, penser à vérifier le résultat et penser
 	* à limiter cette possibilité aux liens dans le contenu */
 	a:after { content: " (" attr(href) ") "; }
 	a:after img { content: ""; }
