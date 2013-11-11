@@ -3,7 +3,8 @@
 
 /* ------------------ GRILLE -------------------- */
 /* retirer la gouttière sur une colonne ou tous les enfants */
-.nogut, .all_nogut > * {
+.nogut,
+.all_nogut > * {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
@@ -13,7 +14,7 @@
 	display: inline-block;
 	width: 100%;
 	vertical-align: top;
-	.nogut; // évite le doublement de la goutière en cas d'imbrication (.col-* .colset)
+	.nogut; // évite le doublement de la goutière en cas d'imbrication
 
 	> [class*=col_] {
 		position: relative;
@@ -51,17 +52,11 @@
 .space_11 { margin-left: ((100 / 12) * 11 + 0%); }
 
 
-/* Une grille automatique se défini directement sur conteneur (basée sur les listes non ordonnées ou structure similaire) */
+/* Grille automatique qui se défini directement sur conteneur (la gouttière s'applique sur les enfants) */
 [class*=listGrid_] {
 	list-style: none;
 	padding-left: 0;
 	width: 100%;
-
-	/* .nogut s'applique également sur le conteneur */
-	&.nogut > * {
-		padding-left: 0 !important;
-		padding-right: 0 !important;
-	}
 
 	> * {
 		float: left;
@@ -69,6 +64,12 @@
 		padding-left: @gutter;
 		padding-right: @gutter;
 		min-height: 1px;
+	}
+
+	/* Annuler les goutières sur les enfants */
+	&.nogut > * {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
 	}
 }
 
@@ -92,8 +93,11 @@
 	max-width: @wrapper;
 }
 
-.left, .all_left > *	{ float: left; }
-.right, .all_right > *	{ float: right; }
+.left,
+.all_left > *	{ float: left; }
+
+.right,
+.all_right > *	{ float: right; }
 
 /* block ayant un contexte de formatage (BFC) */
 .mod	{ overflow: hidden; }
@@ -110,7 +114,8 @@
 
 
 /* inline-block (sur l'élément ou tous ses enfants) */
-.ilbl, .all_ilbl > * {
+.ilbl,
+.all_ilbl > * {
 	display: inline-block;
 	vertical-align: top;
 	margin-right: -.25em;
@@ -191,13 +196,19 @@
 
 
 /* Textes */
-.alignR { text-align: right; }
-.alignC { text-align: center; }
-.alignL { text-align: left; }
-.alignJ { text-align: justify; }
+.alignR,
+.all_alignR > * { text-align: right; }
+.alignC,
+.all_alignC > * { text-align: center; }
+.alignL,
+.all_alignL > * { text-align: left; }
+.alignJ,
+.all_alignJ > * { text-align: justify; }
 
-.uppercase { text-transform: uppercase; }
-.underline { text-decoration: underline; }
+.uppercase,
+.all_uppercase { text-transform: uppercase; }
+.underline,
+.all_underline { text-decoration: underline; }
 
 
 /* pour les listes utiliser comme menu par exemple */

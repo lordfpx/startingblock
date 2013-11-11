@@ -92,17 +92,13 @@
 .space_11 {
   margin-left: 91.66666666666667%;
 }
-/* Une grille automatique se défini directement sur conteneur (basée sur les listes non ordonnées ou structure similaire) */
+/* Grille automatique qui se défini directement sur conteneur (la gouttière s'applique sur les enfants) */
 [class*=listGrid_] {
   list-style: none;
   padding-left: 0;
   width: 100%;
-  /* .nogut s'applique également sur le conteneur */
+  /* Annuler les goutières sur les enfants */
 
-}
-[class*=listGrid_].nogut > * {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
 }
 [class*=listGrid_] > * {
   float: left;
@@ -110,6 +106,10 @@
   padding-left: 15px;
   padding-right: 15px;
   min-height: 1px;
+}
+[class*=listGrid_].nogut > * {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 .listGrid_1 > * {
   width: 100%;
@@ -369,22 +369,28 @@
   margin-right: auto;
 }
 /* Textes */
-.alignR {
+.alignR,
+.all_alignR > * {
   text-align: right;
 }
-.alignC {
+.alignC,
+.all_alignC > * {
   text-align: center;
 }
-.alignL {
+.alignL,
+.all_alignL > * {
   text-align: left;
 }
-.alignJ {
+.alignJ,
+.all_alignJ > * {
   text-align: justify;
 }
-.uppercase {
+.uppercase,
+.all_uppercase {
   text-transform: uppercase;
 }
-.underline {
+.underline,
+.all_underline {
   text-decoration: underline;
 }
 /* pour les listes utiliser comme menu par exemple */
