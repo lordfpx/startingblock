@@ -1,0 +1,88 @@
+@import 'config.less';
+
+/* retirer la gouttière sur une colonne ou tous les enfants */
+.nogut,
+.all_nogut > * {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+/* Contenant d'un set de colonnes */
+.colset {
+	display: inline-block;
+	width: 100%;
+	vertical-align: top;
+	.nogut; // évite le doublement de la goutière en cas d'imbrication
+
+	> [class*=col_] {
+		position: relative;
+		float: left;
+		padding-left: @gutter;
+		padding-right: @gutter;
+		min-height: 1px; /* Pour que cela fonctionne même si le bloc est vide */
+	}
+}
+
+// les colonnes
+.col_1  { width: ((100 / 12) + 0%); }
+.col_2 	{ width: ((100 / 12) * 2 + 0%); }
+.col_3 	{ width: ((100 / 12) * 3 + 0%); }
+.col_4  { width: ((100 / 12) * 4 + 0%); }
+.col_5  { width: ((100 / 12) * 5 + 0%); }
+.col_6 	{ width: ((100 / 12) * 6 + 0%); }
+.col_7 	{ width: ((100 / 12) * 7 + 0%); }
+.col_8  { width: ((100 / 12) * 8 + 0%); }
+.col_9  { width: ((100 / 12) * 9 + 0%); }
+.col_10 { width: ((100 / 12) * 10 + 0%); }
+.col_11 { width: ((100 / 12) * 11 + 0%); }
+.col_12 { width: 100%; }
+
+/* Pour créer des espaces avant une colonne */
+.space_1  { margin-left: ((100 / 12) + 0%); }
+.space_2  { margin-left: ((100 / 12) * 2 + 0%); }
+.space_3  { margin-left: ((100 / 12) * 3 + 0%); }
+.space_4  { margin-left: ((100 / 12) * 4 + 0%); }
+.space_5  { margin-left: ((100 / 12) * 5 + 0%); }
+.space_6  { margin-left: ((100 / 12) * 6 + 0%); }
+.space_7  { margin-left: ((100 / 12) * 7 + 0%); }
+.space_8  { margin-left: ((100 / 12) * 8 + 0%); }
+.space_9  { margin-left: ((100 / 12) * 9 + 0%); }
+.space_10 { margin-left: ((100 / 12) * 10 + 0%); }
+.space_11 { margin-left: ((100 / 12) * 11 + 0%); }
+
+
+/* Grille automatique qui se défini directement sur conteneur (la gouttière s'applique sur les enfants).
+idéal pour les galeries */
+[class*=listGrid_] {
+	list-style: none;
+	padding-left: 0;
+	width: 100%;
+
+	> * {
+		float: left;
+		position: relative;
+		padding-left: @gutter;
+		padding-right: @gutter;
+		min-height: 1px;
+	}
+
+	/* Annuler les goutières sur les enfants */
+	&.nogut > * {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
+// les colonnes
+.listGrid_1 > *  { width: ((100 / 1) + 0%); }
+.listGrid_2 > *  { width: ((100 / 2) + 0%); }
+.listGrid_3 > *  { width: ((100 / 3) + 0%); }
+.listGrid_4 > *  { width: ((100 / 4) + 0%); }
+.listGrid_5 > *  { width: ((100 / 5) + 0%); }
+.listGrid_6 > *  { width: ((100 / 6) + 0%); }
+.listGrid_7 > *  { width: ((100 / 7) + 0%); }
+.listGrid_8 > *  { width: ((100 / 8) + 0%); }
+.listGrid_9 > *  { width: ((100 / 9) + 0%); }
+.listGrid_10 > * { width: ((100 / 10) + 0%); }
+.listGrid_11 > * { width: ((100 / 11) + 0%); }
+.listGrid_12 > * { width: ((100 / 12) + 0%); }

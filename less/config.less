@@ -1,22 +1,21 @@
 @import 'prefixer.less';
 
+// Fonts
 @fontBase     : 14; 	// taille de police de base
-@lineHeight   : 1.5;    // line-height de base
-
+@lineHeight   : 1.5;	// line-height de base
 @fontSize1    : 10;
 
+// margin et padding
 @size1        : 10px; 	// taille minimale (pour margin et padding)
 @size2        : 20px; 	// taille moyenne (pour margin et padding)
 @size3        : 30px; 	// taille importante (pour margin et padding)
 @size4        : 50px; 	// taille imposante (pour margin et padding)
-
-@wrapper      : 1000px; // définition d'un conteneur principal (facultatif)
-
 @gutter       : 15px; 	// goutière en pixel pour la grille
 
-@screenTiny   : 640px; 	// très petite taille d'écran pour media query (mobiles)
-@screenSmall  : 768px; 	// taille d'écran réduite media query (tablettes)
-@screenLarge  : 1280px; // grands écrans media query (moniteurs de grand format)
+// media queries
+@screenTiny   : 480px; 	// très petite taille d'écran (mobiles)
+@screenSmall  : 800px; 	// taille d'écran réduite (tablettes)
+@screenLarge  : 1280px; // grands écrans (moniteurs de grand format)
 
 // jeu de couleurs
 @color1       : rgb(30, 30, 30);
@@ -25,8 +24,11 @@
 @color4       : darken(@color3, 10%);
 @colorLink    : rgb(100,200,200);
 
+// autre
+@wrapper      : 1000px; // définition d'un conteneur principal (facultatif)
 
-// utlisé automatiquement par les CSS = ne pas modifier
+
+// Défini les tailles des polices en rem et px
 .fontSize(@fontSize) {
 	font-size: (@fontSize + 0px);
 	font-size: ((@fontSize / 10) + 0rem);

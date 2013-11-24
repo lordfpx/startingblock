@@ -7,6 +7,9 @@
 /* caché sur mobile */
 /* occupera toute la largeur sur tablettes */
 /* occupera toute la largeur sur mobiles */
+@-ms-viewport {
+  width: device-width;
+}
 /* Ecrans Retina */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   
@@ -16,7 +19,7 @@
   
 }
 /* Tablettes */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .no_desktop {
     display: block;
   }
@@ -46,7 +49,7 @@
   }
 }
 /* Mobiles */
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .no_tablet {
     display: block;
   }

@@ -1,5 +1,6 @@
 @import 'config.less';
 
+// ne pas modifier...
 .no_desktop { display: none; } /* caché sur desktop */
 .no_print   {} /* caché sur print */
 .no_tablet  {} /* caché sur tablettes */
@@ -8,6 +9,9 @@
 .break_tablet { } /* occupera toute la largeur sur tablettes */
 .break_mobile { } /* occupera toute la largeur sur mobiles */
 
+@-ms-viewport {
+	width: device-width;
+}
 
 /* Ecrans Retina */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
