@@ -1,58 +1,187 @@
-@import 'config.less';
-
-/* retirer la gouttière sur une colonne ou tous les enfants */
+/* remove guts on a specific column (or all children) */
 .nogut,
 .all_nogut > * {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
 
-/* Contenant d'un set de colonnes */
+/* grid wrapper */
 .colset {
 	display: inline-block;
 	width: 100%;
 	vertical-align: top;
-	.nogut; // évite le doublement de la goutière en cas d'imbrication
+	.nogut; // no double guts when nested grids
 
 	> [class*=col_] {
 		position: relative;
 		float: left;
-		padding-left: @gutter;
-		padding-right: @gutter;
-		min-height: 1px; /* Pour que cela fonctionne même si le bloc est vide */
+		padding-left: @gutterS;
+		padding-right: @gutterS;
+		min-height: 1px; /* a column exists even when empty */
 	}
 }
 
-// les colonnes
-.col_1  { width: ((100 / 12) + 0%); }
-.col_2 	{ width: ((100 / 12) * 2 + 0%); }
-.col_3 	{ width: ((100 / 12) * 3 + 0%); }
-.col_4  { width: ((100 / 12) * 4 + 0%); }
-.col_5  { width: ((100 / 12) * 5 + 0%); }
-.col_6 	{ width: ((100 / 12) * 6 + 0%); }
-.col_7 	{ width: ((100 / 12) * 7 + 0%); }
-.col_8  { width: ((100 / 12) * 8 + 0%); }
-.col_9  { width: ((100 / 12) * 9 + 0%); }
-.col_10 { width: ((100 / 12) * 10 + 0%); }
-.col_11 { width: ((100 / 12) * 11 + 0%); }
-.col_12 { width: 100%; }
+// columns
+.col_1_S  { width: ((100 / 12) + 0%); }
+.col_2_S 	{ width: ((100 / 12) * 2 + 0%); }
+.col_3_S 	{ width: ((100 / 12) * 3 + 0%); }
+.col_4_S  { width: ((100 / 12) * 4 + 0%); }
+.col_5_S  { width: ((100 / 12) * 5 + 0%); }
+.col_6_S 	{ width: ((100 / 12) * 6 + 0%); }
+.col_7_S 	{ width: ((100 / 12) * 7 + 0%); }
+.col_8_S  { width: ((100 / 12) * 8 + 0%); }
+.col_9_S  { width: ((100 / 12) * 9 + 0%); }
+.col_10_S { width: ((100 / 12) * 10 + 0%); }
+.col_11_S { width: ((100 / 12) * 11 + 0%); }
+.col_12_S { width: 100%; }
 
-/* Pour créer des espaces avant une colonne */
-.space_1  { margin-left: ((100 / 12) + 0%); }
-.space_2  { margin-left: ((100 / 12) * 2 + 0%); }
-.space_3  { margin-left: ((100 / 12) * 3 + 0%); }
-.space_4  { margin-left: ((100 / 12) * 4 + 0%); }
-.space_5  { margin-left: ((100 / 12) * 5 + 0%); }
-.space_6  { margin-left: ((100 / 12) * 6 + 0%); }
-.space_7  { margin-left: ((100 / 12) * 7 + 0%); }
-.space_8  { margin-left: ((100 / 12) * 8 + 0%); }
-.space_9  { margin-left: ((100 / 12) * 9 + 0%); }
-.space_10 { margin-left: ((100 / 12) * 10 + 0%); }
-.space_11 { margin-left: ((100 / 12) * 11 + 0%); }
+/* space before a column */
+.space_1_S  { margin-left: ((100 / 12) + 0%); }
+.space_2_S  { margin-left: ((100 / 12) * 2 + 0%); }
+.space_3_S  { margin-left: ((100 / 12) * 3 + 0%); }
+.space_4_S  { margin-left: ((100 / 12) * 4 + 0%); }
+.space_5_S  { margin-left: ((100 / 12) * 5 + 0%); }
+.space_6_S  { margin-left: ((100 / 12) * 6 + 0%); }
+.space_7_S  { margin-left: ((100 / 12) * 7 + 0%); }
+.space_8_S  { margin-left: ((100 / 12) * 8 + 0%); }
+.space_9_S  { margin-left: ((100 / 12) * 9 + 0%); }
+.space_10_S { margin-left: ((100 / 12) * 10 + 0%); }
+.space_11_S { margin-left: ((100 / 12) * 11 + 0%); }
 
 
-/* Grille automatique qui se défini directement sur conteneur (la gouttière s'applique sur les enfants).
-idéal pour les galeries */
+// tablet grids
+@media (min-width: @screenM) {
+	// reset previous breakpoint settings
+	/*.col_1_S, .col_2_S, .col_3_S, .col_4_S, .col_5_S, .col_6_S, .col_7_S, .col_8_S, .col_9_S, .col_10_S, .col_11_S, .col_12_S 
+		{ width: inherit; }
+
+	.space_1_S, .space_2_S, .space_3_S, .space_4_S, .space_5_S, .space_6_S, .space_7_S, .space_8_S, .space_9_S, .space_10_S, .space_11_S 
+		{ margin-left: inherit; }*/
+
+	/* tablet guts */
+	.colset > [class*=col_] {
+		padding-left: @gutterM;
+		padding-right: @gutterM;
+	}
+
+	// columns
+	.col_1_M  		{ width: ((100 / 12) + 0%); }
+	.col_2_M 		{ width: ((100 / 12) * 2 + 0%); }
+	.col_3_M 		{ width: ((100 / 12) * 3 + 0%); }
+	.col_4_M  		{ width: ((100 / 12) * 4 + 0%); }
+	.col_5_M  		{ width: ((100 / 12) * 5 + 0%); }
+	.col_6_M 		{ width: ((100 / 12) * 6 + 0%); }
+	.col_7_M 		{ width: ((100 / 12) * 7 + 0%); }
+	.col_8_M  		{ width: ((100 / 12) * 8 + 0%); }
+	.col_9_M  		{ width: ((100 / 12) * 9 + 0%); }
+	.col_10_M 		{ width: ((100 / 12) * 10 + 0%); }
+	.col_11_M 		{ width: ((100 / 12) * 11 + 0%); }
+	.col_12_M 		{ width: 100%; }
+
+	/* space before a column */
+	.space_1_M 	{ margin-left: ((100 / 12) + 0%); }
+	.space_2_M 	{ margin-left: ((100 / 12) * 2 + 0%); }
+	.space_3_M 	{ margin-left: ((100 / 12) * 3 + 0%); }
+	.space_4_M 	{ margin-left: ((100 / 12) * 4 + 0%); }
+	.space_5_M 	{ margin-left: ((100 / 12) * 5 + 0%); }
+	.space_6_M 	{ margin-left: ((100 / 12) * 6 + 0%); }
+	.space_7_M 	{ margin-left: ((100 / 12) * 7 + 0%); }
+	.space_8_M 	{ margin-left: ((100 / 12) * 8 + 0%); }
+	.space_9_M 	{ margin-left: ((100 / 12) * 9 + 0%); }
+	.space_10_M 	{ margin-left: ((100 / 12) * 10 + 0%); }
+	.space_11_M 	{ margin-left: ((100 / 12) * 11 + 0%); }
+}
+
+
+// desktop grids
+@media (min-width: @screenL) {
+	// reset previous breakpoint settings
+	.col_1_M, .col_2_M, .col_3_M, .col_4_M, .col_5_M, .col_6_M, .col_7_M, .col_8_M, .col_9_M, .col_10_M, .col_11_M, .col_12_M
+		{ width: inherit; }
+
+	.space_1_M, .space_2_M, .space_3_M, .space_4_M, .space_5_M, .space_6_M, .space_7_M, .space_8_M, .space_9_M, .space_10_M, .space_11_M
+		{ margin-left: inherit; }
+
+	/* desktop guts */
+	.colset > [class*=col_] {
+		padding-left: @gutterL;
+		padding-right: @gutterL;
+	}
+
+	// columns
+	.col_1_L  	{ width: ((100 / 12) + 0%); }
+	.col_2_L 		{ width: ((100 / 12) * 2 + 0%); }
+	.col_3_L 		{ width: ((100 / 12) * 3 + 0%); }
+	.col_4_L  	{ width: ((100 / 12) * 4 + 0%); }
+	.col_5_L  	{ width: ((100 / 12) * 5 + 0%); }
+	.col_6_L 		{ width: ((100 / 12) * 6 + 0%); }
+	.col_7_L 		{ width: ((100 / 12) * 7 + 0%); }
+	.col_8_L  	{ width: ((100 / 12) * 8 + 0%); }
+	.col_9_L  	{ width: ((100 / 12) * 9 + 0%); }
+	.col_10_L 	{ width: ((100 / 12) * 10 + 0%); }
+	.col_11_L 	{ width: ((100 / 12) * 11 + 0%); }
+	.col_12_L 	{ width: 100%; }
+
+	/* space before a column */
+	.space_1_L 	{ margin-left: ((100 / 12) + 0%); }
+	.space_2_L 	{ margin-left: ((100 / 12) * 2 + 0%); }
+	.space_3_L 	{ margin-left: ((100 / 12) * 3 + 0%); }
+	.space_4_L 	{ margin-left: ((100 / 12) * 4 + 0%); }
+	.space_5_L 	{ margin-left: ((100 / 12) * 5 + 0%); }
+	.space_6_L 	{ margin-left: ((100 / 12) * 6 + 0%); }
+	.space_7_L 	{ margin-left: ((100 / 12) * 7 + 0%); }
+	.space_8_L 	{ margin-left: ((100 / 12) * 8 + 0%); }
+	.space_9_L 	{ margin-left: ((100 / 12) * 9 + 0%); }
+	.space_10_L { margin-left: ((100 / 12) * 10 + 0%); }
+	.space_11_L { margin-left: ((100 / 12) * 11 + 0%); }
+}
+
+
+// big desktop grids
+@media (min-width: @screenXL) {
+	// reset previous breakpoint settings
+	.col_1_L, .col_2_L, .col_3_L, .col_4_L, .col_5_L, .col_6_L, .col_7_L, .col_8_L, .col_9_L, .col_10_L, .col_11_L, .col_12_L
+		{ width: inherit; }
+
+	.space_1_L, .space_2_L, .space_3_L, .space_4_L, .space_5_L, .space_6_L, .space_7_L, .space_8_L, .space_9_L, .space_10_L, .space_11_L 
+		{ margin-left: inherit; }
+
+	/* desktop guts */
+	.colset > [class*=col_] {
+		padding-left: @gutterXL;
+		padding-right: @gutterXL;
+	}
+
+	// columns
+	.col_1_XL  		{ width: ((100 / 12) + 0%); }
+	.col_2_XL 		{ width: ((100 / 12) * 2 + 0%); }
+	.col_3_XL 		{ width: ((100 / 12) * 3 + 0%); }
+	.col_4_XL  		{ width: ((100 / 12) * 4 + 0%); }
+	.col_5_XL  		{ width: ((100 / 12) * 5 + 0%); }
+	.col_6_XL 		{ width: ((100 / 12) * 6 + 0%); }
+	.col_7_XL 		{ width: ((100 / 12) * 7 + 0%); }
+	.col_8_XL  		{ width: ((100 / 12) * 8 + 0%); }
+	.col_9_XL  		{ width: ((100 / 12) * 9 + 0%); }
+	.col_10_XL 		{ width: ((100 / 12) * 10 + 0%); }
+	.col_11_XL 		{ width: ((100 / 12) * 11 + 0%); }
+	.col_12_XL 		{ width: 100%; }
+
+	/* space before a column */
+	.space_1_XL 	{ margin-left: ((100 / 12) + 0%); }
+	.space_2_XL 	{ margin-left: ((100 / 12) * 2 + 0%); }
+	.space_3_XL 	{ margin-left: ((100 / 12) * 3 + 0%); }
+	.space_4_XL 	{ margin-left: ((100 / 12) * 4 + 0%); }
+	.space_5_XL 	{ margin-left: ((100 / 12) * 5 + 0%); }
+	.space_6_XL 	{ margin-left: ((100 / 12) * 6 + 0%); }
+	.space_7_XL 	{ margin-left: ((100 / 12) * 7 + 0%); }
+	.space_8_XL 	{ margin-left: ((100 / 12) * 8 + 0%); }
+	.space_9_XL 	{ margin-left: ((100 / 12) * 9 + 0%); }
+	.space_10_XL 	{ margin-left: ((100 / 12) * 10 + 0%); }
+	.space_11_XL 	{ margin-left: ((100 / 12) * 11 + 0%); }
+}
+
+
+/* automatic grid from parent (great for galeries) */
 [class*=listGrid_] {
 	list-style: none;
 	padding-left: 0;
@@ -61,19 +190,19 @@ idéal pour les galeries */
 	> * {
 		float: left;
 		position: relative;
-		padding-left: @gutter;
-		padding-right: @gutter;
+		padding-left: @gutterS;
+		padding-right: @gutterS;
 		min-height: 1px;
 	}
 
-	/* Annuler les goutières sur les enfants */
+	/* if you don't want guts */
 	&.nogut > * {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 	}
 }
 
-// les colonnes
+// columns for automatic grid
 .listGrid_1 > *  { width: ((100 / 1) + 0%); }
 .listGrid_2 > *  { width: ((100 / 2) + 0%); }
 .listGrid_3 > *  { width: ((100 / 3) + 0%); }

@@ -1,20 +1,17 @@
-@import 'config.less';
-
 .wrapper {
 	max-width: @wrapper;
 }
 
-.left,
-.all_left > *	{ float: left; }
+.left, .all_left > *	
+	{ float: left; }
 
-.right,
-.all_right > *	{ float: right; }
+.right, .all_right > *	
+	{ float: right; }
 
-/* block ayant un contexte de formatage (BFC) */
+/* give BFC to wrap floating elements */
 .mod	{ overflow: hidden; }
 
-.clearfix:after,
-[class*=listGrid_]{
+.clearfix:after, [class*=listGrid_] {
 	content: "";
 	display: table;
 	clear: both;
@@ -24,9 +21,8 @@
 	.ie6 .clearfix, .ie7 .clearfix { zoom: 1; }
 
 
-/* inline-block (sur l'élément ou tous ses enfants) */
-.ilbl,
-.all_ilbl > * {
+/* inline-block */
+.ilbl, .all_ilbl > * {
 	display: inline-block;
 	vertical-align: top;
 	margin-right: -.25em;
@@ -38,7 +34,7 @@
 	}
 
 
-/* Définitions de marges et de paddings (sur l'élément ou tous ses enfants) */
+/* Margin and padding presets */
 /* margin */
 .margin0, .all_margin0 > * { margin: 0 !important; }
 .margin1, .all_margin1 > * { margin: @size1; }
@@ -46,59 +42,60 @@
 .margin3, .all_margin3 > * { margin: @size3; }
 .margin4, .all_margin4 > * { margin: @size4; }
 
-/* mt = margin-top */
 .marginT0, .all_marginT0 > * { margin-top: 0 !important; }
 .marginT1, .all_marginT1 > * { margin-top: @size1; }
 .marginT2, .all_marginT2 > * { margin-top: @size2; }
 .marginT3, .all_marginT3 > * { margin-top: @size3; }
+.marginT4, .all_marginT4 > * { margin-top: @size4; }
 
-/* mr = margin-right */
 .marginR0, .all_marginR0 > * { margin-right: 0 !important; }
 .marginR1, .all_marginR1 > * { margin-right: @size1; }
 .marginR2, .all_marginR2 > * { margin-right: @size2; }
 .marginR3, .all_marginR3 > * { margin-right: @size3; }
+.marginR4, .all_marginR4 > * { margin-right: @size4; }
 
-/* mb = margin-bottom */
 .marginB0, .all_marginB0 > * { margin-bottom: 0 !important; }
 .marginB1, .all_marginB1 > * { margin-bottom: @size1; }
 .marginB2, .all_marginB2 > * { margin-bottom: @size2; }
 .marginB3, .all_marginB3 > * { margin-bottom: @size3; }
+.marginB4, .all_marginB4 > * { margin-bottom: @size4; }
 
-/* ml = margin-left */
 .marginL0, .all_marginL0 > * { margin-left: 0 !important; }
 .marginL1, .all_marginL1 > * { margin-left: @size1; }
 .marginL2, .all_marginL2 > * { margin-left: @size2; }
 .marginL3, .all_marginL3 > * { margin-left: @size3; }
+.marginL4, .all_marginL4 > * { margin-left: @size4; }
 
 /* padding */
 .padding0, .all_padding0 > * { padding: 0 !important; }
 .padding1, .all_padding1 > * { padding: @size1; }
 .padding2, .all_padding2 > * { padding: @size2; }
 .padding3, .all_padding3 > * { padding: @size3; }
+.padding4, .all_padding4 > * { padding: @size4; }
 
-/* pt = padding-top */
 .paddingT0, .all_paddingT0 > * { padding-top: 0 !important; }
 .paddingT1, .all_paddingT1 > * { padding-top: @size1; }
 .paddingT2, .all_paddingT2 > * { padding-top: @size2; }
 .paddingT3, .all_paddingT3 > * { padding-top: @size3; }
+.paddingT4, .all_paddingT4 > * { padding-top: @size4; }
 
-/* pr = padding-right */
 .paddingR0, .all_paddingR0 > * { padding-right: 0 !important; }
 .paddingR1, .all_paddingR1 > * { padding-right: @size1; }
 .paddingR2, .all_paddingR2 > * { padding-right: @size2; }
 .paddingR3, .all_paddingR3 > * { padding-right: @size3; }
+.paddingR4, .all_paddingR4 > * { padding-right: @size4; }
 
-/* pb = padding-bottom */
 .paddingB0, .all_paddingB0 > * { padding-bottom: 0 !important; }
 .paddingB1, .all_paddingB1 > * { padding-bottom: @size1; }
 .paddingB2, .all_paddingB2 > * { padding-bottom: @size2; }
 .paddingB3, .all_paddingB3 > * { padding-bottom: @size3; }
+.paddingB4, .all_paddingB4 > * { padding-bottom: @size4; }
 
-/* pl = padding-left */
 .paddingL0, .all_paddingL0 > * { padding-left: 0 !important; }
 .paddingL1, .all_paddingL1 > * { padding-left: @size1; }
 .paddingL2, .all_paddingL2 > * { padding-left: @size2; }
 .paddingL3, .all_paddingL3 > * { padding-left: @size3; }
+.paddingL4, .all_paddingL4 > * { padding-left: @size4; }
 
 .marginA {
 	margin-left: auto;
@@ -106,30 +103,14 @@
 }
 
 
-/* Textes */
-.alignR,
-.all_alignR > * { text-align: right; }
-.alignC,
-.all_alignC > * { text-align: center; }
-.alignL,
-.all_alignL > * { text-align: left; }
-.alignJ,
-.all_alignJ > * { text-align: justify; }
-
-.uppercase,
-.all_uppercase { text-transform: uppercase; }
-.underline,
-.all_underline { text-decoration: underline; }
-
-
-/* pour les listes utiliser comme menu par exemple */
+/* unstyle UL when needed */
 ul.unstyled {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
-/* remplacer du texte par une image en background par exemple */
+/* to replace text with a background image */
 .text_hidden {
 	font: 0/0 a;
 	color: transparent;
@@ -137,5 +118,5 @@ ul.unstyled {
 }
 
 
-/* Règles d'affichage */
-.hidden { display: none; } /* cacher élément */
+/* hide an element */
+.hidden { display: none; }

@@ -1,74 +1,3 @@
-@import 'config.less';
-
-// ne pas modifier...
-.no_desktop { display: none; } /* caché sur desktop */
-.no_print   {} /* caché sur print */
-.no_tablet  {} /* caché sur tablettes */
-.no_mobile  {} /* caché sur mobile */
-
-.break_tablet { } /* occupera toute la largeur sur tablettes */
-.break_mobile { } /* occupera toute la largeur sur mobiles */
-
-@-ms-viewport {
-	width: device-width;
-}
-
-/* Ecrans Retina */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-
-}
-
-/* Grands écrans */
-@media (min-width: @screenLarge) {
-
-}
-
-/* Tablettes */
-@media (max-width: @screenSmall) {
-	.no_desktop { display: block; }
-	.no_tablet { display: none; }
-
-	/* linéarisation des contenus flottants */
-	.break_tablet {
-		float: none;
-		width: 100%;
-		margin-left: 0 !important;
-		margin-right: 0 !important;
-	}
-
-	h1, .h1,
-	h2, .h2,
-	h3, .h3,
-	h4, .h4,
-	h5, .h5,
-	h6, .h6 {
-		text-rendering: optimizeLegibility;
-	}
-}
-
-/* Mobiles */
-@media (max-width: @screenTiny) {
-	.no_tablet { display: block; }
-	.no_mobile { display: none; }
-
-	/* linéarisation des contenus flottants */
-	.break_mobile {
-		float: none;
-		width: 100%;
-		margin-left: 0 !important;
-		margin-right: 0 !important;
-	}
-
-	h1, .h1,
-	h2, .h2,
-	h3, .h3,
-	h4, .h4,
-	h5, .h5,
-	h6, .h6 {
-		text-rendering: optimizeLegibility;
-	}
-}
-
 /* orientation iOS font-size fix */
 @media (orientation: landscape) and (max-device-width: 768px) {
 	html, body {
@@ -76,7 +5,70 @@
 	}
 }
 
-/* print */
+@-ms-viewport {
+	width: device-width;
+}
+
+// hide elements depending on screen size...
+.hide_S  		{ display: none; }
+.hide_M  		{ display: inherit; }
+.hide_L 		{ display: inherit; } 
+.hide_XL 		{ display: inherit; } 
+.hide_print { display: inherit; } 
+
+.break_M 		{  }
+.break_L 		{  }
+
+/* only for Retina screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+
+}
+
+
+/* for tablet */
+@media (min-width: @screenM) {
+	.hide_S  		{ display: inherit; }
+	.hide_M  		{ display: none; }
+	.hide_L 		{ display: inherit; } 
+	.hide_XL 		{ display: inherit; } 
+
+	/* these elements will be forced full width */
+	.break_M {
+		float: none;
+		width: 100%;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+}
+
+
+/* for desktop */
+@media (min-width: @screenL) {
+	.hide_S  		{ display: inherit; }
+	.hide_M  		{ display: inherit; }
+	.hide_L 		{ display: none; } 
+	.hide_XL 		{ display: inherit; } 
+
+	/* these elements will be forced full width */
+	.break_desktop {
+		float: none;
+		width: 100%;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+}
+
+
+/* For big screens */
+@media (min-width: @screenXL) {
+	.hide_S  		{ display: inherit; }
+	.hide_M  		{ display: inherit; }
+	.hide_L 		{ display: inherit; } 
+	.hide_XL 		{ display: none; } 
+}
+
+
+/* for print */
 @media print {
 	body, html, #page {
 		background-color: #fff;
@@ -117,13 +109,4 @@
 	* à limiter cette possibilité aux liens dans le contenu */
 	a:after { content: " (" attr(href) ") "; }
 	a:after img { content: ""; }
-
-	h1, .h1,
-	h2, .h2,
-	h3, .h3,
-	h4, .h4,
-	h5, .h5,
-	h6, .h6 {
-		text-rendering: optimizeLegibility;
-	}
 }
