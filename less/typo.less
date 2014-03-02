@@ -1,4 +1,6 @@
-/* My brain has enough things to remember ;-)
+@import 'config.less';
+
+/* pense-bête font-face
 -----------------------
 @font-face {
 	font-family: 'FuturaStdBook';
@@ -17,55 +19,117 @@ html {
 }
 
 body{
-	.fontSize(@fontSizeNormal);
+	.fontSize(@fontBase);
 	line-height: @lineHeight;
 	text-rendering: optimizeLegibility;
 	color: @color1;
 }
 
-/* Standard texts */
+/* TEXTE STANDARD */
 p, ul, ol, dl, blockquote,
 pre, td, th, label, textarea, caption,
 details, figure, hgroup {
-	.fontSize(@fontSizeNormal);
+	.fontSize(@fontBase);
 }
 
-/* text formating */
-.alignR, .all_alignR > * 
-	{ text-align: right; }
-
-.alignC, .all_alignC > * 
-	{ text-align: center; }
-
-.alignL, .all_alignL > * 
-	{ text-align: left; }
-
-.alignJ, .all_alignJ > * 
-	{ text-align: justify; }
-
-.uppercase, .all_uppercase > * 
-	{ text-transform: uppercase; }
-
-.underline, .all_underline > * 
-	{ text-decoration: underline; }
-
-.bold 
-	{ font-weight: bold; }
-
-/* change font-size */
-.smallest {
-	.fontSize(@fontSizeSmallest);
+p, ul, ol, dl, blockquote, pre {
+	margin-bottom: @size2;
 }
+
+ul, ol {
+	padding-left: @size3;
+}
+
+hr {
+	border: none;
+	border-top: 4px solid @color3;
+}
+
+/* modifier taille des textes */
 .smaller {
-	.fontSize(@fontSizeSmaller);
+	.fontSize(10);
 }
-
+.small {
+	.fontSize(12);
+}
 .big {
-	.fontSize(@fontSizeBig);
+	.fontSize(16);
 }
 .bigger {
-	.fontSize(@fontSizeBigger);
+	.fontSize(19);
 }
 .biggest {
-	.fontSize(@fontSizeBiggest);
+	.fontSize(24);
 }
+
+
+/* TITRES */
+h1, .h1 {
+	.fontSize(60);
+	margin-top: @size2;
+	margin-bottom: @size1;
+}
+
+h2, .h2 {
+	.fontSize(35);
+	margin-top: @size2;
+	margin-bottom: @size1;
+}
+
+h3, .h3 {
+	.fontSize(26);
+	margin-top: @size2;
+	margin-bottom: @size1;
+}
+
+h4, .h4 {
+	.fontSize(20);
+	margin-top: @size1;
+	margin-bottom: @size1;
+}
+
+h5, .h5 {
+	.fontSize(14);
+	margin-top: @size1;
+	margin-bottom: @size1;
+}
+
+h6, .h6 {
+	.fontSize(12);
+	margin-top: @size1;
+	margin-bottom: @size1;
+}
+
+
+/* LIENS */
+a {
+	text-decoration: underline;
+
+	&link{
+
+	}
+
+	&:visited{
+
+	}
+
+	&:focus{
+		outline: thin dotted;
+	}
+
+	&:hover{
+		background: black;
+		color: white;
+	}
+
+	&:active{
+
+	}
+}
+
+
+/* AUTRES */
+q {
+	font-style: italic;
+}
+
