@@ -21,9 +21,9 @@ ADVANTAGES
 ----------
 - Mobile first
 - Border-box ready (even for IE 7 !)
-- Nested grid, padding based system that will keep the same gut size !
-- Different gut sizes depending on media-queries
-- You can remove guts on any columns as you wish
+- Nested grid (you keep the same gutter !)
+- Different gutter sizes depending on media-queries
+- You can remove gutters on any columns as you wish
 - "all-***" allows you to define the same style to direct children (for exemple, .all-ilbl will give display: inline-block to every direct child of this element)
 - GRUNT ready !
 
@@ -36,12 +36,12 @@ http://lordfpx.github.io/startingblock/
 HOW ?
 ------
 If you only plan to use it has-is:
-- Download the full archive here: https://github.com/lordfpx/startingblock/archive/dev.zip
+- Download the full archive here: https://github.com/lordfpx/startingblock/archive/master.zip
 
 If you plan to work on it, start your terminal and:
 - `cd` your working directory
 - Clone the repo: `git clone https://github.com/lordfpx/startingblock.git`
 - install nodeJS (http://nodejs.org/) if you don't have it
-- Install GRUNT globally with `npm install -g grunt-cli`
+- Install GRUNT with `npm install -g grunt-cli`
 - run `npm install`
 - run `grunt` and start playing!
