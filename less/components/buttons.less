@@ -1,0 +1,26 @@
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  padding: 4px 10px;
+  text-decoration: none;
+  background: @colorLink;
+  color: @colorText;
+  font-size: @fontNormal;
+
+  &:hover,
+  &:focus {
+    background: @colorLinkHover;
+    color: @colorText;
+  }
+
+  &.btn-s{
+    padding: 2px 5px;
+    .smaller;
+  }
+
+  &.btn-l{
+    padding: 6px 15px;
+    .bigger;
+  }
+}

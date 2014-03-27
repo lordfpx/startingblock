@@ -1,0 +1,89 @@
+/* My brain has enough things to remember ;-)
+-----------------------
+@font-face {
+  font-family: 'FuturaStdBook';
+  src: url('fonts/futurastd-book-webfont.eot');
+  src: url('fonts/futurastd-book-webfont.eot?#iefix') format('eot'),
+    url('fonts/futurastd-book-webfont.woff') format('woff'),
+    url('fonts/futurastd-book-webfont.ttf') format('truetype'),
+    url('fonts/futurastd-book-webfont.svg#FuturaStdBook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+
+// auto font-size adapter (px + rem)
+.fontSize(@fontSize) {
+  font-size: (@fontSize + 0px);
+  font-size: ((@fontSize / 10) + 0rem);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  .fontSize(@fontNormal);
+  line-height: @lineHeight;
+  text-rendering: optimizeLegibility;
+  color: @colorText;
+}
+
+/* Standard texts */
+p, ul, ol, dl, blockquote,
+pre, td, th, label, textarea, caption,
+details, figure, hgroup {
+  .fontSize(@fontNormal);
+}
+
+p, ul, ol {
+  .margin-b-1;
+}
+
+ul, ol {
+  list-style-position: inside;
+  margin-left: 20px;
+}
+
+/* text formating */
+.align-r, .all-align-r > * { text-align: right; }
+.align-c, .all-align-c > * { text-align: center; }
+.align-l, .all-align-l > * { text-align: left; }
+.align-j, .all-align-j > * { text-align: justify; }
+
+.uppercase, .all-uppercase > * { text-transform: uppercase; }
+.underline, .all-underline > * { text-decoration: underline; }
+
+.bold { font-weight: bold; }
+
+
+/* Links */
+a {
+  color: @colorLink;
+
+  &:hover,
+  &:focus {
+    color: @colorLinkHover;
+  }
+}
+
+/* change font-size */
+.smallest {
+  .fontSize(@fontSmallest);
+}
+
+.smaller {
+  .fontSize(@fontSmaller);
+}
+
+.big {
+  .fontSize(@fontBig);
+}
+
+.bigger {
+  .fontSize(@fontBigger);
+}
+
+.biggest {
+  .fontSize(@fontBiggest);
+}

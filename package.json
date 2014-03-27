@@ -1,0 +1,24 @@
+{
+  "name": "StartingBlock",
+  "title": "Starting Block",
+  "description": "Starting Block - micro CSS framework",
+  "version": "0.1.0",
+  "homepage": "https://github.com/lordfpx/startingblock/",
+  "author": {
+    "name": "Thierry Philippe",
+    "email": "contact@thierryphilippe.fr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lordfpx/startingblock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lordfpx/startingblock/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-less": "~0.10.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-copy": "~0.5.0"
+  }
+}

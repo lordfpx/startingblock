@@ -1,0 +1,98 @@
+body {
+  font-family: arial, helvetica, sans-serif;
+}
+h1 {
+  font-weight: bold;
+  font-size: 80px;
+}
+h2 {
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+h3 {
+  font-weight: bold;
+  font-size: 26px;
+}
+.exemple {
+  background: #ebebeb;
+  border-radius: 5px;
+  padding: 40px 10px 10px 10px;
+  margin: 10px 0;
+  position: relative;
+}
+.exemple:before {
+  content: "exemple";
+  color: #d2d2d2;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.exemple [class*=col-] {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+}
+.definitions dt {
+  text-align: right;
+}
+.off {
+  color: #7d7d7d;
+}
+.class {
+  background: #288472;
+  font-weight: bold;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+#menu {
+  background: #1e1e1e;
+}
+#menu a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+}
+#menu a:hover {
+  background: white;
+  color: #1e1e1e;
+}
+.demo-margins,
+.demo-paddings {
+  border: 1px solid #7d7d7d;
+  width: 40%;
+  min-height: 21px;
+}
+.demo-margins div,
+.demo-paddings div {
+  background: #7d7d7d;
+}
+.demo-paddings {
+  width: 100%;
+}
+#samplesLayout th,
+#samplesLayout td {
+  border: 1px solid #7d7d7d;
+  padding: 5px;
+}
+#samplesLayout th {
+  background: #7d7d7d;
+}
+#samplesLayout .col1 {
+  width: 150px;
+}
+#samplesLayout .col2 {
+  width: 400px;
+}
+@media (max-width: 481px) {
+  h2 {
+    font-size: 30px;
+  }
+  .definitions dt {
+    text-align: left;
+    margin-bottom: 0;
+  }
+}

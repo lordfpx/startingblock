@@ -1,56 +1,47 @@
 Starting-Block
-=============
+==============
 
-Il s'agit d'un (énième) micro framework très basique pour que vous puissiez ne penser qu'à styler votre site et non le framework lui-même. Il est inspiré par d'autres projets comme :
-- http://www.knacss.com/ de Raphaël Goetter
-- http://rocssti.nicolas-hoffmann.net/ de Nicolas Hoffmann
-- http://getbootstrap.com/
-- http://foundation.zurb.com/
+WARNING - NOT READY FOR PRODUCTION YET !
 
-Je l'ai avant tout développé pour mes propres besoins, mais je pense qu'il peut être utile à d'autres intégrateurs.
+Yet another CSS framework which will allow you to start your projects with a solid base. It's inspired by other great projects such as:
+- http://www.knacss.com/ by Raphaël Goetter
+- http://rocssti.nicolas-hoffmann.net/ by Nicolas Hoffmann
 
-Le "htaccess" fourni est celui de Twitter Bootstrap qui est vraiment très travaillé.
-Ce fichier est facultatif, il est juste là pour optimiser le serveur et si vous rencontrez des difficultés ne l'utilisez tout simplement pas. Si vous avez déjà un tel fichier sur votre serveur, ne le remplacez surtout pas si vous ne savez pas ce que vous faites !
+You can use it, change it, take only some parts of it freely. I will be very pleased if you mention me somewhere anyway (with a link to the GIT repository).
 
-Vous pouvez utiliser librement tous les éléments de ce framework, les modifier, redistribuer... merci de me référencer tout de même, ainsi que ceux ayant développés les éléments présents.
-
-Support des navigateurs à partir de : Internet Explorer 7, Firefox 3.6, Safari 3, Google Chrome 16 (et certainement de plus anciennes versions).
+Browser support: Internet Explorer 7+, Firefox 3.6+, Safari 3+, Google Chrome 16+.
 
 
-POURQUOI ?
+WHY ?
+-----
+A CSS micro-framework is a good and faster way to start a new front-end. You will be able to prototype quickly and it will not give you headache when you will be adding you own design (unlike Twitter Bootstrap for exemple).
+
+
+ADVANTAGES
 ----------
-Un micro framework est un moyen de débuter une intégration bien plus rapidement, il propose des bases solides (souvent personnalisables) et légères (à contrario de Twitter bootstrap ou foundation). Sachant qu'utiliser un nouveau framework demande un temps d'adaptiation, j'essai de concerver le maximum de simplicité et une nomenclature claire.
-Il se doit d'être le plus flexible possible pour permettre d'intégrer des designs "exotiques".
+- Mobile first
+- Border-box ready (even for IE 7 !)
+- Nested grid, padding based system that will keep the same gut size !
+- Different gut sizes depending on media-queries
+- You can remove guts on any columns as you wish
+- "all-***" allows you to define the same style to direct children (for exemple, .all-ilbl will give display: inline-block to every direct child of this element)
+- GRUNT ready !
 
 
-FAVICONS
---------
-Les favicons de ce framework sont adaptées pour la majorité des supports (navigateurs, iOS, Androïd...). Pour les designer, vous pouvez vous baser sur les exemple fournis ou utiliser un site comme : http://iconifier.net/
+DOCUMENTATION AND DEMO
+----------------------
+http://lordfpx.github.io/startingblock/
 
 
-CSS/LESS
---------
-Le nom des classes est (normalement) parlant. Je vous encourage à utiliser les version LESS pour personnaliser plus simplement ce framework. Si vous pensez qu'un préprocesseur est trop compliqué : c'est que vous n'avez jamais essayé :-p.
-
-
-DOCUMENTATION ET DEMO
----------------------
-http://test.lordfpx.com/startingblock/
-
-
-
-jQuery
+HOW ?
 ------
-http://jquery.com/
+If you only plan to use it has-is:
+- Download the full archive here: https://github.com/lordfpx/startingblock/archive/dev.zip
 
-modernizr
----------
-http://modernizr.com/
-
-selectivizr
------------
-http://selectivizr.com/
-
-jQuery Easing
--------------
-https://github.com/gdsmith/jquery.easing
+If you plan to work on it, start your terminal and:
+- `cd` your working directory
+- Clone the repo: `git clone https://github.com/lordfpx/startingblock.git`
+- install nodeJS (http://nodejs.org/) if you don't have it
+- Install GRUNT globally with `npm install -g grunt-cli`
+- run `npm install`
+- run `grunt` and start playing!

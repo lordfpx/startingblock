@@ -1,0 +1,132 @@
+.wrapper {
+  max-width: @wrapper;
+}
+
+.left,
+.all-left > *    { float: left; }
+
+.right,
+.all-right > *  { float: right; }
+
+/* give BFC to wrap floating elements for example */
+.mod { overflow: hidden; }
+
+.clearfix,
+.all-left,
+.all-right {
+  &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+  .ie6 .mod,
+  .ie7 .mod,
+  .ie6 .clearfix,
+  .ie7 .clearfix { zoom: 1; }
+
+
+/* inline-block */
+.ilbl,
+.all-ilbl > * {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -.25em;
+}
+  .ie6 .ilbl,
+  .ie7 .ilbl,
+  .ie6 .all-ilbl > *,
+  .ie7 .all-ilbl > * {
+    display: inline;
+    zoom: 1;
+  }
+
+
+/*  ----------------  */
+/*  MARGIN - PADDING  */
+/*  ----------------  */
+
+/* margin */
+.margin-0, .all-margin-0 > *      { margin: 0 !important; }
+.margin-1, .all-margin-1 > *      { margin: @size1; }
+.margin-2, .all-margin-2 > *      { margin: @size2; }
+.margin-3, .all-margin-3 > *      { margin: @size3; }
+.margin-4, .all-margin-4 > *      { margin: @size4; }
+
+.margin-t-0, .all-margin-t-0 > *  { margin-top: 0 !important; }
+.margin-t-1, .all-margin-t-1 > *  { margin-top: @size1; }
+.margin-t-2, .all-margin-t-2 > *  { margin-top: @size2; }
+.margin-t-3, .all-margin-t-3 > *  { margin-top: @size3; }
+.margin-t-4, .all-margin-t-4 > *  { margin-top: @size4; }
+
+.margin-r-0, .all-margin-r-0 > *  { margin-right: 0 !important; }
+.margin-r-1, .all-margin-r-1 > *  { margin-right: @size1; }
+.margin-r-2, .all-margin-r-2 > *  { margin-right: @size2; }
+.margin-r-3, .all-margin-r-3 > *  { margin-right: @size3; }
+.margin-r-4, .all-margin-r-4 > *  { margin-right: @size4; }
+
+.margin-b-0, .all-margin-b-0 > *  { margin-bottom: 0 !important; }
+.margin-b-1, .all-margin-b-1 > *  { margin-bottom: @size1; }
+.margin-b-2, .all-margin-b-2 > *  { margin-bottom: @size2; }
+.margin-b-3, .all-margin-b-3 > *  { margin-bottom: @size3; }
+.margin-b-4, .all-margin-b-4 > *  { margin-bottom: @size4; }
+
+.margin-l-0, .all-margin-l-0 > *  { margin-left: 0 !important; }
+.margin-l-1, .all-margin-l-1 > *  { margin-left: @size1; }
+.margin-l-2, .all-margin-l-2 > *  { margin-left: @size2; }
+.margin-l-3, .all-margin-l-3 > *  { margin-left: @size3; }
+.margin-l-4, .all-margin-l-4 > *  { margin-left: @size4; }
+
+/* padding */
+.padding-0, .all-padding-0 > *     { padding: 0 !important; }
+.padding-1, .all-padding-1 > *     { padding: @size1; }
+.padding-2, .all-padding-2 > *     { padding: @size2; }
+.padding-3, .all-padding-3 > *     { padding: @size3; }
+.padding-4, .all-padding-4 > *     { padding: @size4; }
+
+.padding-t-0, .all-padding-t-0 > * { padding-top: 0 !important; }
+.padding-t-1, .all-padding-t-1 > * { padding-top: @size1; }
+.padding-t-2, .all-padding-t-2 > * { padding-top: @size2; }
+.padding-t-3, .all-padding-t-3 > * { padding-top: @size3; }
+.padding-t-4, .all-padding-t-4 > * { padding-top: @size4; }
+
+.padding-r-0, .all-padding-r-0 > * { padding-right: 0 !important; }
+.padding-r-1, .all-padding-r-1 > * { padding-right: @size1; }
+.padding-r-2, .all-padding-r-2 > * { padding-right: @size2; }
+.padding-r-3, .all-padding-r-3 > * { padding-right: @size3; }
+.padding-r-4, .all-padding-r-4 > * { padding-right: @size4; }
+
+.padding-b-0, .all-padding-b-0 > * { padding-bottom: 0 !important; }
+.padding-b-1, .all-padding-b-1 > * { padding-bottom: @size1; }
+.padding-b-2, .all-padding-b-2 > * { padding-bottom: @size2; }
+.padding-b-3, .all-padding-b-3 > * { padding-bottom: @size3; }
+.padding-b-4, .all-padding-b-4 > * { padding-bottom: @size4; }
+
+.padding-l-0, .all-padding-l-0 > * { padding-left: 0 !important; }
+.padding-l-1, .all-padding-l-1 > * { padding-left: @size1; }
+.padding-l-2, .all-padding-l-2 > * { padding-left: @size2; }
+.padding-l-3, .all-padding-l-3 > * { padding-left: @size3; }
+.padding-l-4, .all-padding-l-4 > * { padding-left: @size4; }
+
+.margin-a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* unstyle UL when needed */
+ul.unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* to replace text with a background image */
+.text-hidden {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+}
+
+/* hide an element */
+.hidden { display: none; }

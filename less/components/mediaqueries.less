@@ -1,0 +1,111 @@
+/* orientation iOS font-size fix */
+@media (orientation: landscape) and (max-device-width: 768px) {
+  html, body {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+/* hide elements depending on screen size... */
+.hide-s     { display: none; }
+.hide-m     { display: inherit; }
+.hide-l     { display: inherit; }
+.hide-xl    { display: inherit; }
+
+.break-s    { }
+.break-m    { }
+.break-l    { }
+
+
+/* only for Retina screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+
+}
+
+
+/* for tablet */
+@media (min-width: @screenM) {
+  .hide-s     { display: inherit; }
+  .hide-m     { display: none; }
+  .hide-l     { display: inherit; }
+  .hide-xl    { display: inherit; }
+
+  /* these elements will be forced full width */
+  .break-m {
+    float: none;
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+
+/* for desktop */
+@media (min-width: @screenL) {
+  .hide-s     { display: inherit; }
+  .hide-m     { display: inherit; }
+  .hide-l     { display: none; }
+  .hide-xl    { display: inherit; }
+
+  /* these elements will be forced full width */
+  .break-l {
+    float: none;
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+
+/* For big screens */
+@media (min-width: @screenXL) {
+  .hide-s     { display: inherit; }
+  .hide-m     { display: inherit; }
+  .hide-l     { display: inherit; }
+  .hide-xl    { display: none; }
+}
+
+
+/* for print */
+@media print {
+  body, html, #page {
+    background-color: #fff;
+    background-image: none;
+    border: 0;
+    box-shadow: none;
+    color: #000;
+    float: none;
+    height: auto;
+    margin: 0;
+    min-height: auto;
+    padding: 0;
+    position: static;
+    width: auto;
+  }
+
+  body {
+    padding: .5em;
+  }
+
+  .no-print { display: none; }
+
+  /* Prevent hazardous page-break */
+  blockquote, ul, ol {
+    page-break-inside: avoid;
+  }
+  h1, h2, h3, caption {
+    page-break-after: avoid;
+  }
+
+  p, blockquote {
+    orphans: 2;
+    widows: 2;
+  }
+
+  /* will display URL, except for images */
+  a:after { content: " (" attr(href) ") "; }
+  a:after img { content: ""; }
+}
