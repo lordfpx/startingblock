@@ -12,6 +12,11 @@ You can use it, change it, take only some parts of it freely. I will be very ple
 Browser support: Internet Explorer 7+, Firefox 3.6+, Safari 3+, Google Chrome 16+.
 
 
+DOCUMENTATION AND DEMO
+----------------------
+http://lordfpx.github.io/startingblock/
+
+
 WHY ?
 -----
 A CSS micro-framework is a good and faster way to start a new front-end. You will be able to prototype quickly and it will not give you headache when you will be adding you own design (unlike Twitter Bootstrap for exemple).
@@ -26,11 +31,6 @@ ADVANTAGES
 - You can remove gutters on any columns as you wish
 - "all-***" allows you to define the same style to direct children (for exemple, .all-ilbl will give display: inline-block to every direct child of this element)
 - GRUNT ready !
-
-
-DOCUMENTATION AND DEMO
-----------------------
-http://lordfpx.github.io/startingblock/
 
 
 HOW ?
