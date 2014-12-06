@@ -10,14 +10,14 @@
 }
 
 /* hide elements depending on screen size... */
-.hide-s     { display: none; }
-.hide-m     { display: inherit; }
-.hide-l     { display: inherit; }
-.hide-xl    { display: inherit; }
+.hide-small     { display: none; }
+.hide-medum     { display: inherit; }
+.hide-large     { display: inherit; }
+.hide-xlarge    { display: inherit; }
 
-.break-s    { }
-.break-m    { }
-.break-l    { }
+.break-small    { }
+.break-medum    { }
+.break-large    { }
 
 
 /* only for Retina screens */
@@ -28,13 +28,13 @@
 
 /* for tablet */
 @media (min-width: @screenM) {
-  .hide-s     { display: inherit; }
-  .hide-m     { display: none; }
-  .hide-l     { display: inherit; }
-  .hide-xl    { display: inherit; }
+  .hide-small     { display: inherit; }
+  .hide-medum     { display: none; }
+  .hide-large     { display: inherit; }
+  .hide-xlarge    { display: inherit; }
 
   /* these elements will be forced full width */
-  .break-m {
+  .break-medum {
     float: none;
     width: 100%;
     margin-left: 0 !important;
@@ -45,13 +45,13 @@
 
 /* for desktop */
 @media (min-width: @screenL) {
-  .hide-s     { display: inherit; }
-  .hide-m     { display: inherit; }
-  .hide-l     { display: none; }
-  .hide-xl    { display: inherit; }
+  .hide-small     { display: inherit; }
+  .hide-medum     { display: inherit; }
+  .hide-large     { display: none; }
+  .hide-xlarge    { display: inherit; }
 
   /* these elements will be forced full width */
-  .break-l {
+  .break-large {
     float: none;
     width: 100%;
     margin-left: 0 !important;
@@ -62,10 +62,10 @@
 
 /* For big screens */
 @media (min-width: @screenXL) {
-  .hide-s     { display: inherit; }
-  .hide-m     { display: inherit; }
-  .hide-l     { display: inherit; }
-  .hide-xl    { display: none; }
+  .hide-small     { display: inherit; }
+  .hide-medum     { display: inherit; }
+  .hide-large     { display: inherit; }
+  .hide-xlarge    { display: none; }
 }
 
 
