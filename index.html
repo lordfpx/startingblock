@@ -27,7 +27,7 @@
     <li><a href="#layout">Layout</a></li>
     <li><a href="#utility">Utility classes</a></li>
     <li><a href="#queries">Media Queries</a></li>
-    <li><a href="#form">Form</a></li>
+    <li><a href="#form">Forms</a></li>
   </ul>
 </nav>
 
@@ -65,7 +65,7 @@
     </div>
   </section><!-- INTRO END -->
 
-  <hr id="balises" class="margin-t-3 margin-b-2">
+  <hr class="margin-t-3 margin-b-2">
 
   <!-- TYPO -->
   <section id="typo">
@@ -132,33 +132,33 @@
         <span class="class">align-l | all-align-l</span>
       </dt>
       <dd class="col-m-8 align-l">
-        Lorem ipsum dolor sit amet
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, ratione, quia, ab blanditiis error a voluptates pariatur veritatis numquam magni ullam facere doloremque maiores odio suscipit tenetur in quidem soluta.
       </dd>
 
       <dt class="col-m-4">
         <span class="class">align-r | all-align-r</span>
       </dt>
       <dd class="col-m-8 align-r">
-        Lorem ipsum dolor sit amet
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, ratione, quia, ab blanditiis error a voluptates pariatur veritatis numquam magni ullam facere doloremque maiores odio suscipit tenetur in quidem soluta.
       </dd>
 
       <dt class="col-m-4">
         <span class="class">align-c | all-align-c</span>
       </dt>
       <dd class="col-m-8 align-c">
-        Lorem ipsum dolor sit amet
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, ratione, quia, ab blanditiis error a voluptates pariatur veritatis numquam magni ullam facere doloremque maiores odio suscipit tenetur in quidem soluta.
       </dd>
 
       <dt class="col-m-4">
         <span class="class">align-j | all-align-j</span>
       </dt>
       <dd class="col-m-8 align-j">
-        Lorem ipsum dolor sit amet
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, ratione, quia, ab blanditiis error a voluptates pariatur veritatis numquam magni ullam facere doloremque maiores odio suscipit tenetur in quidem soluta.
       </dd>
     </dl>
   </section><!-- TYPO END-->
 
-  <hr id="balises" class="margin-t-3 margin-b-2">
+  <hr class="margin-t-3 margin-b-2">
 
   <!-- LAYOUT -->
   <section id="layout">
@@ -176,7 +176,14 @@
         <span class="class">col-x-x</span>
       </dt>
       <dd class="col-m-8">
-        They are direct <span class="class">colset</span> children. The first "x" define the media-query breakpoint that will render the column (it can be "s", "m", "l" or "xl"). The second define the size (up to 12 of course),
+        They are direct <span class="class">colset</span> children. The first "x" define the media-query breakpoint that will render the column (it can be "s", "m", "l" or "xl"). The second define the size (up to 12 of course).
+      </dd>
+
+      <dt class="col-m-4">
+        <span class="class">all-inline-block</span>
+      </dt>
+      <dd class="col-m-8">
+        Using <span class="class">col-x-x</span> with <span class="class">all-inline-block</span> as parent can be useful in <a href="#form">forms</a> or to vertical align children.
       </dd>
 
       <dt class="col-m-4">
@@ -194,7 +201,7 @@
       </dd>
 
       <dt class="col-m-4">
-        <span class="class">nogut | all-nogut</span>
+        <span class="class">nogutter | all-nogutter</span>
       </dt>
       <dd class="col-m-8">
         Will remove the gutter of a specific column (or all columns).
@@ -272,7 +279,7 @@
     </div>
 
     <h3>List grids</h3>
-    <p>Automatic grid definition, perfect for galeries or regular content columns, you can of course use <span class="class">nogut | all-nogut</span>.</p>
+    <p>Automatic grid definition, perfect for galeries or regular content columns, you can of course use <span class="class">nogutter | all-nogutter</span>.</p>
     <div class="exemple">
       <h4><span class="class">listgrid-3-m</span></h4>
       <ul class="listgrid-m-3">
@@ -300,7 +307,98 @@
     </div>
   </section><!-- LAYOUT END-->
 
+  <hr class="margin-t-3 margin-b-2">
 
+  <!-- FORM -->
+  <section id="form">
+
+    <h2>Form <a href="#menu" class="smaller margin-l-1">Back to top</a></h2>
+
+    <p>The use of <span class="class">colset</span>, <span class="class">all-inline-block</span> and <span class="class">col-x-x</span> is very convenient in the case of forms. That give you lot of freedom.</p>
+
+    <div class="exemple">
+      <form>
+        <div class="colset">
+          <label class="col-s-6 all-inline-block">
+            <div class="col-s-4">Label</div>
+            <input type="text" class="col-s-8">
+          </label>
+
+          <label class="col-s-6">
+            <div>Label</div>
+            <input type="text">
+          </label>
+        </div>
+
+        <hr class="margin-t-2 margin-b-2">
+
+        <div class="colset">
+          <label class="col-s-6 all-inline-block">
+            <div class="col-s-4">Label</div>
+            <textarea class="col-s-8"></textarea>
+          </label>
+
+          <label class="col-s-6">
+            <div>Label</div>
+            <textarea></textarea>
+          </label>
+        </div>
+
+        <hr class="margin-t-2 margin-b-2">
+
+        <div class="colset">
+          <fieldset class="col-s-6 colset">
+            <legend class="col-s-4">Legend</legend>
+            <ul class="col-s-8 colset unstyled">
+              <li class="col-s-6">
+                <label class="all-inline-block">
+                  <input type="radio">
+                  <div>Label</div>
+                </label>
+              </li>
+              <li class="col-s-6">
+                <label class="all-inline-block">
+                  <input type="radio">
+                  <div>Label</div>
+                </label>
+              </li>
+              <li class="col-s-6">
+                <label class="all-inline-block">
+                  <input type="radio">
+                  <div>Label</div>
+                </label>
+              </li>
+              <li class="col-s-6">
+                <label class="all-inline-block">
+                  <input type="radio">
+                  <div>Label</div>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="col-s-6">
+            <legend>Legend</legend>
+            <ul class="colset unstyled">
+              <li class="col-s-6">
+                <label class="all-inline-block">
+                  <input type="radio">
+                  <div>Label</div>
+                </label>
+              </li>
+              <li class="col-s-6">
+                <label class="all-inline-block">
+                  <input type="radio">
+                  <div>Label</div>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+        </div>
+      </form>
+    </div>
+  </section><!-- FORM END-->
 
 </div><!-- fin WRAPPER -->
 </body>

@@ -1,4 +1,4 @@
-@import "variables";
+@import "_variables";
 
 body {
   font-family: arial, helvetica, sans-serif;
@@ -36,10 +36,18 @@ h3 {
     font-size: 2rem;
     font-weight: bold;
   }
-  [class*=col-] {
-    border: 1px solid rgba(0,0,0,.1);
-    background: rgba(0,0,0,.2);
-  }
+}
+
+#layout {
+  .exemple {
+      [class*=col-] {
+        border: 1px solid rgba(0,0,0,.1);
+        background: rgba(0,0,0,.2);
+      }
+      .colset {
+        border: none !important;
+      }
+    }
 }
 
 .definitions {

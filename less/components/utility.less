@@ -3,13 +3,10 @@
 }
 
 .left,
-.all-left > *    { float: left; }
+.all-left > *  { float: left; }
 
 .right,
-.all-right > *  { float: right; }
-
-/* give BFC to wrap floating elements for example */
-.mod { overflow: hidden; }
+.all-right > * { float: right; }
 
 .clearfix,
 .all-left,
@@ -20,23 +17,21 @@
     clear: both;
   }
 }
-  .ie6 .mod,
-  .ie7 .mod,
   .ie6 .clearfix,
   .ie7 .clearfix { zoom: 1; }
 
 
 /* inline-block */
-.ilbl,
-.all-ilbl > * {
+.inline-block,
+.all-inline-block > * {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   margin-right: -.25em;
 }
-  .ie6 .ilbl,
-  .ie7 .ilbl,
-  .ie6 .all-ilbl > *,
-  .ie7 .all-ilbl > * {
+  .ie6 .inline-block,
+  .ie7 .inline-block,
+  .ie6 .all-inline-block > *,
+  .ie7 .all-inline-block > * {
     display: inline;
     zoom: 1;
   }

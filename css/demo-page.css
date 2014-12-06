@@ -31,9 +31,12 @@ h3 {
   font-size: 2rem;
   font-weight: bold;
 }
-.exemple [class*=col-] {
+#layout .exemple [class*=col-] {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: rgba(0, 0, 0, 0.2);
+}
+#layout .exemple .colset {
+  border: none !important;
 }
 .definitions dt {
   text-align: right;

@@ -1,9 +1,6 @@
 Starting-Block
 ==============
-
-WARNING - NOT READY FOR PRODUCTION YET !
-
-Yet another CSS framework which will allow you to start your projects with a solid base. It's inspired by other great projects such as:
+Yet another CSS framework which will let you start your projects with a solid base. It's inspired by other great projects such as:
 - http://www.knacss.com/ by Raphaël Goetter
 - http://rocssti.nicolas-hoffmann.net/ by Nicolas Hoffmann
 
@@ -25,12 +22,12 @@ A CSS micro-framework is a good and faster way to start a new front-end. You wil
 ADVANTAGES
 ----------
 - Mobile first
-- Border-box ready (even for IE 7 !)
-- Nested grid (you keep the same gutter !)
+- Border-box ready (even for IE 7!)
+- Nested grid (with the same gutter size whatever the level!)
 - Different gutter sizes depending on media-queries
 - You can remove gutters on any columns as you wish
-- "all-***" allows you to define the same style to direct children (for exemple, .all-ilbl will give display: inline-block to every direct child of this element)
-- GRUNT ready !
+- "all-***" allows you to define the same style to all direct children (for exemple, .all-inline-block will give display: inline-block to every direct child of this element)
+- GRUNT ready!
 
 
 HOW ?
@@ -45,3 +42,5 @@ If you plan to work on it, start your terminal and:
 - Install GRUNT with `npm install -g grunt-cli`
 - run `npm install`
 - run `grunt` and start playing!
+
+Remember to @import _variables.less file to use variables in your own Less files.

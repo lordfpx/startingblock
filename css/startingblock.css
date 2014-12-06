@@ -271,6 +271,11 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+input,
+select,
+textarea {
+  width: 100%;
+}
 button::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -311,40 +316,34 @@ li > ol {
 .all-right > * {
   float: right;
 }
-/* give BFC to wrap floating elements for example */
-.mod {
-  overflow: hidden;
-}
 .clearfix:after,
 .all-left:after,
 .all-right:after,
-[class^=listgrid-]:after,
-.colset:after {
+.colset:after,
+[class^=listgrid-]:after {
   content: "";
   display: table;
   clear: both;
 }
-.ie6 .mod,
-.ie7 .mod,
 .ie6 .clearfix,
 .ie7 .clearfix,
-.ie6 [class^=listgrid-],
-.ie7 [class^=listgrid-],
 .ie6 .colset,
-.ie7 .colset {
+.ie7 .colset,
+.ie6 [class^=listgrid-],
+.ie7 [class^=listgrid-] {
   zoom: 1;
 }
 /* inline-block */
-.ilbl,
-.all-ilbl > * {
+.inline-block,
+.all-inline-block > * {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   margin-right: -0.25em;
 }
-.ie6 .ilbl,
-.ie7 .ilbl,
-.ie6 .all-ilbl > *,
-.ie7 .all-ilbl > * {
+.ie6 .inline-block,
+.ie7 .inline-block,
+.ie6 .all-inline-block > *,
+.ie7 .all-inline-block > * {
   display: inline;
   zoom: 1;
 }
@@ -681,17 +680,30 @@ a:focus {
   font-size: 34px;
   font-size: 3.4rem;
 }
-/* remove guts on a specific column */
-.nogut,
-.all-nogut > * {
+/* remove gutters on a specific column */
+.nogutter,
+.all-nogutter > * {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-/* mobile guts */
+/* mobile gutters */
 .colset > [class^=col-],
 [class^=listgrid-] > * {
   padding-left: 5px;
   padding-right: 5px;
+  min-height: 1px;
+  float: left;
+}
+/* For use in form fields */
+.all-inline-block > [class^=col-]:first-child {
+  padding-right: 5px;
+}
+.colset,
+[class^=listgrid-] {
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 /*  --------------  */
 /*  AUTOMATIC GRID  */
@@ -699,15 +711,8 @@ a:focus {
 /* Apply these classes on the parent only */
 [class^=listgrid-] {
   list-style: none;
-  width: 100%;
-  margin-left: 0;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
 }
 [class^=listgrid-] > * {
-  float: left;
-  position: relative;
-  min-height: 1px;
   margin-bottom: 5px;
 }
 .listgrid-s-1 > * {
@@ -749,20 +754,6 @@ a:focus {
 /*  -------------  */
 /*  FLEXIBLE GRID  */
 /*  -------------  */
-/* grid wrapper */
-.colset {
-  width: 100%;
-  vertical-align: top;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-.colset > [class^=col-s] {
-  position: relative;
-  min-height: 1px;
-}
-.colset > [class^=col-s] {
-  float: left;
-}
 /* columns */
 .col-s-1 {
   width: 8.33333333%;
@@ -838,16 +829,16 @@ a:focus {
 /*  MEDIA-QUERIES  */
 /*  -------------  */
 @media (min-width: 481px) {
-  .colset > [class^=col-] {
-    padding-left: 15px;
-    padding-right: 15px;
-    float: left;
-  }
+  .colset > [class^=col-],
   [class^=listgrid-] > * {
     padding-left: 15px;
     padding-right: 15px;
-    float: left;
+  }
+  [class^=listgrid-] > * {
     margin-bottom: 15px;
+  }
+  .all-inline-block > [class^=col-]:first-child {
+    padding-right: 15px;
   }
   .listgrid-m-1 > * {
     width: 100%;
@@ -960,10 +951,12 @@ a:focus {
   [class^=listgrid-] > * {
     padding-left: 20px;
     padding-right: 20px;
-    float: left;
   }
   [class^=listgrid-] > * {
     margin-bottom: 20px;
+  }
+  .all-inline-block > [class^=col-]:first-child {
+    padding-right: 20px;
   }
   .listgrid-l-1 > * {
     width: 100%;
@@ -1076,10 +1069,12 @@ a:focus {
   [class^=listgrid-] > * {
     padding-left: 30px;
     padding-right: 30px;
-    float: left;
   }
   [class^=listgrid-] > * {
     margin-bottom: 30px;
+  }
+  .all-inline-block > [class^=col-]:first-child {
+    padding-right: 30px;
   }
   .listgrid-xl-1 > * {
     width: 100%;
@@ -1186,57 +1181,6 @@ a:focus {
   .space-xl-11 {
     margin-left: 91.66666667%;
   }
-}
-.btn {
-  display: inline-block;
-  cursor: pointer;
-  text-align: center;
-  padding: 4px 10px;
-  text-decoration: none;
-  background: #f2766b;
-  color: #1e1e1e;
-  font-size: 14;
-}
-.btn:hover,
-.btn:focus {
-  background: #f6a19a;
-  color: #1e1e1e;
-}
-.btn.btn-s {
-  padding: 2px 5px;
-  font-size: 12px;
-  font-size: 1.2rem;
-}
-.btn.btn-l {
-  padding: 6px 15px;
-  font-size: 24px;
-  font-size: 2.4rem;
-}
-.alert {
-  color: red;
-  font-weight: bold;
-}
-.alert input,
-.alert textarea,
-.alert select {
-  color: red;
-  border: 1px solid red;
-}
-.alert img {
-  border: 0;
-}
-.good {
-  color: green;
-  font-weight: bold;
-}
-.good input,
-.good textarea,
-.good select {
-  color: green;
-  border: 1px solid green;
-}
-.good img {
-  border: 0;
 }
 /* orientation iOS font-size fix */
 @media (orientation: landscape) and (max-device-width: 768px) {

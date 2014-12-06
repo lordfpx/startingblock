@@ -47,8 +47,6 @@ UTILITY
 .right
 .all-right
 
-.mod
-
 .clearfix
 
 .ilbl
