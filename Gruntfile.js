@@ -5,31 +5,42 @@ module.exports = function(grunt) {
       main: {
         expand: true,
         flatten: true,
-        cwd: 'less/',
+        cwd: 'src/less/',
         src: ['boxsizing.htc'],
-        dest: 'css/'
+        dest: 'dist/css/'
       }
     },
-    // compile LESS
-    less: {
-      development: {
+
+    // compile JADE
+    jade: {
+      main: {
         files: {
-          "css/startingblock.css": "less/startingblock.less",
-          "css/demo-page.css": "less/demo-page.less" // this can be removed
+          "dist/index.html": "src/index.jade"
         }
       }
     },
+
+    // compile LESS
+    less: {
+      main: {
+        files: {
+          "dist/css/startingblock.css": "src/less/startingblock.less",
+          "dist/css/demo-page.css": "src/less/demo-page.less" // this can be removed
+        }
+      }
+    },
+
     // compile LESS and reload page as you code.
     watch: {
       css: {
-        files: ['less/*.less', 'less/*/*.less'],
+        files: ['src/less/*.less'],
         tasks: ['less'],
         options: {
           livereload: true
         }
       },
       html: {
-        files: 'index.html',
+        files: 'src/index.jade',
         options: {
           livereload: true
         }
@@ -40,7 +51,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-jade');
 
   // Just grunt and work
-  grunt.registerTask('default', ['copy', 'less', 'watch']);
+  grunt.registerTask('default', ['copy', 'less', 'jade', 'watch']);
 };

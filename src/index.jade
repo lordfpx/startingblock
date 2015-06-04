@@ -1,0 +1,347 @@
+doctype html
+//if lt IE 7
+  html.ie6.no-js(lang="fr-FR")
+//if IE 7
+  html.ie7.no-js(lang="fr-FR")
+//if IE 8
+  html.ie8.no-js(lang="fr-FR")
+// [if gt IE 8] <!
+html.no-js(lang="fr-FR")
+  // <![endif]
+  head
+    meta(charset="UTF-8")
+    title Starting Block - CSS micro framework
+    meta(name="description", content="Starting Block, the CSS micro framework as a starting block")
+    meta(name="author", content="Thierry Philippe - www.thierryphilippe.fr")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    // Starting Block micro framework: http://test.lordfpx.com/startingblock/
+    link(rel="stylesheet", href="css/startingblock.css")
+    // Styles only for this demo page
+    link(rel="stylesheet", href="css/demo-page.css")
+  body
+    nav#menu.margin-b-2.padding-t-1.padding-b-1
+      ul.unstyled.big.all-left.all-padding-large-2.all-padding-r-2
+        li.padding-large-3
+          a(href="#intro") About
+        li
+          a(href="#typo") Typography
+        li
+          a(href="#layout") Layout
+        li
+          a(href="#utility") Utility classes
+        li
+          a(href="#queries") Media Queries
+        li
+          a(href="#form") Forms
+    .wrapper.margin-a
+      // INTRO
+      section#intro.colset
+        header.col-small-12.margin-b-2
+          h1 Starting-block
+          p.bold.big.margin-b-2 - The LESS micro framework starter -
+        .col-medium-8
+          p
+            strong Starting-Block
+            | is a micro LESS/CSS framework to start your new projects. It is very flexible so that you can work on complexe designs. This page is, indeed,
+            strong responsive
+            | and can be used as a
+            strong Style Guide
+            | .
+          p
+            | You better use the LESS files instead of compiled CSS. That way you can use Starting-Block classes into your own styles to keep your HTML lighter.
+          p
+            | Some other very good frameworks inspired me, such as:
+            a(href="http://www.knacss.com/")
+              strong Knacss
+            | ,
+            a(href="http://rocssti.nicolas-hoffmann.net/")
+              strong ROCSSTI
+            | ,
+            a(href="http://getbootstrap.com/")
+              strong Bootstrap
+            | or
+            a(href="http://foundation.zurb.com/")
+              strong Foundation
+            | .
+          p
+            | Browser support:
+            strong Internet Explorer 7+, Firefox 3.6+, Safari 3+, Google Chrome 16+
+            | .
+          p
+            | I"m
+            strong Thierry Philippe
+            | , front-end developper and web designer in Paris... with a pleasant south-wester accent:
+            a(href="http://www.thierryphilippe.fr")
+              strong my portfolio
+            | .
+        .col-medium-4
+          p.margin-b-0
+            strong Important updates:
+          ul.margin-b-2
+            li Mobile first grid
+            li Grunt ready
+            li Removed all useless stuff
+            li all-* classes
+          a.btn(href="https://github.com/lordfpx/startingblock", title="Github page") GitHub Page
+          a.btn(href="https://github.com/lordfpx/startingblock/archive/master.zip", title="Download from Github") Download
+      // INTRO END
+      hr.margin-t-3.margin-b-2
+      // TYPO
+      section#typo
+        h2
+          | Typography
+          a.smaller.margin-large-1(href="#menu") Back to top
+        dl.colset.all-margin-b-1.definitions
+          dt.col-medium-4
+            span.class uppercase | all-uppercase
+          dd.col-medium-8
+            span.uppercase Lorem ipsum dolor sit amet
+          dt.col-medium-4
+            span.class underline | all-underline
+          dd.col-medium-8
+            span.underline Lorem ipsum dolor sit amet
+          dt.col-medium-4
+            span.class bold
+          dd.col-medium-8.margin-b-3
+            span.bold Lorem ipsum dolor sit amet
+          dt.col-medium-4
+            span.class smallest
+          dd.col-medium-8
+            span.smallest Lorem ipsum dolor sit amet
+          dt.col-medium-4
+            span.class smaller
+          dd.col-medium-8
+            span.smaller Lorem ipsum dolor sit amet
+          dt.col-medium-4
+            span.class big
+          dd.col-medium-8
+            span.big Lorem ipsum dolor sit amet
+          dt.col-medium-4
+            span.class bigger
+          dd.col-medium-8
+            span.bigger Lorem ipsum dolor sit amet
+          dt.col-medium-4
+            span.class biggest
+          dd.col-medium-8.margin-b-3
+            span.biggest Lorem ipsum dolor sit amet
+          dt.col-medium-4
+            span.class align-l | all-align-l
+          dd.col-medium-8.align-l
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, ratione, quia, ab blanditiis error a voluptates pariatur veritatis numquam magni ullam facere doloremque maiores odio suscipit tenetur in quidem soluta.
+          dt.col-medium-4
+            span.class align-r | all-align-r
+          dd.col-medium-8.align-r
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, ratione, quia, ab blanditiis error a voluptates pariatur veritatis numquam magni ullam facere doloremque maiores odio suscipit tenetur in quidem soluta.
+          dt.col-medium-4
+            span.class align-c | all-align-c
+          dd.col-medium-8.align-c
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, ratione, quia, ab blanditiis error a voluptates pariatur veritatis numquam magni ullam facere doloremque maiores odio suscipit tenetur in quidem soluta.
+          dt.col-medium-4
+            span.class align-j | all-align-j
+          dd.col-medium-8.align-j
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, ratione, quia, ab blanditiis error a voluptates pariatur veritatis numquam magni ullam facere doloremque maiores odio suscipit tenetur in quidem soluta.
+      // TYPO END
+      hr.margin-t-3.margin-b-2
+      // LAYOUT
+      section#layout
+        h2
+          | Layout
+          a.smaller.margin-large-1(href="#menu") Back to top
+        dl.colset.margin-b-1.all-margin-b-1.definitions
+          dt.col-medium-4
+            span.class colset
+          dd.col-medium-8
+            | The columns wrapper. It can contain up to 12 columns and an unfinite nested
+            span.class colset
+            | .
+          dt.col-medium-4
+            span.class col-x-x
+          dd.col-medium-8
+            | They are direct
+            span.class colset
+            | children. The first "x" define the media-query breakpoint that will render the column (it can be "s", "m", "l" or "xl"). The second define the size (up to 12 of course).
+          dt.col-medium-4
+            span.class all-inline-block
+          dd.col-medium-8
+            | Using
+            span.class col-x-x
+            | with
+            span.class all-inline-block
+            | as parent can be useful in
+            a(href="#form") forms
+            | or to vertical align children.
+          dt.col-medium-4
+            span.class space-x-x
+          dd.col-medium-8.margin-b-3
+            | To move a column to the right, use this class and define the second "x" as the offset and the first has the break point when it will be activated.
+          dt.col-medium-4
+            span.class listgrid-x-x
+          dd.col-medium-8.margin-b-3
+            | List grid is a way to set up quickly regular grids for galleries or columns that will have same width. Set this class on the parent and direct parent will be sized of "x" column width.
+          dt.col-medium-4
+            span.class nogutter | all-nogutter
+          dd.col-medium-8
+            | Will remove the gutter of a specific column (or all columns).
+        h3 Usual use of grids
+        .exemple
+          .colset
+            .col-small-8 col-small-8
+            .col-small-4 col-small-4
+          .colset
+            .col-small-4 col-small-4
+            .col-small-4 col-small-4
+            .col-small-4 col-small-4
+          .colset
+            .col-small-6 col-small-6
+            .col-small-6 col-small-6
+        h3 Move columns
+        .exemple
+          .colset
+            .col-small-4 col-small-4
+            .col-small-4.space-small-4 col-small-4 space-small-4
+          .colset
+            .col-small-3.space-small-3 col-small-3 space-small-3
+            .col-small-3.space-small-3 col-small-3 space-small-3
+          .colset
+            .col-small-6.space-small-3 col-small-6 space-small-3
+        h3 Nested grids
+        p Grids can be combined with no limit.
+        .exemple
+          .colset
+            .col-small-8 col-small-8
+            .col-small-4 col-small-4
+          .colset
+            .col-small-8.colset
+              .col-small-4 col-small-4
+              .col-small-8 col-small-8
+            .col-small-4 col-small-4
+        h3 Responsive grid
+        p You can define complexe grid system on each break point, but try to keep simple.
+        p
+          span.class space-x-x
+          | is also responsive, so you can define spaces according to viewport width.
+        .exemple
+          .colset
+            .col-small-8 col-small-8
+            .col-small-4 col-small-4
+          .colset
+            .col-medium-6.col-large-4 col-medium-6 col-large-4
+            .col-medium-6.col-large-4 col-medium-6 col-large-4
+            .col-medium-6.col-large-4 col-medium-6 col-large-4
+            .col-medium-6.col-large-4 col-medium-6 col-large-4
+            .col-medium-6.col-large-4 col-medium-6 col-large-4
+            .col-medium-6.col-large-4 col-medium-6 col-large-4
+          .colset
+            .col-small-6.col-medium-4.space-medium-2 col-small-6 col-medium-4 space-medium-2
+            .col-small-6.col-medium-4 col-small-6 col-medium-4
+        h3 List grids
+        p
+          | Automatic grid definition, perfect for galeries or regular content columns, you can of course use
+          span.class nogutter | all-nogutter
+          | .
+        .exemple
+          h4
+            span.class listgrid-3-m
+          ul.listgrid-medium-3
+            li
+              img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
+            li
+              img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
+            li
+              img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
+            li
+              img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
+            li
+              img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
+            li
+              img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
+            li
+              img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
+            li
+              img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
+          h4
+            span.class listgrid-5-m
+          ul.listgrid-medium-5
+            li
+              img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
+            li
+              img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
+            li
+              img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
+            li
+              img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
+            li
+              img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
+            li
+              img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
+            li
+              img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
+            li
+              img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
+      // LAYOUT END
+      hr.margin-t-3.margin-b-2
+      // FORM
+      section#form
+        h2
+          | Form
+          a.smaller.margin-large-1(href="#menu") Back to top
+        p
+          | The use of
+          span.class colset
+          | ,
+          span.class all-inline-block
+          | and
+          span.class col-x-x
+          | is very convenient in the case of forms. That give you lot of freedom.
+        .exemple
+          form
+            .colset
+              label.col-small-6.all-inline-block
+                .col-small-4 Label
+                input.col-small-8(type="text")
+              label.col-small-6
+                div Label
+                input(type="text")
+            hr.margin-t-2.margin-b-2
+            .colset
+              label.col-small-6.all-inline-block
+                .col-small-4 Label
+                textarea.col-small-8
+              label.col-small-6
+                div Label
+                textarea
+            hr.margin-t-2.margin-b-2
+            .colset
+              fieldset.col-small-6.colset
+                legend.col-small-4 Legend
+                ul.col-small-8.colset.unstyled
+                  li.col-small-6
+                    label.all-inline-block
+                      input(type="radio")
+                      div Label
+                  li.col-small-6
+                    label.all-inline-block
+                      input(type="radio")
+                      div Label
+                  li.col-small-6
+                    label.all-inline-block
+                      input(type="radio")
+                      div Label
+                  li.col-small-6
+                    label.all-inline-block
+                      input(type="radio")
+                      div Label
+              fieldset.col-small-6
+                legend Legend
+                ul.colset.unstyled
+                  li.col-small-6
+                    label.all-inline-block
+                      input(type="radio")
+                      div Label
+                  li.col-small-6
+                    label.all-inline-block
+                      input(type="radio")
+                      div Label
+      // FORM END
+    // fin WRAPPER

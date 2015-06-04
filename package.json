@@ -16,9 +16,10 @@
     "url": "https://github.com/lordfpx/startingblock/issues"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-jade": "^0.14.1",
     "grunt-contrib-less": "~0.10.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-copy": "~0.5.0"
+    "grunt-contrib-watch": "~0.5.3"
   }
 }

@@ -8,7 +8,13 @@
   "description": "Starting-Block is a CSS micro framework that will help you start your projects.",
   "main": "css/starting-block.css",
   "keywords": [
-    "less", "css", "framework", "grid", "responsive", "rwd", "boilerplate"
+    "less",
+    "css",
+    "framework",
+    "grid",
+    "responsive",
+    "rwd",
+    "boilerplate"
   ],
   "license": "MIT",
   "ignore": [
