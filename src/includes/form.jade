@@ -1,0 +1,63 @@
+include ../mixins
+
+section#form
+  h2
+    | Form
+    a.smaller.margin-large-1(href="#menu") Back to top
+  p
+    | The use of
+    span.class colset
+    | ,
+    span.class all-inline-block
+    | and
+    span.class col-x-x
+    | is very convenient in the case of forms. That give you lot of freedom.
+  .exemple
+    form
+      .colset
+        label.col-small-6.all-inline-block
+          .col-small-4 Label
+          input.col-small-8(type="text")
+        label.col-small-6
+          div Label
+          input(type="text")
+      hr.margin-t-2.margin-b-2
+      .colset
+        label.col-small-6.all-inline-block
+          .col-small-4 Label
+          textarea.col-small-8
+        label.col-small-6
+          div Label
+          textarea
+      hr.margin-t-2.margin-b-2
+      .colset
+        fieldset.col-small-6.colset
+          legend.col-small-4 Legend
+          ul.col-small-8.colset.unstyled
+            li.col-small-6
+              label.all-inline-block
+                input(type="radio")
+                div Label
+            li.col-small-6
+              label.all-inline-block
+                input(type="radio")
+                div Label
+            li.col-small-6
+              label.all-inline-block
+                input(type="radio")
+                div Label
+            li.col-small-6
+              label.all-inline-block
+                input(type="radio")
+                div Label
+        fieldset.col-small-6
+          legend Legend
+          ul.colset.unstyled
+            li.col-small-6
+              label.all-inline-block
+                input(type="radio")
+                div Label
+            li.col-small-6
+              label.all-inline-block
+                input(type="radio")
+                div Label

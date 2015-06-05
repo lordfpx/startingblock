@@ -32,15 +32,16 @@ module.exports = function(grunt) {
 
     // compile LESS and reload page as you code.
     watch: {
-      css: {
+      less: {
         files: ['src/less/*.less'],
         tasks: ['less'],
         options: {
           livereload: true
         }
       },
-      html: {
+      jade: {
         files: 'src/index.jade',
+        tasks: ['jade'],
         options: {
           livereload: true
         }

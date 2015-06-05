@@ -1,0 +1,118 @@
+include ../mixins
+
+section#layout
+  h2
+    | Layout
+    a.smaller.margin-large-1(href="#menu") Back to top
+
+  dl.colset.margin-b-1.all-margin-b-1.definitions
+    dt.col-medium-4
+      span.class colset
+    dd.col-medium-8
+      | The columns wrapper. It can contain up to 12 columns and an unfinite nested
+      span.class colset
+      | .
+    dt.col-medium-4
+      span.class col-x-x
+    dd.col-medium-8
+      | They are direct
+      span.class colset
+      | children. The first "x" define the media-query breakpoint that will render the column (it can be "s", "m", "l" or "xl"). The second define the size (up to 12 of course).
+    dt.col-medium-4
+      span.class all-inline-block
+    dd.col-medium-8
+      | Using
+      span.class col-x-x
+      | with
+      span.class all-inline-block
+      | as parent can be useful in
+      a(href="#form") forms
+      | or to vertical align children.
+    dt.col-medium-4
+      span.class space-x-x
+    dd.col-medium-8.margin-b-3
+      | To move a column to the right, use this class and define the second "x" as the offset and the first has the break point when it will be activated.
+    dt.col-medium-4
+      span.class listgrid-x-x
+    dd.col-medium-8.margin-b-3
+      | List grid is a way to set up quickly regular grids for galleries or columns that will have same width. Set this class on the parent and direct parent will be sized of "x" column width.
+    dt.col-medium-4
+      span.class nogutter | all-nogutter
+    dd.col-medium-8
+      | Will remove the gutter of a specific column (or all columns).
+
+  h3 Usual use of grids
+  .exemple
+    .colset
+      .col-small-8 col-small-8
+      .col-small-4 col-small-4
+    .colset
+      .col-small-4 col-small-4
+      .col-small-4 col-small-4
+      .col-small-4 col-small-4
+    .colset
+      .col-small-6 col-small-6
+      .col-small-6 col-small-6
+
+  h3 Move columns
+  .exemple
+    .colset
+      .col-small-4 col-small-4
+      .col-small-4.space-small-4 col-small-4 space-small-4
+    .colset
+      .col-small-3.space-small-3 col-small-3 space-small-3
+      .col-small-3.space-small-3 col-small-3 space-small-3
+    .colset
+      .col-small-6.space-small-3 col-small-6 space-small-3
+
+  h3 Nested grids
+  p Grids can be combined with no limit.
+  .exemple
+    .colset
+      .col-small-8 col-small-8
+      .col-small-4 col-small-4
+    .colset
+      .col-small-8.colset
+        .col-small-4 col-small-4
+        .col-small-8 col-small-8
+      .col-small-4 col-small-4
+
+  h3 Responsive grid
+  p You can define complexe grid system on each break point, but try to keep simple.
+  p
+    span.class space-x-x
+    | is also responsive, so you can define spaces according to viewport width.
+  .exemple
+    .colset
+      .col-small-8 col-small-8
+      .col-small-4 col-small-4
+    .colset
+      .col-medium-6.col-large-4 col-medium-6 col-large-4
+      .col-medium-6.col-large-4 col-medium-6 col-large-4
+      .col-medium-6.col-large-4 col-medium-6 col-large-4
+      .col-medium-6.col-large-4 col-medium-6 col-large-4
+      .col-medium-6.col-large-4 col-medium-6 col-large-4
+      .col-medium-6.col-large-4 col-medium-6 col-large-4
+    .colset
+      .col-small-6.col-medium-4.space-medium-2 col-small-6 col-medium-4 space-medium-2
+      .col-small-6.col-medium-4 col-small-6 col-medium-4
+
+  h3 List grids
+  p
+    | Automatic grid definition, perfect for galeries or regular content columns, you can of course use
+    span.class nogutter | all-nogutter
+    | .
+  .exemple
+    h4
+      span.class listgrid-3-m
+    ul.listgrid-medium-3
+      - for (var i=0; i<5; i++)
+        li
+          img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
+
+    h4
+      span.class listgrid-5-m
+    ul.listgrid-medium-5
+      - for (var i=0; i<8; i++)
+        li
+          img(src="http://placehold.it/600x300/000000/ffffff&text=picture")
