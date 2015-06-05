@@ -1,16 +1,5 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    // Copy boxsizing polyfile for IE 7 (if you need it...)
-    copy: {
-      main: {
-        expand: true,
-        flatten: true,
-        cwd: 'src/less/',
-        src: ['boxsizing.htc'],
-        dest: 'dist/css/'
-      }
-    },
-
     // compile JADE
     jade: {
       main: {
@@ -49,11 +38,10 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jade');
 
   // Just grunt and work
-  grunt.registerTask('default', ['copy', 'less', 'jade', 'watch']);
+  grunt.registerTask('default', ['less', 'jade', 'watch']);
 };
