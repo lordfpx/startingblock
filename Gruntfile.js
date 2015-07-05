@@ -19,11 +19,26 @@ module.exports = function(grunt) {
       }
     },
 
+    // copy LESS files for distribution
+    copy: {
+      main: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/less/',
+            src: ['**', '!demo-page.less'],
+            dest: 'dist/less/',
+            filter: 'isFile'
+          },
+        ],
+      },
+    },
+
     // compile LESS and reload page as you code.
     watch: {
       less: {
         files: ['src/less/*.less'],
-        tasks: ['less'],
+        tasks: ['less', 'copy'],
         options: {
           livereload: true
         }
@@ -41,7 +56,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Just grunt and work
-  grunt.registerTask('default', ['less', 'jade', 'watch']);
+  grunt.registerTask('default', ['less', 'copy', 'jade', 'watch']);
 };
