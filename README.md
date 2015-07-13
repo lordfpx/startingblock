@@ -4,30 +4,30 @@ Yet another CSS framework which will let you start your projects with a solid ba
 - http://www.knacss.com/ by Raphaël Goetter
 - http://rocssti.nicolas-hoffmann.net/ by Nicolas Hoffmann
 
-You can use it, change it, take only some parts of it freely. I will be very pleased if you mention me somewhere anyway (with a link to the GIT repository).
+You can use it, change it, take only some parts of it freely. I will be very pleased if you mention me somewhere anyway (with a link to my GIT repository).
 
-Browser support: Internet Explorer 7+, Firefox 3.6+, Safari 3+, Google Chrome 16+.
+Browser support: Internet Explorer 8+, Firefox 3.6+, Safari 3+, Google Chrome 16+.
 
 
 DOCUMENTATION AND DEMO
 ----------------------
-http://lordfpx.github.io/startingblock/
+http://www.thierryphilippe.fr/projects/startingblock/
 
 
 WHY ?
 -----
-A CSS micro-framework is a good and faster way to start a new front-end. You will be able to prototype quickly and it will not give you headache when you will be adding you own design (unlike Twitter Bootstrap for exemple).
+A LESS/CSS micro-framework is a good and fast way to start a new front-end. You will be able to prototype quickly and it will not give you headache when you will be adding you own design (unlike Twitter Bootstrap for exemple).
 
 
 ADVANTAGES
 ----------
 - Mobile first
-- Border-box ready (even for IE 7!)
+- Border-box ready
 - Nested grid (with the same gutter size whatever the level!)
 - Different gutter sizes depending on media-queries
 - You can remove gutters on any columns as you wish
 - "all-***" allows you to define the same style to all direct children (for exemple, .all-inline-block will give display: inline-block to every direct child of this element)
-- GRUNT ready!
+- GRUNT ready (in your terminal, cd to the startingblock folder and type "grunt" to build and start the watcher, you will find in the dist folder both LESS and CSS files) 
 
 
 HOW ?
